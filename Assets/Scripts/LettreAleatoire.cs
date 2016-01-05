@@ -26,15 +26,17 @@ public class LettreAleatoire : MonoBehaviour
     private Vector2 movement;
 
     // Instanciation des GameObject et des Sprites
-
+    
     public GameObject letter;
     public GameObject letterPrefab;
     public int rand;
     public Sprite[] alphabet;     // Contient tous les sprites (à compléter dans l'instructor)
+    public Vector2 newPos = new Vector2(0, 8);
     
 
     void Start()
-    {        
+    {
+              
         rand = Random.Range(0, alphabet.Length);                            //nombre aléatoire entre 0 et 27
         letter.GetComponent<SpriteRenderer>().sprite = alphabet[rand];      //ajoute le sprite correspondant à l'object lettre
     }
@@ -57,12 +59,19 @@ public class LettreAleatoire : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = movement;
     }
 
+
+
     //Définie l'action à effectuer en cas d'appui sur la bonne lettre
 
-    void ActionLettre()     
+    void ActionLettre()
     {
+
         Destroy(letter);
-    }
+
+        // GetComponent<SpriteRenderer>().color = Color.green;
+
+    }   
+    
 
     //Définie l'action à effectuer en cas d'appui sur le clavier
 
