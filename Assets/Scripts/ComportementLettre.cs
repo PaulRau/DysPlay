@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 
+
 /// <summary>
 /// Déplace l'objet
 /// </summary>
+
 public class ComportementLettre : MonoBehaviour
 {
     // 1 - Designer variables
-
-    private string lettre = "a";
+    
+    
 
     /// <summary>
     /// Vitesse de déplacement
@@ -23,8 +25,29 @@ public class ComportementLettre : MonoBehaviour
 
     private Vector2 movement;
 
+    // Instanciation des GameObject et des Sprites
+
+    public GameObject letter;
+    public GameObject letterPrefab;
+    public Sprite alphabet_D;
+
+    void start()
+    {
+       
+
+        letter = Instantiate(letterPrefab);
+        
+    }
+   
+    
+   
+
     void Update()
     {
+
+
+        letter.GetComponent<SpriteRenderer>().sprite = alphabet_D;
+
         // 2 - Calcul du mouvement
         movement = new Vector2(
           speed.x * direction.x,
