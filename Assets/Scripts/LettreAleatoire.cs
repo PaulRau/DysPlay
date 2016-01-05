@@ -9,7 +9,7 @@ public class LettreAleatoire : MonoBehaviour
 {
     // 1 - Designer variables
 
-
+    public int scoreValue = 1;
 
     /// <summary>
     /// Vitesse de déplacement
@@ -67,6 +67,7 @@ public class LettreAleatoire : MonoBehaviour
     {
 
         Destroy(letter);
+        ScoreManager.score += scoreValue;
 
         // GetComponent<SpriteRenderer>().color = Color.green;
 
