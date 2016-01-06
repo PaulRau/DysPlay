@@ -304,7 +304,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11453152, guid: 52a96268fdeb88c4b8f19700f9584854, type: 2}
+      - m_Target: {fileID: 11473250, guid: 52a96268fdeb88c4b8f19700f9584854, type: 2}
         m_MethodName: setSpeed
         m_Mode: 3
         m_Arguments:
@@ -734,7 +734,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11453152, guid: 52a96268fdeb88c4b8f19700f9584854, type: 2}
+      - m_Target: {fileID: 11473250, guid: 52a96268fdeb88c4b8f19700f9584854, type: 2}
         m_MethodName: setSpeed
         m_Mode: 3
         m_Arguments:
@@ -1151,7 +1151,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11453152, guid: 52a96268fdeb88c4b8f19700f9584854, type: 2}
+      - m_Target: {fileID: 11473250, guid: 52a96268fdeb88c4b8f19700f9584854, type: 2}
         m_MethodName: setSpeed
         m_Mode: 3
         m_Arguments:

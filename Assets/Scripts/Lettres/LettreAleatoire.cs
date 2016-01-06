@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
+//using UnityEngine.Events;
+//using UnityEngine.UI;
 
 
 /// <summary>
 /// Déplace l'objet
 /// </summary>
 
-public class LettreChoisie : MonoBehaviour
+public class LettreAleatoire : MonoBehaviour
 {
     // 1 - Designer variables
 
@@ -14,9 +16,9 @@ public class LettreChoisie : MonoBehaviour
     /// <summary>
     /// Vitesse de déplacement
     /// </summary>
-    public Vector2 speed = new Vector2(10, 10);
+    public Vector2 speed = new Vector2(0, 6);
 
-
+   
     /// <summary>
     /// Direction
     /// </summary>
@@ -26,18 +28,18 @@ public class LettreChoisie : MonoBehaviour
     private Vector2 movement;
 
     // Instanciation des GameObject et des Sprites
-
+    
     public GameObject letter;
-    public GameObject letterPrefab;
-    public int rand;
+    
+    private int rand;
     public Sprite[] alphabet;     // Contient tous les sprites (à compléter dans l'instructor)
     public Vector2 newPos = new Vector2(0, 8);
-
+    
 
     void Start()
     {
-
-                                    //nombre aléatoire entre 0 et 27
+              
+        rand = Random.Range(0, alphabet.Length);                            //nombre aléatoire entre 0 et 27
         letter.GetComponent<SpriteRenderer>().sprite = alphabet[rand];      //ajoute le sprite correspondant à l'object lettre
     }
 
@@ -59,7 +61,12 @@ public class LettreChoisie : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = movement;
     }
 
-
+    public void setSpeed(int value)
+    {        
+        
+        
+        speed = new Vector2(0, value);
+    }
 
     //Définie l'action à effectuer en cas d'appui sur la bonne lettre
 
@@ -71,8 +78,8 @@ public class LettreChoisie : MonoBehaviour
 
         // GetComponent<SpriteRenderer>().color = Color.green;
 
-    }
-
+    }   
+    
 
     //Définie l'action à effectuer en cas d'appui sur le clavier
 
@@ -243,4 +250,3 @@ public class LettreChoisie : MonoBehaviour
 
 
 }
-

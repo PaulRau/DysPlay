@@ -72,11 +72,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 1
-  speed: {x: 0, y: 4}
+  speed: {x: 0, y: 3}
   direction: {x: 0, y: -1}
   letter: {fileID: 186886}
-  letterPrefab: {fileID: 186886}
-  rand: 0
   alphabet:
   - {fileID: 21300002, guid: 5c743efa7632e134dbd6bf527ae7f662, type: 3}
   - {fileID: 21300004, guid: 5c743efa7632e134dbd6bf527ae7f662, type: 3}
@@ -288,11 +286,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: speed.y
-      value: 4
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: direction.y
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

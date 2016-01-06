@@ -34,7 +34,7 @@ public class MenuScript : MonoBehaviour {
             Application.LoadLevel("Scene1.0.1");
         }
 
-        if (GUI.Button(buttonRect1, "OPTION"))
+        if (GUI.Button(buttonRect1, "OPTIONS"))
         {
             Application.LoadLevel("Options");
         }

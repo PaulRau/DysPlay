@@ -1,13 +1,11 @@
 ﻿using UnityEngine;
-//using UnityEngine.Events;
-//using UnityEngine.UI;
 
 
 /// <summary>
 /// Déplace l'objet
 /// </summary>
 
-public class LettreAleatoire : MonoBehaviour
+public class LettreChoisie : MonoBehaviour
 {
     // 1 - Designer variables
 
@@ -16,9 +14,9 @@ public class LettreAleatoire : MonoBehaviour
     /// <summary>
     /// Vitesse de déplacement
     /// </summary>
-    public Vector2 speed = new Vector2(0, 6);
+    public Vector2 speed = new Vector2(10, 10);
 
-   
+
     /// <summary>
     /// Direction
     /// </summary>
@@ -28,19 +26,17 @@ public class LettreAleatoire : MonoBehaviour
     private Vector2 movement;
 
     // Instanciation des GameObject et des Sprites
-    
+
     public GameObject letter;
     public GameObject letterPrefab;
-    public int rand;
+    public static int type;              //rand est ici amené à être modifié dans un autre script pour déterminer la lettre qui doit être affichée
     public Sprite[] alphabet;     // Contient tous les sprites (à compléter dans l'instructor)
     public Vector2 newPos = new Vector2(0, 8);
-    
+
 
     void Start()
     {
-              
-        rand = Random.Range(0, alphabet.Length);                            //nombre aléatoire entre 0 et 27
-        letter.GetComponent<SpriteRenderer>().sprite = alphabet[rand];      //ajoute le sprite correspondant à l'object lettre
+         letter.GetComponent<SpriteRenderer>().sprite = alphabet[type];      //ajoute le sprite correspondant à l'object lettre
     }
 
     void Update()
@@ -61,12 +57,7 @@ public class LettreAleatoire : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = movement;
     }
 
-    public void setSpeed(int value)
-    {        
-        
-        
-        speed = new Vector2(0, value);
-    }
+
 
     //Définie l'action à effectuer en cas d'appui sur la bonne lettre
 
@@ -78,15 +69,15 @@ public class LettreAleatoire : MonoBehaviour
 
         // GetComponent<SpriteRenderer>().color = Color.green;
 
-    }   
-    
+    }
+
 
     //Définie l'action à effectuer en cas d'appui sur le clavier
 
     void clavier()
     {
 
-        switch (rand)
+        switch (type)
         {
             case 0:
                 if (Input.GetKeyDown("a"))
@@ -250,3 +241,4 @@ public class LettreAleatoire : MonoBehaviour
 
 
 }
+
