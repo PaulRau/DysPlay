@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ComportementSol : MonoBehaviour {
 
-
+    
     public int scoreValue = 1;
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -12,6 +12,7 @@ public class ComportementSol : MonoBehaviour {
         {
             //detruit la lettre
             Destroy(collision.gameObject);
+            
             ScoreManager.score -= scoreValue;
             if (ScoreManager.score < 0) ScoreManager.score = 0;
         }

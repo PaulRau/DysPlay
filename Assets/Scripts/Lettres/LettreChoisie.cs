@@ -9,7 +9,7 @@ public class LettreChoisie : MonoBehaviour
 {
     // 1 - Designer variables
 
-    public int scoreValue = 1;
+    //public int scoreValue = 1;
 
     /// <summary>
     /// Vitesse de déplacement
@@ -30,13 +30,13 @@ public class LettreChoisie : MonoBehaviour
     public GameObject letter;
     public GameObject letterPrefab;
     public static int type;              //rand est ici amené à être modifié dans un autre script pour déterminer la lettre qui doit être affichée
-    public Sprite[] alphabet;     // Contient tous les sprites (à compléter dans l'instructor)
+   // public Sprite[] alphabet;     // Contient tous les sprites (à compléter dans l'instructor)
     public Vector2 newPos = new Vector2(0, 8);
 
 
     void Start()
     {
-         letter.GetComponent<SpriteRenderer>().sprite = alphabet[type];      //ajoute le sprite correspondant à l'object lettre
+         // letter.GetComponent<SpriteRenderer>().sprite = alphabet[type];      //ajoute le sprite correspondant à l'object lettre
     }
 
     void Update()
@@ -48,7 +48,7 @@ public class LettreChoisie : MonoBehaviour
 
         // Récupère l'action sur le clavier
 
-        clavier();
+        //clavier();
     }
 
     void FixedUpdate()
@@ -57,7 +57,7 @@ public class LettreChoisie : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = movement;
     }
 
-
+/*
 
     //Définie l'action à effectuer en cas d'appui sur la bonne lettre
 
@@ -238,7 +238,7 @@ public class LettreChoisie : MonoBehaviour
 
         }
     }
-
+*/
 
 }
 

@@ -3,137 +3,455 @@ using System.Collections;
 
 public class Mot : MonoBehaviour {
 
-    private string liste = "eau";
+    private string liste = "abc";
     private int i = 0;
-    public GameObject letter;
+    public GameObject Clone;
+    public GameObject letterPrefab;
+    private GameObject[] letter = new GameObject[12];
+    public Sprite[] alphabet;     // Contient tous les sprites (à compléter dans l'instructor)
+    public int scoreValue = 1;
+    private int type = 0;
+    private int currenttype = 0;
+    private char[] characters;
+    private int x = 0;
+    
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 
-        char[] characters = liste.ToCharArray();
+        characters = liste.ToCharArray();
 
 
-        //Debug.Log(characters[1]);
+        
         for (i = 0; i < liste.Length; i++)
         {
             AfficheLettre(characters[i]);
+            
         }
     }
+    // Update is called once per frame
+    void Update()
+    {
+        clavier();
+
+        if (x < liste.Length)
+        {
+            switch (characters[x])
+            {
+                case 'a':
+
+                    currenttype = 0;
+
+                    break;
+                case 'b':
+                    currenttype = 1;
+                    break;
+                case 'c':
+                    currenttype = 2;
+                    break;
+                case 'd':
+                    currenttype = 3;
+                    break;
+                case 'e':
+                    currenttype = 4;
+                    break;
+                case 'f':
+                    currenttype = 5;
+                    break;
+                case 'g':
+                    currenttype = 6;
+                    break;
+                case 'h':
+                    currenttype = 7;
+                    break;
+                case 'i':
+                    currenttype = 8;
+                    break;
+                case 'j':
+                    currenttype = 9;
+                    break;
+                case 'k':
+                    currenttype = 10;
+                    break;
+                case 'l':
+                    currenttype = 11;
+                    break;
+                case 'm':
+                    currenttype = 12;
+                    break;
+                case 'n':
+                    currenttype = 13;
+                    break;
+                case 'o':
+                    currenttype = 14;
+                    break;
+                case 'p':
+                    currenttype = 15;
+                    break;
+                case 'q':
+                    currenttype = 16;
+                    break;
+                case 'r':
+                    currenttype = 17;
+                    break;
+                case 's':
+                    currenttype = 18;
+                    break;
+                case 't':
+                    currenttype = 19;
+                    break;
+                case 'u':
+                    currenttype = 20;
+                    break;
+                case 'v':
+                    currenttype = 21;
+                    break;
+                case 'w':
+                    currenttype = 22;
+                    break;
+                case 'x':
+                    currenttype = 23;
+                    break;
+                case 'y':
+                    currenttype = 24;
+                    break;
+                case 'z':
+                    currenttype = 25;
+                    break;
+            }
+        }
+       else
+        {
+            for(i=0;i<liste.Length; i++)
+            {
+                Destroy(letter[i]);
+                // Ne pas oublier de detruire le mot éventuellement
+                Destroy(Clone);
+            }
+        }
+    }
+
 
     void AfficheLettre(char charactere)
     {
+
         switch (charactere)
         {
             case 'a':
-                LettreChoisie.type = 0;
-                Instantiate(letter);
-            break;
+
+                type = 0;
+                letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2(-3+3*i,8), Quaternion.identity);
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
+               
+                break;
             case 'b':
-                LettreChoisie.type = 1;
-                Instantiate(letter);
+                type = 1;
+                letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2(-3 + 3 * i, 8), Quaternion.identity);
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'c':
-                LettreChoisie.type = 2;
-                Instantiate(letter);
+                type = 2;
+                letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2(-3 + 3 * i, 8), Quaternion.identity);
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'd':
-                LettreChoisie.type = 3;
-                Instantiate(letter);
+                type = 3;
+                letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2(-3 + 3 * i, 8), Quaternion.identity);
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'e':
-                LettreChoisie.type = 4;
-                Instantiate(letter);
+                type = 4;
+                letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2(-3 + 3 * i, 8), Quaternion.identity);
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
-            case 'f':
-                LettreChoisie.type = 5;
-                Instantiate(letter);
+            /*case 'f':
+                type = 5;
+                letter[i] = (GameObject)Instantiate(letterPrefab, Pos, Quaternion.identity);
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'g':
-                LettreChoisie.type = 6;
-                Instantiate(letter);
+                type = 6;
+                letter[i] = Instantiate(letterPrefab);
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'h':
-                LettreChoisie.type = 7;
-                Instantiate(letter);
+                type = 7;
+                letter[i] = Instantiate(letterPrefab);
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'i':
-                LettreChoisie.type = 8;
-                Instantiate(letter);
+                type = 8;
+                letter[i] = Instantiate(letterPrefab);
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'j':
-                LettreChoisie.type = 9;
-                Instantiate(letter);
+                type = 9;
+                letter[i] = Instantiate(letterPrefab);
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'k':
-                LettreChoisie.type = 10;
-                Instantiate(letter);
+                type = 10;
+                letter[i] = Instantiate(letterPrefab);
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'l':
-                LettreChoisie.type = 11;
-                Instantiate(letter);
+                type = 11;
+                letter[i] = Instantiate(letterPrefab);
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'm':
-                LettreChoisie.type = 12;
-                Instantiate(letter);
+                type = 12;
+                letter[i] = Instantiate(letterPrefab);
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'n':
-                LettreChoisie.type = 13;
-                Instantiate(letter);
+                type = 13;
+                letter[i] = Instantiate(letterPrefab);
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'o':
-                LettreChoisie.type = 14;
-                Instantiate(letter);
+                type = 14;
+                letter[i] = Instantiate(letterPrefab);
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'p':
-                LettreChoisie.type = 15;
-                Instantiate(letter);
+                type = 15;
+                letter[i] = Instantiate(letterPrefab);
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'q':
-                LettreChoisie.type = 16;
-                Instantiate(letter);
+                type = 16;
+                letter[i] = Instantiate(letterPrefab);
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'r':
-                LettreChoisie.type = 17;
-                Instantiate(letter);
+                type = 17;
+                letter[i] = Instantiate(letterPrefab);
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 's':
-                LettreChoisie.type = 18;
-                Instantiate(letter);
+                type = 18;
+                letter[i] = Instantiate(letterPrefab);
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 't':
-                LettreChoisie.type = 19;
-                Instantiate(letter);
+                type = 19;
+                letter[i] = Instantiate(letterPrefab);
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'u':
-                LettreChoisie.type = 20;
-                Instantiate(letter);
+                type = 20;
+                letter[i] = (GameObject)Instantiate(letterPrefab, Pos, Quaternion.identity);
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'v':
-                LettreChoisie.type = 21;
-                Instantiate(letter);
+                type = 21;
+                letter[i] = Instantiate(letterPrefab);
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'w':
-                LettreChoisie.type = 22;
-                Instantiate(letter);
+                type = 22;
+                letter[i] = Instantiate(letterPrefab);
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'x':
-                LettreChoisie.type = 23;
-                Instantiate(letter);
+                type = 23;
+                letter[i] = Instantiate(letterPrefab);
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'y':
-                LettreChoisie.type = 24;
-                Instantiate(letter);
+                type = 24;
+                letter[i] = Instantiate(letterPrefab);
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'z':
-                LettreChoisie.type = 25;
-                Instantiate(letter);
-                break;
+                type = 25;
+                letter[i] = Instantiate(letterPrefab);
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
+                break;*/
         }
-        
+
 
     }
-	// Update is called once per frame
-	void Update () {
+
+    void ActionLettre()
+    {
+        //Destroy(letter[x]);
+        ScoreManager.score += scoreValue;
+
+        letter[x].GetComponent<SpriteRenderer>().color = Color.green;
+        x++;
+
+    }
+
+
+    //Définie l'action à effectuer en cas d'appui sur le clavier
+
+    void clavier()
+    {
+
+        switch (currenttype)
+        {
+            case 0:
+                if (Input.GetKeyDown("a"))
+                {
+                    ActionLettre();
+                }
+                break;
+            case 1:
+                if (Input.GetKeyDown("b"))
+                {
+                    ActionLettre();
+                }
+                break;
+            case 2:
+                if (Input.GetKeyDown("c"))
+                {
+                    ActionLettre();
+                }
+                break;
+            case 3:
+                if (Input.GetKeyDown("d"))
+                {
+                    ActionLettre();
+                }
+                break;
+            case 4:
+                if (Input.GetKeyDown("e"))
+                {
+                    ActionLettre();
+                }
+                break;
+            case 5:
+                if (Input.GetKeyDown("f"))
+                {
+                    ActionLettre();
+                }
+                break;
+            case 6:
+                if (Input.GetKeyDown("g"))
+                {
+                    ActionLettre();
+                }
+                break;
+            case 7:
+                if (Input.GetKeyDown("h"))
+                {
+                    ActionLettre();
+                }
+                break;
+            case 8:
+                if (Input.GetKeyDown("i"))
+                {
+                    ActionLettre();
+                }
+                break;
+            case 9:
+                if (Input.GetKeyDown("j"))
+                {
+                    ActionLettre();
+                }
+                break;
+            case 10:
+                if (Input.GetKeyDown("k"))
+                {
+                    ActionLettre();
+                }
+                break;
+            case 11:
+                if (Input.GetKeyDown("l"))
+                {
+                    ActionLettre();
+                }
+                break;
+            case 12:
+                if (Input.GetKeyDown("m"))
+                {
+                    ActionLettre();
+                }
+                break;
+            case 13:
+                if (Input.GetKeyDown("n"))
+                {
+                    ActionLettre();
+                }
+                break;
+            case 14:
+                if (Input.GetKeyDown("o"))
+                {
+                    ActionLettre();
+                }
+                break;
+            case 15:
+                if (Input.GetKeyDown("p"))
+                {
+                    ActionLettre();
+                }
+                break;
+            case 16:
+                if (Input.GetKeyDown("q"))
+                {
+                    ActionLettre();
+                }
+                break;
+            case 17:
+                if (Input.GetKeyDown("r"))
+                {
+                    ActionLettre();
+                }
+                break;
+            case 18:
+                if (Input.GetKeyDown("s"))
+                {
+                    ActionLettre();
+                }
+                break;
+            case 19:
+                if (Input.GetKeyDown("t"))
+                {
+                    ActionLettre();
+                }
+                break;
+            case 20:
+                if (Input.GetKeyDown("u"))
+                {
+                    ActionLettre();
+                }
+                break;
+            case 21:
+                if (Input.GetKeyDown("v"))
+                {
+                    ActionLettre();
+                }
+                break;
+            case 22:
+                if (Input.GetKeyDown("w"))
+                {
+                    ActionLettre();
+                }
+                break;
+            case 23:
+                if (Input.GetKeyDown("x"))
+                {
+                    ActionLettre();
+                }
+                break;
+            case 24:
+                if (Input.GetKeyDown("y"))
+                {
+                    ActionLettre();
+                }
+                break;
+            case 25:
+                if (Input.GetKeyDown("z"))
+                {
+                    ActionLettre();
+                }
+                break;
+
+        }
+    }
+
+    
 	
-	}
 }
