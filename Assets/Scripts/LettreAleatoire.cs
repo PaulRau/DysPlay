@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+//using UnityEngine.Events;
+//using UnityEngine.UI;
 
 
 /// <summary>
@@ -14,9 +16,9 @@ public class LettreAleatoire : MonoBehaviour
     /// <summary>
     /// Vitesse de déplacement
     /// </summary>
-    public Vector2 speed = new Vector2(10, 10);
+    public Vector2 speed = new Vector2(0, 6);
 
-
+   
     /// <summary>
     /// Direction
     /// </summary>
@@ -59,7 +61,12 @@ public class LettreAleatoire : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = movement;
     }
 
-
+    public void setSpeed(int value)
+    {        
+        
+        
+        speed = new Vector2(0, value);
+    }
 
     //Définie l'action à effectuer en cas d'appui sur la bonne lettre
 
