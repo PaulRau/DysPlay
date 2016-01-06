@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Mot : MonoBehaviour {
 
-    private string liste = "abc";
+    private string liste = "abztr";
     private int i = 0;
     public GameObject Clone;
     public GameObject letterPrefab;
@@ -164,111 +164,111 @@ public class Mot : MonoBehaviour {
                 letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2(-3 + 3 * i, 8), Quaternion.identity);
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
-            /*case 'f':
+            case 'f':
                 type = 5;
-                letter[i] = (GameObject)Instantiate(letterPrefab, Pos, Quaternion.identity);
+                letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2(-3 + 3 * i, 8), Quaternion.identity);
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'g':
                 type = 6;
-                letter[i] = Instantiate(letterPrefab);
+                letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2(-3 + 3 * i, 8), Quaternion.identity);
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'h':
                 type = 7;
-                letter[i] = Instantiate(letterPrefab);
+                letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2(-3 + 3 * i, 8), Quaternion.identity);
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'i':
                 type = 8;
-                letter[i] = Instantiate(letterPrefab);
+                letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2(-3 + 3 * i, 8), Quaternion.identity);
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'j':
                 type = 9;
-                letter[i] = Instantiate(letterPrefab);
+                letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2(-3 + 3 * i, 8), Quaternion.identity);
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'k':
                 type = 10;
-                letter[i] = Instantiate(letterPrefab);
+                letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2(-3 + 3 * i, 8), Quaternion.identity);
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'l':
                 type = 11;
-                letter[i] = Instantiate(letterPrefab);
+                letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2(-3 + 3 * i, 8), Quaternion.identity);
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'm':
                 type = 12;
-                letter[i] = Instantiate(letterPrefab);
+                letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2(-3 + 3 * i, 8), Quaternion.identity);
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'n':
                 type = 13;
-                letter[i] = Instantiate(letterPrefab);
+                letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2(-3 + 3 * i, 8), Quaternion.identity);
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'o':
                 type = 14;
-                letter[i] = Instantiate(letterPrefab);
+                letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2(-3 + 3 * i, 8), Quaternion.identity);
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'p':
                 type = 15;
-                letter[i] = Instantiate(letterPrefab);
+                letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2(-3 + 3 * i, 8), Quaternion.identity);
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'q':
                 type = 16;
-                letter[i] = Instantiate(letterPrefab);
+                letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2(-3 + 3 * i, 8), Quaternion.identity);
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'r':
                 type = 17;
-                letter[i] = Instantiate(letterPrefab);
+                letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2(-3 + 3 * i, 8), Quaternion.identity);
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 's':
                 type = 18;
-                letter[i] = Instantiate(letterPrefab);
+                letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2(-3 + 3 * i, 8), Quaternion.identity);
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 't':
                 type = 19;
-                letter[i] = Instantiate(letterPrefab);
+                letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2(-3 + 3 * i, 8), Quaternion.identity);
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'u':
                 type = 20;
-                letter[i] = (GameObject)Instantiate(letterPrefab, Pos, Quaternion.identity);
+                letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2(-3 + 3 * i, 8), Quaternion.identity);
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'v':
                 type = 21;
-                letter[i] = Instantiate(letterPrefab);
+                letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2(-3 + 3 * i, 8), Quaternion.identity);
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'w':
                 type = 22;
-                letter[i] = Instantiate(letterPrefab);
+                letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2(-3 + 3 * i, 8), Quaternion.identity);
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'x':
                 type = 23;
-                letter[i] = Instantiate(letterPrefab);
+                letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2(-3 + 3 * i, 8), Quaternion.identity);
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'y':
                 type = 24;
-                letter[i] = Instantiate(letterPrefab);
+                letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2(-3 + 3 * i, 8), Quaternion.identity);
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'z':
                 type = 25;
-                letter[i] = Instantiate(letterPrefab);
+                letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2(-3 + 3 * i, 8), Quaternion.identity);
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
-                break;*/
+                break;
         }
 
 
