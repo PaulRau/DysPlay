@@ -1,10 +1,12 @@
 fileFormatVersion: 2
 guid: cdca4ab115bf2b8488cdc576cee4db62
-timeCreated: 1452078236
+timeCreated: 1452101442
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Clone: {fileID: 105058, guid: 965619d0610a1254dacd57a02301ccbe, type: 2}
+  - letterPrefab: {fileID: 138626, guid: ab112ceeda7e47c498fe41748e08a051, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

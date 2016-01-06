@@ -3,8 +3,9 @@ using System.Collections;
 
 public class Mot : MonoBehaviour {
 
-    private string liste = "abztr";
+    private string liste = "azert";
     private int i = 0;
+    private int j = 0;
     public GameObject Clone;
     public GameObject letterPrefab;
     private GameObject[] letter = new GameObject[12];
@@ -18,6 +19,14 @@ public class Mot : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+
+        //Destroy(Clone,5);
+
+        for (j = 0; j < 12; j++)
+        {
+            letter[j] = null;           //Initialise le tableau de lettre
+
+        }
 
         characters = liste.ToCharArray();
 
@@ -276,7 +285,7 @@ public class Mot : MonoBehaviour {
 
     void ActionLettre()
     {
-        //Destroy(letter[x]);
+        
         ScoreManager.score += scoreValue;
 
         letter[x].GetComponent<SpriteRenderer>().color = Color.green;
