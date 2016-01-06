@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11453152}
   - 114: {fileID: 11436154}
   m_Layer: 0
-  m_Name: Lettre
+  m_Name: LettreAleatoire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,7 +103,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 1
+<<<<<<< HEAD:Assets/Prefabs/Lettre.prefab
   speed: {x: 0, y: 9}
+=======
+  speed: {x: 0, y: 4}
+>>>>>>> 1f4bbd404b8f5175d74e7d480338f81dc8f84a43:Assets/Prefabs/LettreAleatoire.prefab
   direction: {x: 0, y: -1}
   letter: {fileID: 113088}
   letterPrefab: {fileID: 113088}
