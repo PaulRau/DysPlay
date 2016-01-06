@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CreerLettre : MonoBehaviour {
+public class CreerLettreAleatoire : MonoBehaviour {
 
     public GameObject letter;
 	// Use this for initialization
@@ -15,7 +15,7 @@ public class CreerLettre : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (GameObject.Find("Lettre(Clone)")==null)
+        if (GameObject.Find("LettreAleatoire(Clone)")==null)
         {
             Instantiate(letter);
         }
