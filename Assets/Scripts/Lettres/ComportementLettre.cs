@@ -27,15 +27,13 @@ public class ComportementLettre : MonoBehaviour
 
     // Instanciation des GameObject et des Sprites
 
-    public GameObject letter;
-    public GameObject letterPrefab;
-    public Sprite alphabet_D;
+    
 
     void start()
     {
        
 
-        letter = Instantiate(letterPrefab);
+        
         
     }
    
@@ -46,7 +44,7 @@ public class ComportementLettre : MonoBehaviour
     {
 
 
-        letter.GetComponent<SpriteRenderer>().sprite = alphabet_D;
+        
 
         // 2 - Calcul du mouvement
         movement = new Vector2(

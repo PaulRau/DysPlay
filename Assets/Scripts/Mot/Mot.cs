@@ -15,13 +15,14 @@ public class Mot : MonoBehaviour {
     private int currenttype = 0;
     private char[] characters;
     private int x = 0;
+    private bool success = false;
       
     
 
     // Use this for initialization
     void Start () {
 
-        
+        success = false;
 
         for (j = 0; j < 12; j++)
         {
@@ -42,7 +43,7 @@ public class Mot : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        clavier();
+        
 
         if (x < liste.Length)
         {
@@ -132,10 +133,11 @@ public class Mot : MonoBehaviour {
         }
        else
         {
-            
-            
+
+            success = true;
            for (i = 0; i < liste.Length; i++)
            {
+                
                 // Arrête le mouvement de chaque lettre 
                 letter[i].GetComponent<LettreChoisie>().speed = new Vector2(0,0);
 
@@ -146,6 +148,8 @@ public class Mot : MonoBehaviour {
             // Ne pas oublier de detruire l'object mot éventuellement
             Destroy(Clone,0.5f);
         }
+        if (success== false) { clavier(); }
+        
     }
 
 
