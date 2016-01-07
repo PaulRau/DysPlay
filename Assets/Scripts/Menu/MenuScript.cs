@@ -21,12 +21,12 @@ public class MenuScript : MonoBehaviour {
 
     public void butonJouerNiveaux()
     {
-        Application.LoadLevel("Scene1.0.1");
+        Application.LoadLevel("PartieNiveaux");
     }
 
     public void butonJouerPerso()
     {
-        Application.LoadLevel("Scene1.0.1");
+        Application.LoadLevel("PartiePerso");
     }
 
 
@@ -35,6 +35,13 @@ public class MenuScript : MonoBehaviour {
         Application.LoadLevel("Options");
     }
 
+
+
+    //lancer niveau
+    public void lancerNiveau1()
+    {
+        Application.LoadLevel("Scene1.0.1");
+    }
 
     //scene1.0.1
     public void butonPause()
