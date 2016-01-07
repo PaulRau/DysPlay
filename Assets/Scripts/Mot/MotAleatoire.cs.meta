@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5d73a231e1b96244fb641ac8f4da7385
+timeCreated: 1452178263
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - Clone: {fileID: 135216, guid: d3f1568c39aad8f45a7bf3b0716179b7, type: 2}
+  - letterPrefab: {fileID: 138626, guid: ab112ceeda7e47c498fe41748e08a051, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

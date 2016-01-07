@@ -10,14 +10,14 @@ public class GenererMot : MonoBehaviour
     void Start()
     {
 
-        Instantiate(mot);
+        
         
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
         if (GameObject.Find("LettreChoisie(Clone)") == null)
         {
             Instantiate(mot);

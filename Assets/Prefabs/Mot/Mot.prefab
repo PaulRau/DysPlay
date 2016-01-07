@@ -72,7 +72,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdca4ab115bf2b8488cdc576cee4db62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  liste: azert
+  liste: air
   Clone: {fileID: 105058}
   letterPrefab: {fileID: 138626, guid: ab112ceeda7e47c498fe41748e08a051, type: 2}
   alphabet:
@@ -216,7 +216,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: liste
-      value: azert
+      value: air
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
