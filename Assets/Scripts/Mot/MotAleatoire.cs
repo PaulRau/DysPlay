@@ -16,7 +16,7 @@ public class MotAleatoire : MonoBehaviour
     private int currenttype = 0;
     private char[] characters;
     private int x = 0;
-    private bool success = false;
+    public static bool success = false;
     private int rand = 0;
 
 
@@ -310,7 +310,7 @@ public class MotAleatoire : MonoBehaviour
     {
         if (Input.anyKeyDown)
         {
-            letter[x].GetComponent<SpriteRenderer>().color = Color.red;
+            if (Input.GetMouseButtonDown(0)) { }else letter[x].GetComponent<SpriteRenderer>().color = Color.red;
         }
     }
 

@@ -34,7 +34,7 @@ public class LettreAleatoire : MonoBehaviour
     private int rand;
     public Sprite[] alphabet;     // Contient tous les sprites (à compléter dans l'instructor)
     public Vector2 newPos = new Vector2(0, 8);
-    private bool success = false;
+    public static bool success = false;
 
     void Start()
     {
@@ -92,7 +92,8 @@ public class LettreAleatoire : MonoBehaviour
     {
         if (Input.anyKeyDown)
         {
-            letter.GetComponent<SpriteRenderer>().color = Color.red;
+            if (Input.GetMouseButtonDown(0)) { } else letter.GetComponent<SpriteRenderer>().color = Color.red;
+
         }
     }
 

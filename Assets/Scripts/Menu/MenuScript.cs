@@ -85,11 +85,17 @@ public class MenuScript : MonoBehaviour {
         //pause
         if (pause == false)
         {
+            MotAleatoire.success = true;
+            LettreAleatoire.success = true;   //Empêche de faire des actions au clavier pendant la pause
+
             Time.timeScale = 0.0f;
             pause = true;
         }
         else
         {
+            MotAleatoire.success = false;
+            LettreAleatoire.success = false;
+
             Time.timeScale = 1.0f;
             pause = false;
         }
