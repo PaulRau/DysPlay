@@ -34,11 +34,11 @@ public class LettreAleatoire : MonoBehaviour
     private int rand;
     public Sprite[] alphabet;     // Contient tous les sprites (à compléter dans l'instructor)
     public Vector2 newPos = new Vector2(0, 8);
-    
+    private bool success = false;
 
     void Start()
     {
-              
+        success = false;      
         rand = Random.Range(0, alphabet.Length);                            //nombre aléatoire entre 0 et 27
         letter.GetComponent<SpriteRenderer>().sprite = alphabet[rand];      //ajoute le sprite correspondant à l'object lettre
     }
@@ -51,8 +51,8 @@ public class LettreAleatoire : MonoBehaviour
           speed.y * direction.y);
 
         // Récupère l'action sur le clavier
-
-        clavier();
+        if (success== false) { clavier(); }
+        
     }
 
     void FixedUpdate()
@@ -70,16 +70,31 @@ public class LettreAleatoire : MonoBehaviour
 
     //Définie l'action à effectuer en cas d'appui sur la bonne lettre
 
-    void ActionLettre()
+    void BonneLettre()
     {
+        //Change la couleur de la lettre
+        letter.GetComponent<SpriteRenderer>().color = Color.green;
 
-        Destroy(letter);
+        //Stope le mouvement de la lettre
+        letter.GetComponent<LettreAleatoire>().speed = new Vector2(0, 0);
+
+        //Incremente le score
         ScoreManager.score += scoreValue;
 
-        // GetComponent<SpriteRenderer>().color = Color.green;
+        //Detruit la lettre dans un délai de 0.5 secondes
+        Destroy(letter, 0.5f);
 
+        //Empêche le joueur de faire quoi que ce soit pendant ce délai
+        success = true;
     }   
     
+    void MauvaiseLettre()
+    {
+        if (Input.anyKeyDown)
+        {
+            letter.GetComponent<SpriteRenderer>().color = Color.red;
+        }
+    }
 
     //Définie l'action à effectuer en cas d'appui sur le clavier
 
@@ -91,158 +106,184 @@ public class LettreAleatoire : MonoBehaviour
             case 0:
                 if (Input.GetKeyDown("a"))
                 {
-                    ActionLettre();
+                    BonneLettre();
                 }
+                else MauvaiseLettre();
                 break;
             case 1:
                 if (Input.GetKeyDown("b"))
                 {
-                    ActionLettre();
+                    BonneLettre();
                 }
+                else MauvaiseLettre();
                 break;
             case 2:
                 if (Input.GetKeyDown("c"))
                 {
-                    ActionLettre();
+                    BonneLettre();
                 }
+                else MauvaiseLettre();
                 break;
             case 3:
                 if (Input.GetKeyDown("d"))
                 {
-                    ActionLettre();
+                    BonneLettre();
                 }
+                else MauvaiseLettre();
                 break;
             case 4:
                 if (Input.GetKeyDown("e"))
                 {
-                    ActionLettre();
+                    BonneLettre();
                 }
+                else MauvaiseLettre();
                 break;
             case 5:
                 if (Input.GetKeyDown("f"))
                 {
-                    ActionLettre();
+                    BonneLettre();
                 }
+                else MauvaiseLettre();
                 break;
             case 6:
                 if (Input.GetKeyDown("g"))
                 {
-                    ActionLettre();
+                    BonneLettre();
                 }
+                else MauvaiseLettre();
                 break;
             case 7:
                 if (Input.GetKeyDown("h"))
                 {
-                    ActionLettre();
+                    BonneLettre();
                 }
+                else MauvaiseLettre();
                 break;
             case 8:
                 if (Input.GetKeyDown("i"))
                 {
-                    ActionLettre();
+                    BonneLettre();
                 }
+                else MauvaiseLettre();
                 break;
             case 9:
                 if (Input.GetKeyDown("j"))
                 {
-                    ActionLettre();
+                    BonneLettre();
                 }
+                else MauvaiseLettre();
                 break;
             case 10:
                 if (Input.GetKeyDown("k"))
                 {
-                    ActionLettre();
+                    BonneLettre();
                 }
+                else MauvaiseLettre();
                 break;
             case 11:
                 if (Input.GetKeyDown("l"))
                 {
-                    ActionLettre();
+                    BonneLettre();
                 }
+                else MauvaiseLettre();
                 break;
             case 12:
                 if (Input.GetKeyDown("m"))
                 {
-                    ActionLettre();
+                    BonneLettre();
                 }
+                else MauvaiseLettre();
                 break;
             case 13:
                 if (Input.GetKeyDown("n"))
                 {
-                    ActionLettre();
+                    BonneLettre();
                 }
+                else MauvaiseLettre();
                 break;
             case 14:
                 if (Input.GetKeyDown("o"))
                 {
-                    ActionLettre();
+                    BonneLettre();
                 }
+                else MauvaiseLettre();
                 break;
             case 15:
                 if (Input.GetKeyDown("p"))
                 {
-                    ActionLettre();
+                    BonneLettre();
                 }
+                else MauvaiseLettre();
                 break;
             case 16:
                 if (Input.GetKeyDown("q"))
                 {
-                    ActionLettre();
+                    BonneLettre();
                 }
+                else MauvaiseLettre();
                 break;
             case 17:
                 if (Input.GetKeyDown("r"))
                 {
-                    ActionLettre();
+                    BonneLettre();
                 }
+                else MauvaiseLettre();
                 break;
             case 18:
                 if (Input.GetKeyDown("s"))
                 {
-                    ActionLettre();
+                    BonneLettre();
                 }
+                else MauvaiseLettre();
                 break;
             case 19:
                 if (Input.GetKeyDown("t"))
                 {
-                    ActionLettre();
+                    BonneLettre();
                 }
+                else MauvaiseLettre();
                 break;
             case 20:
                 if (Input.GetKeyDown("u"))
                 {
-                    ActionLettre();
+                    BonneLettre();
                 }
+                else MauvaiseLettre();
                 break;
             case 21:
                 if (Input.GetKeyDown("v"))
                 {
-                    ActionLettre();
+                    BonneLettre();
                 }
+                else MauvaiseLettre();
                 break;
             case 22:
                 if (Input.GetKeyDown("w"))
                 {
-                    ActionLettre();
+                    BonneLettre();
                 }
+                else MauvaiseLettre();
                 break;
             case 23:
                 if (Input.GetKeyDown("x"))
                 {
-                    ActionLettre();
+                    BonneLettre();
                 }
+                else MauvaiseLettre();
                 break;
             case 24:
                 if (Input.GetKeyDown("y"))
                 {
-                    ActionLettre();
+                    BonneLettre();
                 }
+                else MauvaiseLettre();
                 break;
             case 25:
                 if (Input.GetKeyDown("z"))
                 {
-                    ActionLettre();
+                    BonneLettre();
                 }
+                else MauvaiseLettre();
                 break;
 
         }
