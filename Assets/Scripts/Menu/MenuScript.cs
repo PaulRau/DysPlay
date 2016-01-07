@@ -42,7 +42,43 @@ public class MenuScript : MonoBehaviour {
     {
         Application.LoadLevel("Scene1.0.1");
     }
-
+    public void lancerNiveau2()
+    {
+        Application.LoadLevel("Lettre1");
+    }
+    public void lancerNiveau3()
+    {
+        Application.LoadLevel("Lettre2");
+    }
+    public void lancerNiveau4()
+    {
+        Application.LoadLevel("Lettre3");
+    }
+    public void lancerNiveau5()
+    {
+        Application.LoadLevel("Lettre4");
+    }
+    public void lancerNiveau6()
+    {
+        Application.LoadLevel("Lettre5");
+    }
+    public void lancerNiveau7()
+    {
+        Application.LoadLevel("Mot1");
+    }
+    public void lancerNiveau8()
+    {
+        Application.LoadLevel("Mot2");
+    }
+    public void lancerNiveau9()
+    {
+        Application.LoadLevel("Mot3");
+    }
+    public void lancerNiveau10()
+    {
+        Application.LoadLevel("Mot4");
+    }
+   
     //scene1.0.1
     public void butonPause()
     {

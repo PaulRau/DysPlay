@@ -15,3 +15,21 @@ EditorBuildSettings:
     path: Assets/Scenes/PartiePerso.unity
   - enabled: 1
     path: Assets/Scenes/PartieNiveaux.unity
+  - enabled: 1
+    path: Assets/Scenes/Niveaux/Lettre1.unity
+  - enabled: 1
+    path: Assets/Scenes/Niveaux/Lettre2.unity
+  - enabled: 1
+    path: Assets/Scenes/Niveaux/Lettre3.unity
+  - enabled: 1
+    path: Assets/Scenes/Niveaux/Lettre4.unity
+  - enabled: 1
+    path: Assets/Scenes/Niveaux/Lettre5.unity
+  - enabled: 1
+    path: Assets/Scenes/Niveaux/Mot1.unity
+  - enabled: 1
+    path: Assets/Scenes/Niveaux/Mot2.unity
+  - enabled: 1
+    path: Assets/Scenes/Niveaux/Mot3.unity
+  - enabled: 1
+    path: Assets/Scenes/Niveaux/Mot4.unity
