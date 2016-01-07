@@ -8,7 +8,7 @@ public class ComportementSol : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "LettreChoisie(Clone)" || collision.gameObject.name == "LettreAleatoire(Clone)" || collision.gameObject.name == "Mot(Clone)" || collision.gameObject.name == "MotAleatoire(Clone)")
+        if (collision.gameObject.name == "LettreChoisie(Clone)" || collision.gameObject.name == "LettreAleatoire(Clone)" )
         {
             //detruit la lettre
             Destroy(collision.gameObject);
@@ -18,5 +18,11 @@ public class ComportementSol : MonoBehaviour {
         }
 
 
+        if (collision.gameObject.name == "Mot(Clone)" || collision.gameObject.name == "MotAleatoire(Clone)")
+        {
+            //detruit la lettre
+            Destroy(collision.gameObject);
+        }
+        
     }
 }
