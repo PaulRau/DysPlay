@@ -129,6 +129,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b422b7cb86125b4499f4e51950947d34, type: 3}
   - {fileID: 21300000, guid: ba1d892701a11104d9427f21f30fcc09, type: 3}
   scoreValue: 1
+  scoreValue1: 1
 --- !u!212 &21290038
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -413,6 +414,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Size.y
       value: .800000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: scoreValue
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

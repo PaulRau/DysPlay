@@ -3,10 +3,10 @@ using System.Collections;
 
 public class ComportementSol : MonoBehaviour {
 
-    public GameObject[] vie;
+    public GameObject vie;
 
 
-    public int scoreValue = 1;
+    public int scoreValue = 10;
 
     void OnCollisionEnter2D(Collision2D collision)
     {

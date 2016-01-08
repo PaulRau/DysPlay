@@ -12,6 +12,7 @@ public class MotAleatoire : MonoBehaviour
     private GameObject[] letter = new GameObject[12];
     public Sprite[] alphabet;     // Contient tous les sprites (à compléter dans l'instructor)
     public int scoreValue = 1;
+    public int scoreValue1 = 1;
     private int type = 0;
     private int currenttype = 0;
     private char[] characters;
@@ -300,6 +301,7 @@ public class MotAleatoire : MonoBehaviour
     {
 
         ScoreManager.score += scoreValue;
+        ScoreManager.bonneLettre += scoreValue1;
 
         letter[x].GetComponent<SpriteRenderer>().color = Color.green;
         x++;
@@ -310,7 +312,15 @@ public class MotAleatoire : MonoBehaviour
     {
         if (Input.anyKeyDown)
         {
-            if (Input.GetMouseButtonDown(0)) { }else letter[x].GetComponent<SpriteRenderer>().color = Color.red;
+            if (Input.GetMouseButtonDown(0))
+            {
+
+            }
+            else
+            {
+                letter[x].GetComponent<SpriteRenderer>().color = Color.red;
+                ScoreManager.mauvaiseLettre += scoreValue1;
+            }
         }
     }
 

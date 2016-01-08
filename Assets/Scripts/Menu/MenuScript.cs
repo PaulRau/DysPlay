@@ -41,6 +41,8 @@ public class MenuScript : MonoBehaviour {
     public void lancerNiveau1()
     {
         Application.LoadLevel("Scene1.0.1");
+        Time.timeScale = 1.0f;
+        pause = false;
     }
     public void lancerNiveau2()
     {
