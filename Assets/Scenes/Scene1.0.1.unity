@@ -899,7 +899,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a243451ee391f3d4db12f231eff3ee7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vie: {fileID: 0}
+  coeurPrefab: {fileID: 152550, guid: b1237ce5b4e80914aa598ff0cf36ba15, type: 2}
+  coeur: {fileID: 0}
+  canvas: {fileID: 179098, guid: 5f23973f42d5f384ab29954c1caa07dc, type: 2}
+  nbcoeur:
+  - {fileID: 21300000, guid: b4820e8defa7c23448d2093407f00d01, type: 3}
+  - {fileID: 21300000, guid: 21bfb6d6ad9d58f4a9fb5673358fb8d1, type: 3}
+  - {fileID: 21300000, guid: 4f7c0f2cc5a12344aac630f629f925e0, type: 3}
+  - {fileID: 21300000, guid: 9bb9c9a9ea34d89439701989de27cf07, type: 3}
+  - {fileID: 21300000, guid: 59f2fb666289c8a46917976ac817d479, type: 3}
   scoreValue: 1
 --- !u!50 &1224585187
 Rigidbody2D:
@@ -912,7 +920,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0

@@ -60,7 +60,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: .800000012, y: .800000012}
+  m_Size: {x: .600000024, y: .600000024}
 --- !u!114 &11468264
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,16 +89,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   liste:
-  - albatross
-  - montagne
-  - koala
-  - eau
-  - air
-  - lui
-  - bonjour
-  - carte
-  - aide
+  - le
   - ah
+  - lui
+  - constitution
+  - tu
+  - aime
+  - chocolat
+  - poil
+  - arbre
+  - source
+  - calvaire
+  - dyspraxique
+  - envie
+  - parfaitement
+  - bol
+  - extremement
+  - parfait
+  - poire
+  - animation
+  - quotient
   Clone: {fileID: 135216}
   letterPrefab: {fileID: 138626, guid: ab112ceeda7e47c498fe41748e08a051, type: 2}
   alphabet:
@@ -167,7 +177,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: liste.Array.size
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: alphabet.Array.size
@@ -309,43 +319,43 @@ Prefab:
       objectReference: {fileID: 135216}
     - target: {fileID: 0}
       propertyPath: liste.Array.data[5]
-      value: lui
+      value: aime
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: liste.Array.data[6]
-      value: bonjour
+      value: chocolat
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: liste.Array.data[7]
-      value: carte
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: liste.Array.data[8]
-      value: aide
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: liste.Array.data[9]
-      value: ah
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: liste.Array.data[10]
       value: poil
       objectReference: {fileID: 0}
     - target: {fileID: 0}
+      propertyPath: liste.Array.data[8]
+      value: arbre
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: liste.Array.data[9]
+      value: source
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: liste.Array.data[10]
+      value: calvaire
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
       propertyPath: liste.Array.data[11]
-      value: le
+      value: dyspraxique
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: liste.Array.data[12]
-      value: rateau
+      value: envie
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: liste.Array.data[13]
-      value: kayak
+      value: parfaitement
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: liste.Array.data[14]
-      value: marteau
+      value: bol
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: speed.x
@@ -381,23 +391,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: liste.Array.data[1]
-      value: montagne
+      value: ah
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: liste.Array.data[2]
-      value: koala
+      value: lui
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: liste.Array.data[3]
-      value: eau
+      value: constitution
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: liste.Array.data[4]
-      value: air
+      value: tu
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: liste.Array.data[0]
-      value: albatross
+      value: le
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Enabled
@@ -409,15 +419,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Size.x
-      value: .800000012
+      value: .600000024
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Size.y
-      value: .800000012
+      value: .600000024
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: scoreValue
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: liste.Array.data[15]
+      value: extremement
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: liste.Array.data[16]
+      value: parfait
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: liste.Array.data[17]
+      value: poire
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: liste.Array.data[18]
+      value: animation
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: liste.Array.data[19]
+      value: quotient
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

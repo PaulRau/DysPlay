@@ -24,6 +24,8 @@ public class GenerateurFinDePartie : MonoBehaviour {
         {
             if (ScoreManager.score >= 15)
             {
+                MotAleatoire.success = true;
+                LettreAleatoire.success = true;
                 Instantiate(canvas);
                 Time.timeScale = 0.0f;
                 //pas oublié de remettre la partie en route !

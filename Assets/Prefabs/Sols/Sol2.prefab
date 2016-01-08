@@ -42,7 +42,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -71,6 +71,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a243451ee391f3d4db12f231eff3ee7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coeurPrefab: {fileID: 152550, guid: b1237ce5b4e80914aa598ff0cf36ba15, type: 2}
+  coeur: {fileID: 0}
+  canvas: {fileID: 179098, guid: 5f23973f42d5f384ab29954c1caa07dc, type: 2}
+  nbcoeur:
+  - {fileID: 21300000, guid: b4820e8defa7c23448d2093407f00d01, type: 3}
+  - {fileID: 21300000, guid: 21bfb6d6ad9d58f4a9fb5673358fb8d1, type: 3}
+  - {fileID: 21300000, guid: 4f7c0f2cc5a12344aac630f629f925e0, type: 3}
+  - {fileID: 21300000, guid: 9bb9c9a9ea34d89439701989de27cf07, type: 3}
+  - {fileID: 21300000, guid: 59f2fb666289c8a46917976ac817d479, type: 3}
   scoreValue: 1
 --- !u!212 &21272910
 SpriteRenderer:
@@ -106,7 +115,64 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: nbcoeur.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: mot
+      value: 
+      objectReference: {fileID: 105058, guid: 965619d0610a1254dacd57a02301ccbe, type: 2}
+    - target: {fileID: 0}
+      propertyPath: MotA
+      value: 
+      objectReference: {fileID: 135216, guid: d3f1568c39aad8f45a7bf3b0716179b7, type: 2}
+    - target: {fileID: 0}
+      propertyPath: LA
+      value: 
+      objectReference: {fileID: 186886, guid: 52a96268fdeb88c4b8f19700f9584854, type: 2}
+    - target: {fileID: 0}
+      propertyPath: Lettre
+      value: 
+      objectReference: {fileID: 138626, guid: ab112ceeda7e47c498fe41748e08a051, type: 2}
+    - target: {fileID: 0}
+      propertyPath: coeur
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: nbcoeur.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: b4820e8defa7c23448d2093407f00d01,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: nbcoeur.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 21bfb6d6ad9d58f4a9fb5673358fb8d1,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: nbcoeur.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4f7c0f2cc5a12344aac630f629f925e0,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: nbcoeur.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9bb9c9a9ea34d89439701989de27cf07,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: nbcoeur.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 59f2fb666289c8a46917976ac817d479,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: coeurPrefab
+      value: 
+      objectReference: {fileID: 152550, guid: b1237ce5b4e80914aa598ff0cf36ba15, type: 2}
+    - target: {fileID: 0}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 179098, guid: 5f23973f42d5f384ab29954c1caa07dc, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 125822}
