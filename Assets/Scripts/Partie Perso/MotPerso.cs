@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Mot : MonoBehaviour {
-
+public class MotPerso : MonoBehaviour {
+   
     public static string liste;
-    //public string liste = "abcd";
     private int i = 0;
     private int j = 0;
     public GameObject Clone;
@@ -18,11 +17,12 @@ public class Mot : MonoBehaviour {
     private char[] characters;
     private int x = 0;
     private bool success = false;
-      
-    
+
+
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
 
         success = false;
 
@@ -35,17 +35,17 @@ public class Mot : MonoBehaviour {
         characters = liste.ToCharArray();
 
 
-        
+
         for (i = 0; i < liste.Length; i++)
         {
             AfficheLettre(characters[i]);
-            
+
         }
     }
     // Update is called once per frame
     void Update()
     {
-        
+
 
         if (x < liste.Length)
         {
@@ -133,25 +133,25 @@ public class Mot : MonoBehaviour {
                     break;
             }
         }
-       else
+        else
         {
 
             success = true;
-           for (i = 0; i < liste.Length; i++)
-           {
-                
+            for (i = 0; i < liste.Length; i++)
+            {
+
                 // Arrête le mouvement de chaque lettre 
-              letter[i].GetComponent<LettreChoisie>().speed = new Vector2(0,0);
-                
+                letter[i].GetComponent<LettreChoisie>().speed = new Vector2(0, 0);
+
                 // Detruit chaque lettre après un délai de 0.5 secondes
-                Destroy(letter[i],0.5f); 
-                   
-           }
+                Destroy(letter[i], 0.5f);
+
+            }
             // Ne pas oublier de detruire l'object mot éventuellement
-            Destroy(Clone,0.5f);
+            Destroy(Clone, 0.5f);
         }
-        if (success== false) { clavier(); }
-        
+        if (success == false) { clavier(); }
+
     }
 
 
@@ -165,7 +165,7 @@ public class Mot : MonoBehaviour {
                 type = 0;
                 letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 8), Quaternion.identity);
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
-               
+
                 break;
             case 'b':
                 type = 1;
@@ -300,7 +300,7 @@ public class Mot : MonoBehaviour {
 
     void BonneLettre()
     {
-        
+
         ScoreManager.score += scoreValue;
         ScoreManager.bonneLettre += scoreValue1;
 
@@ -371,7 +371,7 @@ public class Mot : MonoBehaviour {
             case 6:
                 if (Input.GetKeyDown("g"))
                 {
-                    BonneLettre(); 
+                    BonneLettre();
                 }
                 else MauvaiseLettre();
                 break;
@@ -514,4 +514,5 @@ public class Mot : MonoBehaviour {
 
     
 	
+
 }
