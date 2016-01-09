@@ -8,7 +8,7 @@ public class MotPerso : MonoBehaviour
     public string[] liste2 = { "le", "la", "de", "ma", "si", "vu" };
     public string[] liste3 = { "les", "lui", "bon", "mes", "cri" };
     public string[] liste4 = { "main", "joli", "lieu", "ceux", "pain" };
-    public string[] liste5 = { "quatre", "carte", "sinon", "papier", "appel" };
+    public string[] liste5 = {  "carte", "sinon", "appel" };
     public string[] liste6 = { "ballon", "enfant", "revoir", "reflex" };
 
     public int nb;
@@ -47,7 +47,9 @@ public class MotPerso : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        //PersonalisablePartie.NbLettreAlea;
+
+        Clone.GetComponent<LettreChoisie>().speed = new Vector2(0, PersonalisablePartie.vitesse);
+       
         nb = (int)PersonalisablePartie.NbLettreAlea;
         Debug.Log(nb);
         switch (nb)

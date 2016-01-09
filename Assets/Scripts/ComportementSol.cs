@@ -7,20 +7,32 @@ public class ComportementSol : MonoBehaviour {
     public GameObject coeur;
     public GameObject canvas;
     public Sprite[] nbcoeur;
-    private int vies; 
+    private int vies;
+
+    private bool aVie;
 
     void Start()
     {
         vies = 4;
-        coeur = Instantiate(coeurPrefab);
+
+        aVie = PersonalisablePartie.OuiNonVie;
+
+        if(aVie == true)
+        {
+            coeur = Instantiate(coeurPrefab);
+        }
+      
+       
         
 
     } 
     
     void Update()
     {
+          if(aVie == true)
+        {
         coeur.GetComponent<SpriteRenderer>().sprite = nbcoeur[vies];
-
+        }
         if (GameObject.Find("GameOver(Clone)") == null)
         {
             if (vies==0)
@@ -80,11 +92,13 @@ public class ComportementSol : MonoBehaviour {
             MotAleatoire.success = true;
             LettreAleatoire.success = true;
 
-            if (vies != 0)
+            if (aVie == true)
             {
-                vies--;
-            }// else fin de partie 
-
+                if (vies != 0)
+                {
+                    vies--;
+                }// else fin de partie 
+            }
         }
 
 
@@ -100,11 +114,13 @@ public class ComportementSol : MonoBehaviour {
                 //desactive le clavie
                 MotAleatoire.success = true;
                 LettreAleatoire.success = true;
-
-                if (vies != 0)
+                if (aVie == true)
                 {
-                    vies--;
-                }// else fin de partie                
+                    if (vies != 0)
+                    {
+                        vies--;
+                    }// else fin de partie    
+                }
             }
         
         

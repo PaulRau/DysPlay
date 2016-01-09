@@ -35,7 +35,7 @@ public class LettreChoisie : MonoBehaviour
 
     void Start()
     {
-         
+        letter.GetComponent<LettreChoisie>().speed = new Vector2(0, PersonalisablePartie.vitesse);
     }
 
     void Update()

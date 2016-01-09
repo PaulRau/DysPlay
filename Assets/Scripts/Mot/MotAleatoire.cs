@@ -181,6 +181,7 @@ public class MotAleatoire : MonoBehaviour
                 }
                 else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
 
+               
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'b':

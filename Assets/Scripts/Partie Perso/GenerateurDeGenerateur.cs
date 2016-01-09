@@ -16,7 +16,7 @@ public class GenerateurDeGenerateur : MonoBehaviour {
     void Start()
     {
 
-
+       // mot.GetComponent<LettreChoisie>().speed = new Vector2(0, PersonalisablePartie.vitesse);
 
     }
 

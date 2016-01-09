@@ -6,11 +6,13 @@ public class PersonalisablePartie : MonoBehaviour {
 
     public static float nombrescore;
 
+    public static bool OuiNonVie = true;
 
     public static bool bloc = false;
     public static bool bloc1 = false;
 
     public static float NbLettreAlea;
+    public static float vitesse = 4;
 
    public GameObject but;
    public GameObject but2;
@@ -48,8 +50,14 @@ public class PersonalisablePartie : MonoBehaviour {
       
        
 	}
+    
+    
+    public void sliderVitesse(float vit)
+    {
+        vitesse = vit;
 
-  
+    }
+       
 
     public void MOTtoggle(bool sel)
     {
@@ -91,6 +99,12 @@ public class PersonalisablePartie : MonoBehaviour {
         NbLettreAlea = slide;
         
            
+    }
+
+    public void OnToggleVie(bool vita)
+    {
+        OuiNonVie = vita;
+        Debug.Log(OuiNonVie);
     }
 
     public void OnToggleLettre(bool selected)

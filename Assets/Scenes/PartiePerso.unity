@@ -2642,7 +2642,18 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 958205405}
+        m_MethodName: OnToggleVie
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 1
@@ -3017,12 +3028,12 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 10
   m_WholeNumbers: 1
-  m_Value: 0
+  m_Value: 4
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 958205405}
-        m_MethodName: Vitesse
+        m_MethodName: sliderVitesse
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3845,6 +3856,7 @@ GameObject:
   - 224: {fileID: 1578635753}
   - 222: {fileID: 1578635752}
   - 114: {fileID: 1578635751}
+  - 114: {fileID: 1578635754}
   m_Layer: 5
   m_Name: Text Vitesse
   m_TagString: Untagged
@@ -3883,7 +3895,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Vitesse des lettres/mots: 0'
+  m_Text: 'Vitesse des lettres/mots: 4'
 --- !u!222 &1578635752
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3904,9 +3916,21 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -144, y: -127.5}
-  m_SizeDelta: {x: 205, y: 21}
+  m_AnchoredPosition: {x: -136, y: -127.5}
+  m_SizeDelta: {x: 220, y: 21}
   m_Pivot: {x: .5, y: .5}
+--- !u!114 &1578635754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1578635750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04a32e1a107aa06498a7336876222daa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1578635751}
 --- !u!1 &1613647884
 GameObject:
   m_ObjectHideFlags: 0

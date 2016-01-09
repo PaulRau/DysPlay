@@ -10,7 +10,7 @@ public class GenererMot : MonoBehaviour
     void Start()
     {
 
-        
+      
         
     }
 
