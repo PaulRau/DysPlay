@@ -17,13 +17,14 @@ public class Mot : MonoBehaviour {
     private int currenttype = 0;
     private char[] characters;
     private int x = 0;
-    private bool success = false;
+    public static bool success = false; 
       
     
 
     // Use this for initialization
     void Start () {
 
+        Clone.GetComponent<LettreChoisie>().speed = new Vector2(0, PersonalisablePartie.vitesse);
         success = false;
 
         for (j = 0; j < 12; j++)

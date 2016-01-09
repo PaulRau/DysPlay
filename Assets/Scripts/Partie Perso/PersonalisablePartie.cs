@@ -142,7 +142,8 @@ public class PersonalisablePartie : MonoBehaviour {
     public void choixLettre(string choix)
     {
        // Mot.liste = choix;
-    
+   
+      LettrechoisiPerso.cara = choix;
 
     }
 
