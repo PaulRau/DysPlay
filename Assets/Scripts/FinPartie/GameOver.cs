@@ -1,26 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GenerateurFinDePartie : MonoBehaviour {
+public class GameOver : MonoBehaviour
+{
 
     public GameObject canvas;
 
-   
-	// Use this for initialization
-	void Start () {
 
-       
-	}
-	
-
-    
-    
-
-	// Update is called once per frame
-	void Update () {
+    // Use this for initialization
+    void Start()
+    {
 
 
-        if (GameObject.Find("Canvas(Clone)") == null)
+    }
+
+
+
+
+
+    // Update is called once per frame
+    void Update()
+    {
+
+
+        if (GameObject.Find("GameOver(Clone)") == null)
         {
             if (ScoreManager.score >= 15)
             {
@@ -32,11 +35,6 @@ public class GenerateurFinDePartie : MonoBehaviour {
             }
 
         }
-        
 
-      
-     
-            
-
-	}
+    }
 }
