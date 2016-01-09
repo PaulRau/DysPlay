@@ -3,7 +3,8 @@ using System.Collections;
 
 public class Mot : MonoBehaviour {
 
-    public string liste = "abcd";
+    public static string liste;
+    //public string liste = "abcd";
     private int i = 0;
     private int j = 0;
     public GameObject Clone;
@@ -140,8 +141,8 @@ public class Mot : MonoBehaviour {
            {
                 
                 // Arrête le mouvement de chaque lettre 
-                letter[i].GetComponent<LettreChoisie>().speed = new Vector2(0,0);
-
+              letter[i].GetComponent<LettreChoisie>().speed = new Vector2(0,0);
+                
                 // Detruit chaque lettre après un délai de 0.5 secondes
                 Destroy(letter[i],0.5f); 
                    

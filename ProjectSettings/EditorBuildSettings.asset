@@ -33,3 +33,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Niveaux/Mot3.unity
   - enabled: 1
     path: Assets/Scenes/Niveaux/Mot4.unity
+  - enabled: 1
+    path: Assets/Scenes/PersonalisablePartie.unity
