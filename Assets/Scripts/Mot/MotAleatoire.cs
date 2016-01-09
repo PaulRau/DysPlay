@@ -20,6 +20,17 @@ public class MotAleatoire : MonoBehaviour
     public static bool success = false;
     private int rand = 0;
 
+    public AudioClip sonBonneLettre;
+    public AudioClip sonMauvaiseLettre;
+
+    private AudioSource source;
+
+    void awake ()
+    {
+        source = GetComponent<AudioSource>();
+    }
+    
+
 
     // Use this for initialization
     void Start()
@@ -446,7 +457,10 @@ public class MotAleatoire : MonoBehaviour
         ScoreManager.score += scoreValue;
         ScoreManager.bonneLettre += scoreValue1;
 
+
         letter[x].GetComponent<SpriteRenderer>().color = Color.green;
+
+      //  source.PlayOneShot(sonBonneLettre,1.0f);
         x++;
 
     }

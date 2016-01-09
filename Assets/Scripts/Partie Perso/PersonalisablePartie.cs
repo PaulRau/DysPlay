@@ -1,10 +1,19 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class PersonalisablePartie : MonoBehaviour {
 
-    
+    public static float nombrescore;
 
+
+    Text text;
+
+    void Awake ()
+    {
+        text = GetComponent<Text>();
+        nombrescore = 20;
+    }
 
     
 	// Use this for initialization
@@ -16,6 +25,8 @@ public class PersonalisablePartie : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        text.text = "Score à atteindre: " + nombrescore;
        
 	}
 
@@ -62,9 +73,14 @@ public class PersonalisablePartie : MonoBehaviour {
     {
         Mot.liste = choix;
         Debug.Log(choix);
+               
+    }
 
+    public void choixLettre(string choix)
+    {
+        Mot.liste = choix;
+        Debug.Log(choix);
 
-       
     }
 
 
@@ -80,5 +96,26 @@ public class PersonalisablePartie : MonoBehaviour {
             GenerateurDeGenerateur.choixMotchoisia = false;
         }
                 
+    }
+
+    public void OnToggleLettreChoix(bool ch)
+    {
+        if (ch == true)
+        {
+            GenerateurDeGenerateur.choixLettrechoisia = true;
+
+        }
+        else
+        {
+            GenerateurDeGenerateur.choixLettrechoisia = false;
+        }
+    }
+
+    public void longeurPartie(float lon)
+    {
+        GenerateurFinDePartie.finDePartiePerso = lon;
+        nombrescore = lon;
+        Debug.Log(lon);
+        
     }
 }

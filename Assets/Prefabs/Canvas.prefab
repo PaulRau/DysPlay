@@ -499,7 +499,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11423082, guid: b897218475b04264e9f1eab3a475e33a, type: 2}
-        m_MethodName: lancerNiveau1
+        m_MethodName: reJouer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -6,9 +6,11 @@ public class GenerateurDeGenerateur : MonoBehaviour {
     public static bool choixMota = false;
     public static bool choixLettrea = false;
     public static bool choixMotchoisia = false;
+    public static bool choixLettrechoisia = false;
     public GameObject choixMot;
     public GameObject choixLettre;
     public GameObject choixMotChoisi;
+    public GameObject choixLettreChoisi;
     // Use this for initialization
 
     void Start()
@@ -43,6 +45,14 @@ public class GenerateurDeGenerateur : MonoBehaviour {
             if (GameObject.Find("LettreChoisie(Clone)") == null)
             {
                 Instantiate(choixMotChoisi);
+            }
+        }
+
+        if (choixLettrechoisia == true)
+        {
+            if (GameObject.Find("LettreChoisie(Clone)") == null)
+            {
+                Instantiate(choixLettreChoisi);
             }
         }
      

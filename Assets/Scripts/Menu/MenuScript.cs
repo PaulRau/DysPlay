@@ -11,6 +11,15 @@ public class MenuScript : MonoBehaviour {
         Application.LoadLevel("PersonalisablePartie");
     }
 
+
+    public void reJouer()
+    {
+        Application.LoadLevel(Application.loadedLevel);
+        Time.timeScale = 1.0f;
+        pause = false;
+     
+    }
+
     //retour menu
     public void retourMenu()
     {
@@ -20,6 +29,8 @@ public class MenuScript : MonoBehaviour {
         GenerateurDeGenerateur.choixMota = false;
         GenerateurDeGenerateur.choixLettrea = false;
         GenerateurDeGenerateur.choixMotchoisia = false;
+        GenerateurDeGenerateur.choixLettrechoisia = false;
+        GenerateurFinDePartie.finDePartiePerso = 15;
     }
 
     //menu
@@ -112,6 +123,6 @@ public class MenuScript : MonoBehaviour {
         }
     }
 
-   
+  
 
 }

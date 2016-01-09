@@ -5,6 +5,7 @@ public class GenerateurFinDePartie : MonoBehaviour {
 
     public GameObject canvas;
 
+    public static float finDePartiePerso = 15;
    
 	// Use this for initialization
 	void Start () {
@@ -22,7 +23,7 @@ public class GenerateurFinDePartie : MonoBehaviour {
 
         if (GameObject.Find("Canvas(Clone)") == null)
         {
-            if (ScoreManager.score >= 15)
+            if (ScoreManager.score >= finDePartiePerso)
             {
                 Instantiate(canvas);
                 Time.timeScale = 0.0f;
