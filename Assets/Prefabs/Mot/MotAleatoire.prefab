@@ -140,6 +140,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ba1d892701a11104d9427f21f30fcc09, type: 3}
   scoreValue: 1
   scoreValue1: 1
+  sonBonneLettre: {fileID: 8300000, guid: 5952017146d231c478e38c89163fd523, type: 3}
+  sonMauvaiseLettre: {fileID: 8300000, guid: 5952017146d231c478e38c89163fd523, type: 3}
 --- !u!212 &21290038
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -449,6 +451,14 @@ Prefab:
       propertyPath: liste.Array.data[19]
       value: quotient
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: sonBonneLettre
+      value: 
+      objectReference: {fileID: 8300000, guid: 5952017146d231c478e38c89163fd523, type: 3}
+    - target: {fileID: 0}
+      propertyPath: sonMauvaiseLettre
+      value: 
+      objectReference: {fileID: 8300000, guid: 5952017146d231c478e38c89163fd523, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 135216}

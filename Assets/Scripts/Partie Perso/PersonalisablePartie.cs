@@ -6,13 +6,26 @@ public class PersonalisablePartie : MonoBehaviour {
 
     public static float nombrescore;
 
+    public static bool bloc = false;
+    public static bool bloc1 = false;
 
-    Text text;
+   public GameObject but;
+   public GameObject but2;
+   public GameObject but3;
+   public GameObject but4;
+
+
+    public Text text;
+    
 
     void Awake ()
     {
         text = GetComponent<Text>();
+    
         nombrescore = 20;
+        bloc = false;
+        bloc1 = false;
+        Debug.Log(bloc);
     }
 
     
@@ -30,21 +43,42 @@ public class PersonalisablePartie : MonoBehaviour {
        
 	}
 
+    public void MOTtoggle(bool sel)
+    {
+        bloc = sel;
+        Debug.Log(bloc);
+    }
+
+    public void LETTREtoggle(bool sela)
+    {
+        bloc1 = sela;
+        Debug.Log(bloc1);
+    }
 
     public void OnToggleMot(bool selected)
     {
 
+
+           if(bloc == true)
+           {
+               if (selected == true)
+               {
+                   GenerateurDeGenerateur.choixMota = true;
+
+               }
+               else
+               {
+                   GenerateurDeGenerateur.choixMota = false;
+               }
+           }
+           else
+           {
+               but.GetComponent<Toggle>().isOn = false;
+           }
        
        
-        if (selected == true)
-        {
-            GenerateurDeGenerateur.choixMota = true;
-            
-        }
-        else
-        {
-            GenerateurDeGenerateur.choixMota = false;
-        }
+       
+  
                    
         
     }
@@ -54,7 +88,8 @@ public class PersonalisablePartie : MonoBehaviour {
     {
       
 
-
+         if(bloc1 == true)
+           {
         if (selected == true)
         {
             GenerateurDeGenerateur.choixLettrea = true;
@@ -64,6 +99,11 @@ public class PersonalisablePartie : MonoBehaviour {
         {
             GenerateurDeGenerateur.choixLettrea = false;
         }
+           }
+         else
+         {
+             but3.GetComponent<Toggle>().isOn = false;
+         }
 
         
     }
@@ -86,6 +126,9 @@ public class PersonalisablePartie : MonoBehaviour {
 
     public void OnToggleMotChoix(bool choivre)
     {
+
+        if(bloc == true)
+           {
          if (choivre == true)
         {
             GenerateurDeGenerateur.choixMotchoisia = true;
@@ -95,11 +138,18 @@ public class PersonalisablePartie : MonoBehaviour {
         {
             GenerateurDeGenerateur.choixMotchoisia = false;
         }
-                
+           }
+        else
+        {
+            but2.GetComponent<Toggle>().isOn = false;
+        } 
     }
 
     public void OnToggleLettreChoix(bool ch)
     {
+       
+         if(bloc1 == true)
+           {
         if (ch == true)
         {
             GenerateurDeGenerateur.choixLettrechoisia = true;
@@ -109,6 +159,11 @@ public class PersonalisablePartie : MonoBehaviour {
         {
             GenerateurDeGenerateur.choixLettrechoisia = false;
         }
+           }
+         else
+         {
+             but4.GetComponent<Toggle>().isOn = false;
+         }
     }
 
     public void longeurPartie(float lon)
