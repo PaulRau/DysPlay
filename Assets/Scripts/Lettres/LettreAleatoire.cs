@@ -38,6 +38,7 @@ public class LettreAleatoire : MonoBehaviour
 
     void Start()
     {
+        letter.GetComponent<LettreAleatoire>().speed = new Vector2(0, PersonalisablePartie.vitesse);
         success = false;      
         rand = Random.Range(0, alphabet.Length);                            //nombre aléatoire entre 0 et 27
         letter.GetComponent<SpriteRenderer>().sprite = alphabet[rand];      //ajoute le sprite correspondant à l'object lettre
@@ -61,12 +62,7 @@ public class LettreAleatoire : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = movement;
     }
 
-    public void setSpeed(int value)
-    {        
-        
-        
-        speed = new Vector2(0, value);
-    }
+ 
 
     //Définie l'action à effectuer en cas d'appui sur la bonne lettre
 
