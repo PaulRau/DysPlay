@@ -5,7 +5,7 @@ public class GenerateurFinDePartie : MonoBehaviour {
 
     public GameObject canvas;
 
-    public static float finDePartiePerso = 15;
+    public static float finDePartiePerso = 20;
    
 	// Use this for initialization
 	void Start () {

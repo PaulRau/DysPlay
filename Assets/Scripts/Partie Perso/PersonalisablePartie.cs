@@ -6,8 +6,11 @@ public class PersonalisablePartie : MonoBehaviour {
 
     public static float nombrescore;
 
+
     public static bool bloc = false;
     public static bool bloc1 = false;
+
+    public static float NbLettreAlea;
 
    public GameObject but;
    public GameObject but2;
@@ -17,15 +20,17 @@ public class PersonalisablePartie : MonoBehaviour {
 
     public Text text;
     
+    
 
     void Awake ()
     {
         text = GetComponent<Text>();
+
     
         nombrescore = 20;
         bloc = false;
         bloc1 = false;
-        Debug.Log(bloc);
+     
     }
 
     
@@ -40,19 +45,22 @@ public class PersonalisablePartie : MonoBehaviour {
 	void Update () {
 
         text.text = "Score à atteindre: " + nombrescore;
+      
        
 	}
+
+  
 
     public void MOTtoggle(bool sel)
     {
         bloc = sel;
-        Debug.Log(bloc);
+       
     }
 
     public void LETTREtoggle(bool sela)
     {
         bloc1 = sela;
-        Debug.Log(bloc1);
+        
     }
 
     public void OnToggleMot(bool selected)
@@ -74,15 +82,16 @@ public class PersonalisablePartie : MonoBehaviour {
            else
            {
                but.GetComponent<Toggle>().isOn = false;
-           }
-       
-       
-       
-  
-                   
-        
-    }
+           }       
+      }
 
+
+    public void sliderNbLettreAlea(float slide)
+    {
+        NbLettreAlea = slide;
+        
+           
+    }
 
     public void OnToggleLettre(bool selected)
     {
@@ -112,14 +121,14 @@ public class PersonalisablePartie : MonoBehaviour {
     public void choixMot(string choix)
     {
         Mot.liste = choix;
-        Debug.Log(choix);
+        
                
     }
 
     public void choixLettre(string choix)
     {
         Mot.liste = choix;
-        Debug.Log(choix);
+    
 
     }
 
@@ -173,4 +182,6 @@ public class PersonalisablePartie : MonoBehaviour {
         Debug.Log(lon);
         
     }
+
+   
 }
