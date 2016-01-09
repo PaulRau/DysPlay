@@ -30,8 +30,11 @@ public class MenuScript : MonoBehaviour {
         GenerateurDeGenerateur.choixLettrea = false;
         GenerateurDeGenerateur.choixMotchoisia = false;
         GenerateurDeGenerateur.choixLettrechoisia = false;
-        GenerateurFinDePartie.finDePartiePerso = 15;
+        GenerateurFinDePartie.finDePartiePerso = 20;
+        PersonalisablePartie.NbLettreAlea = 1;
     }
+
+ 
 
     //menu
     public void butonQuitter()

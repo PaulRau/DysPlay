@@ -22,7 +22,7 @@ public class MotAleatoire : MonoBehaviour
 
     public AudioClip sonBonneLettre;
     public AudioClip sonMauvaiseLettre;
-
+    
     private AudioSource source;
 
     void awake ()
