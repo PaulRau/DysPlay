@@ -98,7 +98,7 @@ MonoBehaviour:
   - chocolat
   - poil
   - arbre
-  - "p\xEAche"
+  - peche
   - calvaire
   - dyspraxique
   - envie
@@ -337,7 +337,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: liste.Array.data[9]
-      value: "p\xEAche"
+      value: peche
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: liste.Array.data[10]
