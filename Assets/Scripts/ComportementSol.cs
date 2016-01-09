@@ -73,7 +73,7 @@ public class ComportementSol : MonoBehaviour {
             LettreAleatoire.success = true;
         }
 
-        if (collision.gameObject.name == "LettreAleatoire(Clone)")
+        if (collision.gameObject.name == "LettreAleatoire(Clone)" || collision.gameObject.name == "LettreChoisiPerso(Clone)")
         {
             //Modifie le score
             ScoreManager.score -= scoreValue;

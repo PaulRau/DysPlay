@@ -11,12 +11,17 @@ public class GenerateurDeGenerateur : MonoBehaviour {
     public GameObject choixLettre;
     public GameObject choixMotChoisi;
     public GameObject choixLettreChoisi;
+
+
+    
+
     // Use this for initialization
 
     void Start()
     {
-
+    
        // mot.GetComponent<LettreChoisie>().speed = new Vector2(0, PersonalisablePartie.vitesse);
+
 
     }
 
@@ -50,9 +55,11 @@ public class GenerateurDeGenerateur : MonoBehaviour {
 
         if (choixLettrechoisia == true)
         {
-            if (GameObject.Find("LettreChoisie(Clone)") == null)
+            if (GameObject.Find("LettreChoisiPerso(Clone)") == null)
             {
+
                 Instantiate(choixLettreChoisi);
+
             }
         }
      

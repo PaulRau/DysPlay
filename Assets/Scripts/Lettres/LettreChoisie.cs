@@ -28,7 +28,7 @@ public class LettreChoisie : MonoBehaviour
     // Instanciation des GameObject et des Sprites
 
     public GameObject letter;
-    public GameObject letterPrefab;
+
     public static int type;              //rand est ici amené à être modifié dans un autre script pour déterminer la lettre qui doit être affichée
     public Vector2 newPos = new Vector2(0, 8);
 
@@ -53,6 +53,10 @@ public class LettreChoisie : MonoBehaviour
         // Application du mouvement
         GetComponent<Rigidbody2D>().velocity = movement;
     }
+
+
+
+
 
 
 

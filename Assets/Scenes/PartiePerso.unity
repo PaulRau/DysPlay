@@ -3286,7 +3286,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 958205405}
-        m_MethodName: OnToggleMotChoix
+        m_MethodName: OnToggleLettreChoix
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
