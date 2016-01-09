@@ -88,7 +88,7 @@ public class ComportementSol : MonoBehaviour {
         }
 
 
-        if (collision.gameObject.name == "Mot(Clone)" || collision.gameObject.name == "MotAleatoire(Clone)")
+        if (collision.gameObject.name == "Mot(Clone)" || collision.gameObject.name == "MotAleatoire(Clone)" || collision.gameObject.name == "MotPerso(Clone)")
             {
                 
 
