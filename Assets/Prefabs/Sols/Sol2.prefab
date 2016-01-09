@@ -76,6 +76,7 @@ MonoBehaviour:
   canvas: {fileID: 179098, guid: 5f23973f42d5f384ab29954c1caa07dc, type: 2}
   nbcoeur:
   - {fileID: 21300000, guid: b4820e8defa7c23448d2093407f00d01, type: 3}
+  - {fileID: 21300000, guid: b4820e8defa7c23448d2093407f00d01, type: 3}
   - {fileID: 21300000, guid: 21bfb6d6ad9d58f4a9fb5673358fb8d1, type: 3}
   - {fileID: 21300000, guid: 4f7c0f2cc5a12344aac630f629f925e0, type: 3}
   - {fileID: 21300000, guid: 9bb9c9a9ea34d89439701989de27cf07, type: 3}
@@ -118,7 +119,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: nbcoeur.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: mot
@@ -148,22 +149,22 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: nbcoeur.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: 21bfb6d6ad9d58f4a9fb5673358fb8d1,
+      objectReference: {fileID: 21300000, guid: b4820e8defa7c23448d2093407f00d01,
         type: 3}
     - target: {fileID: 0}
       propertyPath: nbcoeur.Array.data[2]
       value: 
-      objectReference: {fileID: 21300000, guid: 4f7c0f2cc5a12344aac630f629f925e0,
+      objectReference: {fileID: 21300000, guid: 21bfb6d6ad9d58f4a9fb5673358fb8d1,
         type: 3}
     - target: {fileID: 0}
       propertyPath: nbcoeur.Array.data[3]
       value: 
-      objectReference: {fileID: 21300000, guid: 9bb9c9a9ea34d89439701989de27cf07,
+      objectReference: {fileID: 21300000, guid: 4f7c0f2cc5a12344aac630f629f925e0,
         type: 3}
     - target: {fileID: 0}
       propertyPath: nbcoeur.Array.data[4]
       value: 
-      objectReference: {fileID: 21300000, guid: 59f2fb666289c8a46917976ac817d479,
+      objectReference: {fileID: 21300000, guid: 9bb9c9a9ea34d89439701989de27cf07,
         type: 3}
     - target: {fileID: 0}
       propertyPath: coeurPrefab
@@ -173,6 +174,11 @@ Prefab:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 179098, guid: 5f23973f42d5f384ab29954c1caa07dc, type: 2}
+    - target: {fileID: 0}
+      propertyPath: nbcoeur.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 59f2fb666289c8a46917976ac817d479,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 125822}

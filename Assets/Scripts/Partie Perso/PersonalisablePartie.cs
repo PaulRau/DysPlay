@@ -39,9 +39,11 @@ public class PersonalisablePartie : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-   
-     
-	}
+        OuiNonVie = true;
+        vitesse = 4;
+
+
+    }
 	
 	// Update is called once per frame
 	void Update () {

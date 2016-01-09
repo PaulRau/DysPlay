@@ -13,7 +13,7 @@ public class ComportementSol : MonoBehaviour {
 
     void Start()
     {
-        vies = 4;
+        vies = 5;
 
         aVie = PersonalisablePartie.OuiNonVie;
 
@@ -91,10 +91,11 @@ public class ComportementSol : MonoBehaviour {
             //desactive le clavie
             MotAleatoire.success = true;
             LettreAleatoire.success = true;
+            LettrechoisiPerso.success = true;
 
             if (aVie == true)
             {
-                if (vies != 0)
+                if (vies > 0)
                 {
                     vies--;
                 }// else fin de partie 
@@ -114,9 +115,10 @@ public class ComportementSol : MonoBehaviour {
                 //desactive le clavie
                 MotAleatoire.success = true;
                 LettreAleatoire.success = true;
-                if (aVie == true)
+                LettrechoisiPerso.success = true;
+            if (aVie == true)
                 {
-                    if (vies != 0)
+                    if (vies > 0)
                     {
                         vies--;
                     }// else fin de partie    

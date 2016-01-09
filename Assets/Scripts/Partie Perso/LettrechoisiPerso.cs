@@ -7,7 +7,7 @@ public class LettrechoisiPerso : MonoBehaviour {
 
     //public GameObject choixLettreChoisiPrefab;
     private char[] charactere;
-
+    private int rand;
     public static string cara;
 
     public static bool success = false;
@@ -24,14 +24,15 @@ public class LettrechoisiPerso : MonoBehaviour {
         charactere = cara.ToCharArray();
         choixLettreChoisi.GetComponent<LettreChoisie>().speed = new Vector2(0, PersonalisablePartie.vitesse);
         success = false;
-	}
+        rand = Random.Range(0, charactere.Length);
+    }
 	
 	// Update is called once per frame
 	void Update () {
 
 
 
-        switch (charactere[0])
+        switch (charactere[rand])
         {
             case 'a':
 
