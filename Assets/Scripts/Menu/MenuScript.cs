@@ -12,6 +12,16 @@ public class MenuScript : MonoBehaviour {
     }
 
 
+    public void allerNiveauxLettre()
+    {
+        Application.LoadLevel("PartieNiveauxLettre");
+    }
+
+    public void allerNiveauxMot()
+    {
+        Application.LoadLevel("PartieNiveauxMot");
+    }
+
     public void reJouer()
     {
         Application.LoadLevel(Application.loadedLevel);
