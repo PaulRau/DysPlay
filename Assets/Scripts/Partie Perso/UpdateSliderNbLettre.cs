@@ -12,7 +12,7 @@ public class UpdateSliderNbLettre : MonoBehaviour {
     {
         
         text = GetComponent<Text>();
-
+        PersonalisablePartie.NbLettreAlea = 2;
    
 
     }

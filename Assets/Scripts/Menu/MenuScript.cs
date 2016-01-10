@@ -36,12 +36,17 @@ public class MenuScript : MonoBehaviour {
         Application.LoadLevel("Menu");
         Time.timeScale = 1.0f;
         pause = false;
-        GenerateurDeGenerateur.choixMota = false;
-        GenerateurDeGenerateur.choixLettrea = false;
-        GenerateurDeGenerateur.choixMotchoisia = false;
-        GenerateurDeGenerateur.choixLettrechoisia = false;
+        GenerateurDePartiePerso.choixMota = false;
+        GenerateurDePartiePerso.choixLettrea = false;
+        GenerateurDePartiePerso.choixMotchoisia = false;
+        GenerateurDePartiePerso.choixLettrechoisia = false;
         GenerateurFinDePartie.finDePartiePerso = 20;
         PersonalisablePartie.NbLettreAlea = 1;
+    }
+
+    public void retourMenuNiveaux()
+    {
+        Application.LoadLevel("PartieNiveaux");
     }
 
  
@@ -122,7 +127,7 @@ public class MenuScript : MonoBehaviour {
         {
             MotAleatoire.success = true;
             LettreAleatoire.success = true;   //Empêche de faire des actions au clavier pendant la pause
-            LettrechoisiPerso.success = true;
+            LettreChoisiePerso.success = true;
 
             Time.timeScale = 0.0f;
             pause = true;
@@ -131,7 +136,7 @@ public class MenuScript : MonoBehaviour {
         {
             MotAleatoire.success = false;
             LettreAleatoire.success = false;
-            LettrechoisiPerso.success = false;
+            LettreChoisiePerso.success = false;
 
             Time.timeScale = 1.0f;
             pause = false;

@@ -81,12 +81,12 @@ public class PersonalisablePartie : MonoBehaviour {
            {
                if (selected == true)
                {
-                   GenerateurDeGenerateur.choixMota = true;
+                   GenerateurDePartiePerso.choixMota = true;
 
                }
                else
                {
-                   GenerateurDeGenerateur.choixMota = false;
+                   GenerateurDePartiePerso.choixMota = false;
                }
            }
            else
@@ -117,12 +117,12 @@ public class PersonalisablePartie : MonoBehaviour {
            {
         if (selected == true)
         {
-            GenerateurDeGenerateur.choixLettrea = true;
+            GenerateurDePartiePerso.choixLettrea = true;
 
         }
         else
         {
-            GenerateurDeGenerateur.choixLettrea = false;
+            GenerateurDePartiePerso.choixLettrea = false;
         }
            }
          else
@@ -144,8 +144,8 @@ public class PersonalisablePartie : MonoBehaviour {
     public void choixLettre(string choix)
     {
        // Mot.liste = choix;
-   
-      LettrechoisiPerso.cara = choix;
+
+        LettreChoisiePerso.cara = choix;
 
     }
 
@@ -157,12 +157,12 @@ public class PersonalisablePartie : MonoBehaviour {
            {
          if (choivre == true)
         {
-            GenerateurDeGenerateur.choixMotchoisia = true;
+            GenerateurDePartiePerso.choixMotchoisia = true;
             
         }
         else
         {
-            GenerateurDeGenerateur.choixMotchoisia = false;
+            GenerateurDePartiePerso.choixMotchoisia = false;
         }
            }
         else
@@ -178,12 +178,12 @@ public class PersonalisablePartie : MonoBehaviour {
            {
         if (ch == true)
         {
-            GenerateurDeGenerateur.choixLettrechoisia = true;
+            GenerateurDePartiePerso.choixLettrechoisia = true;
 
         }
         else
         {
-            GenerateurDeGenerateur.choixLettrechoisia = false;
+            GenerateurDePartiePerso.choixLettrechoisia = false;
         }
            }
          else

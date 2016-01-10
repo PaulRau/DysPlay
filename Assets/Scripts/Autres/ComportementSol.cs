@@ -91,7 +91,7 @@ public class ComportementSol : MonoBehaviour {
             //desactive le clavie
             MotAleatoire.success = true;
             LettreAleatoire.success = true;
-            LettrechoisiPerso.success = true;
+            LettreChoisiePerso.success = true;
 
             if (aVie == true)
             {
@@ -115,7 +115,7 @@ public class ComportementSol : MonoBehaviour {
                 //desactive le clavie
                 MotAleatoire.success = true;
                 LettreAleatoire.success = true;
-                LettrechoisiPerso.success = true;
+                LettreChoisiePerso.success = true;
             if (aVie == true)
                 {
                     if (vies > 0)

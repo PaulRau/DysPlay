@@ -9,19 +9,15 @@ public class GenerateurFinDePartie : MonoBehaviour {
    
 	// Use this for initialization
 	void Start () {
-
        
-	}
-	
-
-    
+	}    
     
 
 	// Update is called once per frame
 	void Update () {
 
 
-        if (GameObject.Find("Canvas(Clone)") == null)
+        if (GameObject.Find("FinDePartie (Canvas)(Clone)") == null)
         {
             if (ScoreManager.score >= finDePartiePerso)
             {
@@ -31,11 +27,7 @@ public class GenerateurFinDePartie : MonoBehaviour {
             }
 
         }
-        
-
-      
+          
      
-            
-
-	}
+            }
 }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GenerateurDeGenerateur : MonoBehaviour {
+public class GenerateurDePartiePerso : MonoBehaviour {
 
     public static bool choixMota = false;
     public static bool choixLettrea = false;

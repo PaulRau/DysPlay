@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LettrechoisiPerso : MonoBehaviour {
+public class LettreChoisiePerso : MonoBehaviour {
 
 
 
