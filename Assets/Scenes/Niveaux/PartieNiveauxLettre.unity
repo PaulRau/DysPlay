@@ -140,8 +140,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_FontSize: 26
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -190,8 +190,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -78.9160156, y: -40.0000038}
-  m_SizeDelta: {x: 118, y: 52}
+  m_AnchoredPosition: {x: 34, y: -90.7549973}
+  m_SizeDelta: {x: 265, y: 85.0019989}
   m_Pivot: {x: 2.37359452, y: -.538057625}
 --- !u!114 &106504818
 MonoBehaviour:
@@ -441,8 +441,8 @@ RectTransform:
   m_RootOrder: 6
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 80, y: -40}
-  m_SizeDelta: {x: 118, y: 52}
+  m_AnchoredPosition: {x: 309, y: -91.6409988}
+  m_SizeDelta: {x: 251, y: 82.4830017}
   m_Pivot: {x: 2.37359452, y: -.538057625}
 --- !u!114 &229000318
 MonoBehaviour:
@@ -611,8 +611,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_FontSize: 26
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -659,8 +659,8 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -240, y: 86}
-  m_SizeDelta: {x: 255, y: 40}
+  m_AnchoredPosition: {x: -300, y: 147}
+  m_SizeDelta: {x: 430, y: 66.0210037}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &673969297
 MonoBehaviour:
@@ -683,7 +683,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 30
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
@@ -786,8 +786,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_FontSize: 26
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -883,8 +883,8 @@ RectTransform:
   m_RootOrder: 7
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 290.5, y: -173}
-  m_SizeDelta: {x: 126, y: 45}
+  m_AnchoredPosition: {x: 449.5, y: -347}
+  m_SizeDelta: {x: 262, y: 95}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &886979024
 MonoBehaviour:
@@ -1026,8 +1026,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_FontSize: 26
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -1084,19 +1084,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22434604, guid: 0483d4897b3a4844d8a32fb585172892, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 20.9960003
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22434604, guid: 0483d4897b3a4844d8a32fb585172892, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 166.5
+      value: 322
       objectReference: {fileID: 0}
     - target: {fileID: 22434604, guid: 0483d4897b3a4844d8a32fb585172892, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 646
+      value: 1076.59998
       objectReference: {fileID: 0}
     - target: {fileID: 22434604, guid: 0483d4897b3a4844d8a32fb585172892, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 93
+      value: 173
       objectReference: {fileID: 0}
     - target: {fileID: 22434604, guid: 0483d4897b3a4844d8a32fb585172892, type: 2}
       propertyPath: m_AnchorMin.x
@@ -1125,6 +1125,10 @@ Prefab:
     - target: {fileID: 11444364, guid: 0483d4897b3a4844d8a32fb585172892, type: 2}
       propertyPath: m_Text
       value: NIVEAUX LETTRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 11444364, guid: 0483d4897b3a4844d8a32fb585172892, type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0483d4897b3a4844d8a32fb585172892, type: 2}
@@ -1167,8 +1171,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 290.709991, y: -113}
-  m_SizeDelta: {x: 125.580002, y: 45}
+  m_AnchoredPosition: {x: 449.5, y: -226}
+  m_SizeDelta: {x: 262, y: 95}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1169079343
 MonoBehaviour:
@@ -1310,8 +1314,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_FontSize: 26
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -1501,8 +1505,8 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 242.080002, y: -40}
-  m_SizeDelta: {x: 118, y: 52}
+  m_AnchoredPosition: {x: 620, y: -90.7539978}
+  m_SizeDelta: {x: 242, y: 85}
   m_Pivot: {x: 2.37359452, y: -.538057625}
 --- !u!114 &1937910161
 MonoBehaviour:
@@ -1644,8 +1648,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_FontSize: 26
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -1722,8 +1726,8 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 429, y: -40}
-  m_SizeDelta: {x: 118, y: 52}
+  m_AnchoredPosition: {x: 964, y: -101.519997}
+  m_SizeDelta: {x: 260, y: 92}
   m_Pivot: {x: 2.37359452, y: -.538057625}
 --- !u!114 &2099049888
 MonoBehaviour:
@@ -1880,11 +1884,11 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ReferenceResolution: {x: 1600, y: 900}
+  m_ScreenMatchMode: 2
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -1898,12 +1902,12 @@ Canvas:
   m_GameObject: {fileID: 2122593736}
   m_Enabled: 1
   serializedVersion: 2
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1883496445}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
