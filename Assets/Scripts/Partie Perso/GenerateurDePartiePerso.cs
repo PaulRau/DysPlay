@@ -7,6 +7,7 @@ public class GenerateurDePartiePerso : MonoBehaviour {
     public static bool choixLettrea = false;
     public static bool choixMotchoisia = false;
     public static bool choixLettrechoisia = false;
+    private float vit;
     public GameObject choixMot;
     public GameObject choixLettre;
     public GameObject choixMotChoisi;
@@ -19,9 +20,9 @@ public class GenerateurDePartiePerso : MonoBehaviour {
 
     void Start()
     {
-    
-       // mot.GetComponent<LettreChoisie>().speed = new Vector2(0, PersonalisablePartie.vitesse);
 
+        // mot.GetComponent<LettreChoisie>().speed = new Vector2(0, PersonalisablePartie.vitesse);
+        vit = PersonalisablePartie.vitesse;
 
     }
 
@@ -41,7 +42,12 @@ public class GenerateurDePartiePerso : MonoBehaviour {
         {
             if (GameObject.Find("LettreAleatoire(Clone)") == null)
             {
-                Instantiate(choixLettre);
+                if (vit == 0)
+                {
+                    Instantiate(choixLettre, new Vector2(0, 0), Quaternion.identity);
+                }
+                else Instantiate(choixLettre);
+             
             } 
         }
 
@@ -57,8 +63,12 @@ public class GenerateurDePartiePerso : MonoBehaviour {
         {
             if (GameObject.Find("LettreChoisiPerso(Clone)") == null)
             {
+                if (vit == 0)
+                {
+                    Instantiate(choixLettreChoisi, new Vector2(0, 0), Quaternion.identity);
+                }else Instantiate(choixLettreChoisi);
 
-                Instantiate(choixLettreChoisi);
+
 
             }
         }

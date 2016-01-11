@@ -28,6 +28,7 @@ public class MotAleaPerso : MonoBehaviour
     private int x = 0;
     public static bool success = false;
     private int rand = 0;
+    private float vit;
 
     public AudioClip sonBonneLettre;
     public AudioClip sonMauvaiseLettre;
@@ -49,7 +50,7 @@ public class MotAleaPerso : MonoBehaviour
     {
 
         Clone.GetComponent<LettreChoisie>().speed = new Vector2(0, PersonalisablePartie.vitesse);
-       
+        vit = PersonalisablePartie.vitesse;
         nb = (int)PersonalisablePartie.NbLettreAlea;
         Debug.Log(nb);
         switch (nb)
@@ -219,307 +220,636 @@ public class MotAleaPerso : MonoBehaviour
             case 'a':
 
                 type = 0;
-
-                if (liste[rand].Length < 6)
+                if (vit == 0)
                 {
-                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
-                }
-                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
 
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
+                }else
+                {
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'b':
                 type = 1;
-                if (liste[rand].Length < 6)
+                if (vit == 0)
                 {
-                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
                 }
-                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                else
+                {
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
 
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'c':
                 type = 2;
-                if (liste[rand].Length < 6)
+                if (vit == 0)
                 {
-                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
                 }
-                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                else
+                {
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
 
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'd':
                 type = 3;
-                if (liste[rand].Length < 6)
+                if (vit == 0)
                 {
-                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
-                }
-                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
 
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'e':
                 type = 4;
-                if (liste[rand].Length < 6)
+                if (vit == 0)
                 {
-                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
-                }
-                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
 
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'f':
                 type = 5;
-                if (liste[rand].Length < 6)
+                if (vit == 0)
                 {
-                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
-                }
-                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
 
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'g':
                 type = 6;
-                if (liste[rand].Length < 6)
+                if (vit == 0)
                 {
-                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
-                }
-                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
 
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'h':
                 type = 7;
-                if (liste[rand].Length < 6)
+                if (vit == 0)
                 {
-                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
-                }
-                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
 
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'i':
                 type = 8;
-                if (liste[rand].Length < 6)
+                if (vit == 0)
                 {
-                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
-                }
-                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
 
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'j':
                 type = 9;
-                if (liste[rand].Length < 6)
+                if (vit == 0)
                 {
-                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
-                }
-                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
 
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'k':
                 type = 10;
-                if (liste[rand].Length < 6)
+                if (vit == 0)
                 {
-                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
-                }
-                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
 
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'l':
                 type = 11;
-                if (liste[rand].Length < 6)
+                if (vit == 0)
                 {
-                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
-                }
-                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
 
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'm':
                 type = 12;
-                if (liste[rand].Length < 6)
+                if (vit == 0)
                 {
-                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
-                }
-                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
 
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'n':
                 type = 13;
-                if (liste[rand].Length < 6)
+                if (vit == 0)
                 {
-                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
-                }
-                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
 
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'o':
                 type = 14;
-                if (liste[rand].Length < 6)
+                if (vit == 0)
                 {
-                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
-                }
-                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
 
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'p':
                 type = 15;
-                if (liste[rand].Length < 6)
+                if (vit == 0)
                 {
-                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
-                }
-                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
 
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'q':
                 type = 16;
-                if (liste[rand].Length < 6)
+                if (vit == 0)
                 {
-                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
-                }
-                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
 
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'r':
                 type = 17;
-                if (liste[rand].Length < 6)
+                if (vit == 0)
                 {
-                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
-                }
-                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
 
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 's':
                 type = 18;
-                if (liste[rand].Length < 6)
+                if (vit == 0)
                 {
-                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
-                }
-                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
 
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 't':
                 type = 19;
-                if (liste[rand].Length < 6)
+                if (vit == 0)
                 {
-                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
-                }
-                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
 
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'u':
                 type = 20;
-                if (liste[rand].Length < 6)
+                if (vit == 0)
                 {
-                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
-                }
-                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
 
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'v':
                 type = 21;
-                if (liste[rand].Length < 6)
+                if (vit == 0)
                 {
-                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
-                }
-                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
 
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'w':
                 type = 22;
-                if (liste[rand].Length < 6)
+                if (vit == 0)
                 {
-                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
-                }
-                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
 
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'x':
                 type = 23;
-                if (liste[rand].Length < 6)
+                if (vit == 0)
                 {
-                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
-                }
-                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
 
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'y':
                 type = 24;
-                if (liste[rand].Length < 6)
+                if (vit == 0)
                 {
-                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
-                }
-                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
 
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'z':
                 type = 25;
-                if (liste[rand].Length < 6)
+                if (vit == 0)
                 {
-                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
-                }
-                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
 
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type]; 
                 break;
             case 'é':
                 type = 26;
-                if (liste.Length < 6)
+                if (vit == 0)
                 {
-                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 8), Quaternion.identity);
-                }
-                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 8), Quaternion.identity);
 
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
 
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'è':
                 type = 27;
-                if (liste.Length < 6)
+                if (vit == 0)
                 {
-                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 8), Quaternion.identity);
-                }
-                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 8), Quaternion.identity);
 
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
 
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             case 'à':
                 type = 28;
-                if (liste.Length < 6)
+                if (vit == 0)
                 {
-                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 8), Quaternion.identity);
+
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
                 }
-                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 8), Quaternion.identity);
-
-
+                else
+                {
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
             
             case 'ç':
                 type = 29;
-                if (liste.Length < 6)
+                if (vit == 0)
                 {
-                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 8), Quaternion.identity);
-                }
-                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 8), Quaternion.identity);
 
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste[rand].Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
 
                 break;
