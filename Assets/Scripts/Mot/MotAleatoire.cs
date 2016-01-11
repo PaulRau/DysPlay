@@ -25,9 +25,10 @@ public class MotAleatoire : MonoBehaviour
     
     private AudioSource source;
 
-    void awake ()
+    void Awake ()
     {
-        source = GetComponent<AudioSource>();
+       source = GetComponent<AudioSource>();
+        
     }
     
 
@@ -461,7 +462,10 @@ public class MotAleatoire : MonoBehaviour
 
         letter[x].GetComponent<SpriteRenderer>().color = Color.green;
 
-      //  source.PlayOneShot(sonBonneLettre,1.0f);
+       //source.PlayOneShot(sonBonneLettre,1.0f);
+       source.PlayOneShot(sonBonneLettre);
+        
+
         x++;
 
     }
@@ -478,6 +482,7 @@ public class MotAleatoire : MonoBehaviour
             {
                 letter[x].GetComponent<SpriteRenderer>().color = Color.red;
                 ScoreManager.mauvaiseLettre += scoreValue1;
+                source.PlayOneShot(sonMauvaiseLettre);
             }
         }
     }
