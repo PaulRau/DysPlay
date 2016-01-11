@@ -33,7 +33,7 @@ public class ComportementSol : MonoBehaviour {
         {
         coeur.GetComponent<SpriteRenderer>().sprite = nbcoeur[vies];
         }
-        if (GameObject.Find("GameOver(Clone)") == null)
+          if (GameObject.Find("GameOver (Canvas)(Clone)") == null)
         {
             if (vies==0)
             {
