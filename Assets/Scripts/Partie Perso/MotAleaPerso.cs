@@ -8,7 +8,7 @@ public class MotAleaPerso : MonoBehaviour
     public string[] liste2 = { "le", "la", "de", "ma", "si", "vu", "ah", "ce" , "je", "tu", "il", "me", "sa", "ta", "eu", "si", "lu", "es", "va" };
     public string[] liste3 = { "les", "lui", "bon", "mes", "cri" };
     public string[] liste4 = { "main", "joli", "lieu", "ceux", "pain" };
-    public string[] liste5 = {  "carte", "sinon", "appel" };
+    public string[] liste5 = {  "aéàçè", "maçon" };
     public string[] liste6 = { "ballon", "enfant", "revoir", "reflex" };
 
     public int nb;
@@ -173,6 +173,18 @@ public class MotAleaPerso : MonoBehaviour
                     break;
                 case 'z':
                     currenttype = 25;
+                    break;
+                case 'é':
+                    currenttype = 26;
+                    break;
+                case 'è':
+                    currenttype = 27;
+                    break;
+                case 'à':
+                    currenttype = 28;
+                    break;
+                case 'ç':
+                    currenttype = 29;
                     break;
             }
         }
@@ -464,10 +476,55 @@ public class MotAleaPerso : MonoBehaviour
                 }
                 else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
 
-                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type]; ;
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type]; 
                 break;
+            case 'é':
+                type = 26;
+                if (liste.Length < 6)
+                {
+                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                }
+                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 8), Quaternion.identity);
 
+
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
+                break;
+            case 'è':
+                type = 27;
+                if (liste.Length < 6)
+                {
+                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                }
+                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 8), Quaternion.identity);
+
+
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
+                break;
+            case 'à':
+                type = 28;
+                if (liste.Length < 6)
+                {
+                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                }
+                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 8), Quaternion.identity);
+
+
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
+                break;
+            
+            case 'ç':
+                type = 29;
+                if (liste.Length < 6)
+                {
+                    letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                }
+                else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 8), Quaternion.identity);
+
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
+
+                break;
         }
+        
         if (liste[rand].Length > 5)
         {
             letter[i].GetComponent<Transform>().localScale = new Vector2(0.3f, 0.3f);
@@ -704,6 +761,35 @@ public class MotAleaPerso : MonoBehaviour
                 }
                 else MauvaiseLettre();
                 break;
+            case 26:
+                if (Input.GetKeyDown("2"))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 27:
+                if (Input.GetKeyDown("7"))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 28:
+                if (Input.GetKeyDown("0"))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 29:
+                if (Input.GetKeyDown("9"))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            
 
         }
     }

@@ -191,6 +191,15 @@ public class PersonalisablePartie : MonoBehaviour {
              but4.GetComponent<Toggle>().isOn = false;
          }
     }
+     
+    public void OnToggleCarSpecLettre (bool spec)
+    {
+        if (spec == true)
+        {
+            LettreAleatoire.spec = true;
+        }
+        else LettreAleatoire.spec = false;
+    }
 
     public void longeurPartie(float lon)
     {

@@ -193,7 +193,31 @@ public class LettreChoisiePerso : MonoBehaviour {
                 
 
                 choixLettreChoisi.GetComponent<SpriteRenderer>().sprite = alphabet[type];
-                break; 
+                break;
+            case 'é':
+                type = 26;
+
+
+                choixLettreChoisi.GetComponent<SpriteRenderer>().sprite = alphabet[type];
+                break;
+            case 'è':
+                type = 27;
+
+
+                choixLettreChoisi.GetComponent<SpriteRenderer>().sprite = alphabet[type];
+                break;
+            case 'à':
+                type = 28;
+
+
+                choixLettreChoisi.GetComponent<SpriteRenderer>().sprite = alphabet[type];
+                break;
+            case 'ç':
+                type = 29;
+
+
+                choixLettreChoisi.GetComponent<SpriteRenderer>().sprite = alphabet[type];
+                break;
 
         }
 
@@ -421,6 +445,34 @@ public class LettreChoisiePerso : MonoBehaviour {
                 break;
             case 25:
                 if (Input.GetKeyDown("z"))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 26:
+                if (Input.GetKeyDown("2"))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 27:
+                if (Input.GetKeyDown("7"))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 28:
+                if (Input.GetKeyDown("0"))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 29:
+                if (Input.GetKeyDown("9"))
                 {
                     BonneLettre();
                 }

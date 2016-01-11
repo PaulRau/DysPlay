@@ -101,6 +101,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e022bc2f5dc66ab4691a4930b9d6cd73, type: 3}
   - {fileID: 21300000, guid: b422b7cb86125b4499f4e51950947d34, type: 3}
   - {fileID: 21300000, guid: ba1d892701a11104d9427f21f30fcc09, type: 3}
+  - {fileID: 21300000, guid: 05eede4b1b6f52944b0c116a22151e5b, type: 3}
+  - {fileID: 21300000, guid: a57408b42e740ea4db88c3bc8944228c, type: 3}
+  - {fileID: 21300000, guid: 218222c370ca1c243b091e8497916561, type: 3}
+  - {fileID: 21300000, guid: 95ec827bb4729e44ca1f1230a54711e3, type: 3}
   scoreValue: 1
   scoreValue1: 1
 --- !u!114 &11465692
@@ -117,7 +121,6 @@ MonoBehaviour:
   speed: {x: 0, y: 4}
   direction: {x: 0, y: -1}
   letter: {fileID: 138626, guid: ab112ceeda7e47c498fe41748e08a051, type: 2}
-  letterPrefab: {fileID: 138626, guid: ab112ceeda7e47c498fe41748e08a051, type: 2}
   newPos: {x: 0, y: 8}
 --- !u!212 &21201774
 SpriteRenderer:
@@ -154,6 +157,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.size
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Enabled
       value: 1
@@ -347,6 +354,31 @@ Prefab:
       propertyPath: alphabet.Array.data[25]
       value: 
       objectReference: {fileID: 21300000, guid: ba1d892701a11104d9427f21f30fcc09,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[26]
+      value: 
+      objectReference: {fileID: 21300000, guid: 05eede4b1b6f52944b0c116a22151e5b,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[27]
+      value: 
+      objectReference: {fileID: 21300000, guid: a57408b42e740ea4db88c3bc8944228c,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[28]
+      value: 
+      objectReference: {fileID: 21300000, guid: 218222c370ca1c243b091e8497916561,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[29]
+      value: 
+      objectReference: {fileID: 21300000, guid: 95ec827bb4729e44ca1f1230a54711e3,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[30]
+      value: 
+      objectReference: {fileID: 21300000, guid: 95ec827bb4729e44ca1f1230a54711e3,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -39,6 +39,10 @@ public class ComportementSol : MonoBehaviour {
             {
                 MotAleatoire.success = true;
                 LettreAleatoire.success = true;
+                MotAleaPerso.success = true;
+                LettreChoisiePerso.success = true;
+                Mot.success = true;
+
                 Instantiate(canvas);
                 Time.timeScale = 0.0f;
 
@@ -71,6 +75,9 @@ public class ComportementSol : MonoBehaviour {
             //desactive le clavie
             MotAleatoire.success = true;
             LettreAleatoire.success = true;
+            MotAleaPerso.success = true;
+            LettreChoisiePerso.success = true;
+            Mot.success = true;
         }
 
         if (collision.gameObject.name == "LettreAleatoire(Clone)" || collision.gameObject.name == "LettreChoisiPerso(Clone)")
@@ -92,6 +99,7 @@ public class ComportementSol : MonoBehaviour {
             MotAleatoire.success = true;
             LettreAleatoire.success = true;
             LettreChoisiePerso.success = true;
+            Mot.success = true;
 
             if (aVie == true)
             {
@@ -116,6 +124,8 @@ public class ComportementSol : MonoBehaviour {
                 MotAleatoire.success = true;
                 LettreAleatoire.success = true;
                 LettreChoisiePerso.success = true;
+                Mot.success = true;
+
             if (aVie == true)
                 {
                     if (vies > 0)
