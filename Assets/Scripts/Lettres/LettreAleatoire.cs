@@ -35,12 +35,21 @@ public class LettreAleatoire : MonoBehaviour
     public Sprite[] alphabet;     // Contient tous les sprites (à compléter dans l'instructor)
     public Vector2 newPos = new Vector2(0, 8);
     public static bool success = false;
+    public static bool spec;   //Caractère spéciaux ou pas
 
     void Start()
     {
+        
+
         letter.GetComponent<LettreAleatoire>().speed = new Vector2(0, PersonalisablePartie.vitesse);
         success = false;      
-        rand = Random.Range(0, alphabet.Length);                            //nombre aléatoire entre 0 et 27
+       
+        if (spec == true)
+        {
+            rand = Random.Range(0, alphabet.Length);                            //nombre aléatoire entre 0 et la taille de la liste Alphabet
+        }
+        else rand = Random.Range(0, 25);  // Les 25 premiers caractères correspondent aux lettres A à Z, sans caractères spéciaux.
+
         letter.GetComponent<SpriteRenderer>().sprite = alphabet[rand];      //ajoute le sprite correspondant à l'object lettre
     }
 
@@ -277,6 +286,34 @@ public class LettreAleatoire : MonoBehaviour
                 break;
             case 25:
                 if (Input.GetKeyDown("z"))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 26:
+                if (Input.GetKeyDown("2"))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 27:
+                if (Input.GetKeyDown("7"))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 28:
+                if (Input.GetKeyDown("0"))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 29:
+                if (Input.GetKeyDown("9"))
                 {
                     BonneLettre();
                 }
