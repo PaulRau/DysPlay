@@ -128,6 +128,8 @@ public class MenuScript : MonoBehaviour {
             MotAleatoire.success = true;
             LettreAleatoire.success = true;   //Empêche de faire des actions au clavier pendant la pause
             LettreChoisiePerso.success = true;
+            MotAleaPerso.success = true;
+            Mot.success = true;
 
             Time.timeScale = 0.0f;
             pause = true;
@@ -137,6 +139,8 @@ public class MenuScript : MonoBehaviour {
             MotAleatoire.success = false;
             LettreAleatoire.success = false;
             LettreChoisiePerso.success = false;
+            MotAleaPerso.success = false;
+            Mot.success = false;
 
             Time.timeScale = 1.0f;
             pause = false;

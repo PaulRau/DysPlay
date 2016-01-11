@@ -29,6 +29,9 @@ public class GameOver : MonoBehaviour
             {
                 MotAleatoire.success = true;
                 LettreAleatoire.success = true;
+                MotAleaPerso.success = true;
+                LettreChoisiePerso.success = true;
+
                 Instantiate(canvas);
                 Time.timeScale = 0.0f;
                 
