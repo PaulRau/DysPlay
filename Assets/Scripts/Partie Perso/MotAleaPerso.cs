@@ -244,9 +244,11 @@ public class MotAleaPerso : MonoBehaviour
             // Ne pas oublier de detruire l'object mot éventuellement
             Destroy(Clone, 0.5f);
         }
-        if (activationCaret == true) { CaracSpeciaux(); }
+        
 
         if (success == false) { clavier(); }
+
+        if (activationCaret == true) { CaracSpeciaux(); }
 
     }
 
@@ -902,17 +904,17 @@ public class MotAleaPerso : MonoBehaviour
 
                     if (liste.Length < 6)
                     {
-                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
                     }
-                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 0), Quaternion.identity);
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
                 }
                 else
                 {
                     if (liste.Length < 6)
                     {
-                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
                     }
-                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 8), Quaternion.identity);
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
                 }
 
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
@@ -926,17 +928,17 @@ public class MotAleaPerso : MonoBehaviour
 
                     if (liste.Length < 6)
                     {
-                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
                     }
-                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 0), Quaternion.identity);
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
                 }
                 else
                 {
                     if (liste.Length < 6)
                     {
-                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
                     }
-                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 8), Quaternion.identity);
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
                 }
 
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
@@ -950,17 +952,17 @@ public class MotAleaPerso : MonoBehaviour
 
                     if (liste.Length < 6)
                     {
-                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
                     }
-                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 0), Quaternion.identity);
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
                 }
                 else
                 {
                     if (liste.Length < 6)
                     {
-                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
                     }
-                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 8), Quaternion.identity);
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
                 }
 
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
@@ -974,17 +976,17 @@ public class MotAleaPerso : MonoBehaviour
 
                     if (liste.Length < 6)
                     {
-                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
                     }
-                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 0), Quaternion.identity);
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
                 }
                 else
                 {
                     if (liste.Length < 6)
                     {
-                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
                     }
-                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 8), Quaternion.identity);
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
                 }
 
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
@@ -998,17 +1000,17 @@ public class MotAleaPerso : MonoBehaviour
 
                     if (liste.Length < 6)
                     {
-                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
                     }
-                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 0), Quaternion.identity);
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
                 }
                 else
                 {
                     if (liste.Length < 6)
                     {
-                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
                     }
-                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 8), Quaternion.identity);
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
                 }
 
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
@@ -1022,17 +1024,17 @@ public class MotAleaPerso : MonoBehaviour
 
                     if (liste.Length < 6)
                     {
-                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
                     }
-                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 0), Quaternion.identity);
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
                 }
                 else
                 {
                     if (liste.Length < 6)
                     {
-                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
                     }
-                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 8), Quaternion.identity);
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
                 }
 
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
@@ -1046,17 +1048,17 @@ public class MotAleaPerso : MonoBehaviour
 
                     if (liste.Length < 6)
                     {
-                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
                     }
-                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 0), Quaternion.identity);
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
                 }
                 else
                 {
                     if (liste.Length < 6)
                     {
-                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
                     }
-                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 8), Quaternion.identity);
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
                 }
 
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
@@ -1070,17 +1072,17 @@ public class MotAleaPerso : MonoBehaviour
 
                     if (liste.Length < 6)
                     {
-                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
                     }
-                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 0), Quaternion.identity);
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 0), Quaternion.identity);
                 }
                 else
                 {
                     if (liste.Length < 6)
                     {
-                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
                     }
-                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 8), Quaternion.identity);
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
                 }
 
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];

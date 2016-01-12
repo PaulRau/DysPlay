@@ -204,10 +204,12 @@ public class Mot : MonoBehaviour {
             // Ne pas oublier de detruire l'object mot éventuellement
             Destroy(Clone,0.5f);
         }
-        if (activationCaret == true) { CaracSpeciaux(); }
+        
 
         if (success== false) { clavier(); }
-        
+
+        if (activationCaret == true) { CaracSpeciaux(); }
+
     }
 
 
