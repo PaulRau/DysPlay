@@ -10,6 +10,11 @@ public class LettreChoisiePerso : MonoBehaviour {
     private int rand;
     public static string cara;
 
+    // utiles pour les caractères spéciaux
+    private bool caret;
+    private int Ctype;
+    private bool activationCaret;
+
     public static bool success = false;
 
     public int scoreValue = 1;
@@ -21,10 +26,12 @@ public class LettreChoisiePerso : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
         charactere = cara.ToCharArray();
         choixLettreChoisi.GetComponent<LettreChoisie>().speed = new Vector2(0, PersonalisablePartie.vitesse);
         success = false;
         rand = Random.Range(0, charactere.Length);
+        activationCaret = false;
     }
 	
 	// Update is called once per frame
@@ -218,8 +225,64 @@ public class LettreChoisiePerso : MonoBehaviour {
 
                 choixLettreChoisi.GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
+            case 'ê':
+                type = 30;
+                Ctype = 0;
+
+                choixLettreChoisi.GetComponent<SpriteRenderer>().sprite = alphabet[type];
+                break;
+            case 'â':
+                type = 31;
+                Ctype = 1;
+
+                choixLettreChoisi.GetComponent<SpriteRenderer>().sprite = alphabet[type];
+                type = 30;
+                break;
+            case 'û':
+                type = 32;
+                Ctype = 2;
+
+                choixLettreChoisi.GetComponent<SpriteRenderer>().sprite = alphabet[type];
+                
+                break;
+            case 'î':
+                type = 33;
+                Ctype = 3;
+
+                choixLettreChoisi.GetComponent<SpriteRenderer>().sprite = alphabet[type];
+                
+                break;
+            case 'ô':
+                type = 34;
+                Ctype = 4;
+
+                choixLettreChoisi.GetComponent<SpriteRenderer>().sprite = alphabet[type];
+                
+                break;
+            case 'ë':
+                type = 35;
+                Ctype = 5;
+
+                choixLettreChoisi.GetComponent<SpriteRenderer>().sprite = alphabet[type];
+                
+                break;
+            case 'ü':
+                type = 36;
+                Ctype = 6;
+
+                choixLettreChoisi.GetComponent<SpriteRenderer>().sprite = alphabet[type];
+                
+                break;
+            case 'ï':
+                type = 37;
+                Ctype = 7;
+
+                choixLettreChoisi.GetComponent<SpriteRenderer>().sprite = alphabet[type];
+                
+                break;
 
         }
+        if (activationCaret== true) { CaracSpeciaux(); }
 
         if (success == false) { clavier(); }
 
@@ -228,7 +291,8 @@ public class LettreChoisiePerso : MonoBehaviour {
 
     void BonneLettre()
     {
-
+        caret = false;
+        activationCaret = false;
         //Change la couleur de la lettre
         choixLettreChoisi.GetComponent<SpriteRenderer>().color = Color.green;
 
@@ -479,6 +543,104 @@ public class LettreChoisiePerso : MonoBehaviour {
                 else MauvaiseLettre();
                 break;
 
+            case 30:
+            case 31:
+            case 32:
+            case 33:
+            case 34:
+                if (caret == false)
+                {
+                    if (Input.GetKeyDown(KeyCode.RightBracket) && !Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.RightShift))
+                    {
+                        activationCaret = true;
+                        choixLettreChoisi.GetComponent<SpriteRenderer>().color = Color.cyan;
+                        caret = true;
+                    }
+                    else MauvaiseLettre();
+                }
+                
+                break;
+            case 35:
+            case 36:
+            case 37:
+                if (caret == false)
+                {
+                    if (Input.GetKeyDown(KeyCode.RightBracket) && (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))
+                    {
+                        activationCaret = true;
+                        choixLettreChoisi.GetComponent<SpriteRenderer>().color = Color.cyan;
+                        caret = true;
+                    }
+                    else if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) { } else MauvaiseLettre();
+                }
+
+                break;
+
         }
     }
+    void CaracSpeciaux()
+    {
+        
+        switch (Ctype)
+        {
+            case 0:
+                if (Input.GetKeyDown("e"))
+                {
+                    BonneLettre();
+                }
+                
+
+                break;
+            case 1:
+                if (Input.GetKeyDown("a"))
+                {
+                    BonneLettre();
+                }
+                
+                break;
+            case 2:
+                if (Input.GetKeyDown("u"))
+                {
+                    BonneLettre();
+                }
+                
+                break;
+            case 3:
+                if (Input.GetKeyDown("i"))
+                {
+                    BonneLettre();
+                }
+                
+                break;
+            case 4:
+                if (Input.GetKeyDown("o"))
+                {
+                    BonneLettre();
+                }
+                
+                break;
+            case 5:
+                if (Input.GetKeyDown("e"))
+                {
+                    BonneLettre();
+                }
+                
+                break;
+            case 6:
+                if (Input.GetKeyDown("u"))
+                {
+                    BonneLettre();
+                }
+                
+                break;
+            case 7:
+                if (Input.GetKeyDown("i"))
+                {
+                    BonneLettre();
+                }
+                
+                break;
+        }
+     }
+    
 }

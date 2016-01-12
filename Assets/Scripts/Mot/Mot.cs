@@ -4,7 +4,7 @@ using System.Collections;
 public class Mot : MonoBehaviour {
 
     public static string liste;
-    //public string liste = "abcd";
+    
     private int i = 0;
     private int j = 0;
     public GameObject Clone;
@@ -18,11 +18,18 @@ public class Mot : MonoBehaviour {
     private char[] characters;
     private int x = 0;
     public static bool success = false;
-    private float vit;  
-    
+    private float vit;
+
+    // utiles pour les caractères spéciaux
+    private bool caret;
+    private int Ctype;
+    private bool activationCaret;
+
 
     // Use this for initialization
     void Start () {
+
+        activationCaret = false;
 
         vit = PersonalisablePartie.vitesse;
 
@@ -143,9 +150,40 @@ public class Mot : MonoBehaviour {
                 case 'à':
                     currenttype = 28;
                     break;
-                
                 case 'ç':
                     currenttype = 29;
+                    break;
+                case 'ê':
+                    currenttype = 30;
+                    Ctype = 0;     
+                    break;
+                case 'â':
+                    currenttype = 31;
+                    Ctype = 1;
+                    break;
+                case 'û':
+                    currenttype = 32;
+                    Ctype = 2;
+                    break;
+                case 'î':
+                    currenttype = 33;
+                    Ctype = 3;
+                    break;
+                case 'ô':
+                    currenttype = 34;
+                    Ctype = 4;
+                    break;
+                case 'ë':
+                    currenttype = 35;
+                    Ctype = 5;
+                    break;
+                case 'ü':
+                    currenttype = 36;
+                    Ctype = 6;
+                    break;
+                case 'ï':
+                    currenttype = 37;
+                    Ctype = 7;
                     break;
             }
         }
@@ -166,6 +204,8 @@ public class Mot : MonoBehaviour {
             // Ne pas oublier de detruire l'object mot éventuellement
             Destroy(Clone,0.5f);
         }
+        if (activationCaret == true) { CaracSpeciaux(); }
+
         if (success== false) { clavier(); }
         
     }
@@ -836,6 +876,198 @@ public class Mot : MonoBehaviour {
 
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
+            case 'ê':
+
+                type = 30;
+
+                if (vit == 0)
+                {
+
+                    if (liste.Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste.Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
+
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
+                break;
+            case 'â':
+
+                type = 31;
+
+                if (vit == 0)
+                {
+
+                    if (liste.Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste.Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
+
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
+                break;
+            case 'û':
+
+                type = 32;
+
+                if (vit == 0)
+                {
+
+                    if (liste.Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste.Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
+
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
+                break;
+            case 'î':
+
+                type = 33;
+
+                if (vit == 0)
+                {
+
+                    if (liste.Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste.Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
+
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
+                break;
+            case 'ô':
+
+                type = 34;
+
+                if (vit == 0)
+                {
+
+                    if (liste.Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste.Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
+
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
+                break;
+            case 'ë':
+
+                type = 35;
+
+                if (vit == 0)
+                {
+
+                    if (liste.Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste.Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
+
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
+                break;
+            case 'ü':
+
+                type = 36;
+
+                if (vit == 0)
+                {
+
+                    if (liste.Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste.Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
+
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
+                break;
+            case 'ï':
+
+                type = 37;
+
+                if (vit == 0)
+                {
+
+                    if (liste.Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 0), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 0), Quaternion.identity);
+                }
+                else
+                {
+                    if (liste.Length < 6)
+                    {
+                        letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste.Length + 3 * i + 1.5f, 8), Quaternion.identity);
+                    }
+                    else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste.Length + 2 * i + 1f, 8), Quaternion.identity);
+                }
+
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
+                break;
 
 
         }
@@ -857,7 +1089,9 @@ public class Mot : MonoBehaviour {
 
     void BonneLettre()
     {
-        
+        caret = false;
+        activationCaret = false;
+
         ScoreManager.score += scoreValue;
         ScoreManager.bonneLettre += scoreValue1;
 
@@ -1103,9 +1337,107 @@ public class Mot : MonoBehaviour {
                 else MauvaiseLettre();
                 break;
 
+            case 30:
+            case 31:
+            case 32:
+            case 33:
+            case 34:
+                if (caret == false)
+                {
+                    if (Input.GetKeyDown(KeyCode.RightBracket) && !Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.RightShift))
+                    {
+                        activationCaret = true;
+                        letter[x].GetComponent<SpriteRenderer>().color = Color.cyan;
+                        caret = true;
+                    }
+                    else MauvaiseLettre();
+                }
+
+                break;
+            case 35:
+            case 36:
+            case 37:
+                if (caret == false)
+                {
+                    if (Input.GetKeyDown(KeyCode.RightBracket) && (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))
+                    {
+                        activationCaret = true;
+                        letter[x].GetComponent<SpriteRenderer>().color = Color.cyan;
+                        caret = true;
+                    }
+                    else if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) { } else MauvaiseLettre();
+                }
+
+                break;
+
         }
     }
 
-    
-	
+    void CaracSpeciaux()
+    {
+
+        switch (Ctype)
+        {
+            case 0:
+                if (Input.GetKeyDown("e"))
+                {
+                    BonneLettre();
+                }
+
+
+                break;
+            case 1:
+                if (Input.GetKeyDown("a"))
+                {
+                    BonneLettre();
+                }
+
+                break;
+            case 2:
+                if (Input.GetKeyDown("u"))
+                {
+                    BonneLettre();
+                }
+
+                break;
+            case 3:
+                if (Input.GetKeyDown("i"))
+                {
+                    BonneLettre();
+                }
+
+                break;
+            case 4:
+                if (Input.GetKeyDown("o"))
+                {
+                    BonneLettre();
+                }
+
+                break;
+            case 5:
+                if (Input.GetKeyDown("e"))
+                {
+                    BonneLettre();
+                }
+
+                break;
+            case 6:
+                if (Input.GetKeyDown("u"))
+                {
+                    BonneLettre();
+                }
+
+                break;
+            case 7:
+                if (Input.GetKeyDown("i"))
+                {
+                    BonneLettre();
+                }
+
+                break;
+        }
+    }
+
+
+
 }
