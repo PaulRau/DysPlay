@@ -88,8 +88,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   liste:
-  - aaa
-  - bbb
+  - a
+  - b
+  - c
+  - d
+  - e
+  - f
   liste2:
   - le
   - la
@@ -111,11 +115,48 @@ MonoBehaviour:
   - es
   - va
   liste3:
-  - les
-  - lui
+  - ail
+  - air
+  - aux
+  - axe
+  - bac
+  - bal
+  - bar
+  - bas
+  - bat
+  - boa
+  - bol
   - bon
-  - mes
+  - cil
+  - col
   - cri
+  - cru
+  - des
+  - dit
+  - duc
+  - duo
+  - dur
+  - eau
+  - est
+  - fil
+  - fin
+  - foi
+  - gai
+  - jet
+  - job
+  - jus
+  - lac
+  - les
+  - lot
+  - lui
+  - mes
+  - mon
+  - mou
+  - pli
+  - que
+  - qui
+  - sac
+  - sol
   liste4:
   - main
   - joli
@@ -123,9 +164,528 @@ MonoBehaviour:
   - ceux
   - pain
   liste5:
-  - "ma\xE7on"
-  - tarte
-  - "\xE9lire"
+  - absent
+  - aborde
+  - acheva
+  - affine
+  - allant
+  - allait
+  - alcool
+  - alarme
+  - baigne
+  - balade
+  - banane
+  - babine
+  - balais
+  - bandit
+  - balise
+  - bagage
+  - bajoue
+  - bambou
+  - bennes
+  - bidule
+  - beurre
+  - berner
+  - belote
+  - blabla
+  - blondi
+  - bobard
+  - blouse
+  - blonde
+  - blancs
+  - bocaux
+  - boeufs
+  - brader
+  - bougie
+  - boxant
+  - boulot
+  - bourde
+  - braise
+  - boudes
+  - brebis
+  - braies
+  - brasse
+  - brelan
+  - brises
+  - brouet
+  - brouta
+  - bruine
+  - bronze
+  - brouet
+  - butins
+  - bulles
+  - butome
+  - brumes
+  - bruies
+  - bureau
+  - cafard
+  - caille
+  - calcul
+  - cacher
+  - cabine
+  - cabane
+  - cabrer
+  - caducs
+  - cachez
+  - captif
+  - captai
+  - canyon
+  - canifs
+  - citron
+  - chaume
+  - charme
+  - chauds
+  - champi
+  - chanta
+  - chauve
+  - charge
+  - chenil
+  - chimie
+  - cigare
+  - ciller
+  - chrome
+  - chlore
+  - cibles
+  - chutes
+  - choque
+  - chopes
+  - choses
+  - chuter
+  - ciment
+  - cigale
+  - datais
+  - danses
+  - daigna
+  - dauber
+  - dalton
+  - dattes
+  - dagues
+  - devoir
+  - devise
+  - devons
+  - dicton
+  - dindon
+  - diluas
+  - dicton
+  - dettes
+  - disons
+  - divans
+  - dirent
+  - dirige
+  - disque
+  - doigts
+  - doigte
+  - dogmes
+  - drague
+  - dragon
+  - droite
+  - empire
+  - encart
+  - encave
+  - encens
+  - enclos
+  - emmena
+  - empois
+  - enroba
+  - enfoui
+  - enivra
+  - entama
+  - entour
+  - envers
+  - envahi
+  - enlise
+  - essora
+  - esprit
+  - espace
+  - espoir
+  - estime
+  - estima
+  - escroc
+  - erreur
+  - essuya
+  - ethnie
+  - exalte
+  - excuse
+  - exclue
+  - expire
+  - expira
+  - expier
+  - farces
+  - farter
+  - faucon
+  - fatale
+  - fatals
+  - ferrer
+  - feutra
+  - festin
+  - fermes
+  - fesses
+  - fermer
+  - fendit
+  - fichai
+  - fibres
+  - flocon
+  - floral
+  - fleuve
+  - flaque
+  - flamme
+  - forban
+  - fondue
+  - forage
+  - fluide
+  - fuyard
+  - fusera
+  - fumeux
+  - frotte
+  - gagnes
+  - galion
+  - gamine
+  - gadoue
+  - garage
+  - galons
+  - gibets
+  - gifler
+  - gisant
+  - girafe
+  - germes
+  - gendre
+  - genres
+  - gobent
+  - gloire
+  - gobera
+  - goulue
+  - gommes
+  - gonfle
+  - goujon
+  - grille
+  - griffe
+  - grimpe
+  - guidon
+  - guidai
+  - habile
+  - haleur
+  - harder
+  - hacher
+  - hareng
+  - habite
+  - homard
+  - hivers
+  - heurta
+  - hockey
+  - hymnes
+  - humble
+  - impair
+  - impoli
+  - impose
+  - inapte
+  - incuba
+  - isoler
+  - ironie
+  - intime
+  - intact
+  - inonda
+  - ivoire
+  - jaguar
+  - jarres
+  - jaunes
+  - jokers
+  - jauger
+  - jamais
+  - jasmin
+  - jambes
+  - jaunes
+  - jument
+  - jumeau
+  - jungle
+  - jurent
+  - jonque
+  - joueur
+  - jouent
+  - jonche
+  - kaolin
+  - koalas
+  - kimono
+  - kelvin
+  - kraken
+  - labour
+  - lagune
+  - lamine
+  - labeur
+  - labels
+  - laitue
+  - lavent
+  - lavera
+  - levure
+  - lierre
+  - ligues
+  - lieues
+  - lionne
+  - ligote
+  - lisage
+  - lisent
+  - lutins
+  - lovait
+  - loyale
+  - lutter
+  - lourde
+  - louves
+  - loyaux
+  - longue
+  - magnum
+  - malins
+  - mamies
+  - madame
+  - manioc
+  - manque
+  - mairie
+  - maigre
+  - menhir
+  - mentir
+  - meuble
+  - mettre
+  - mignon
+  - minime
+  - minute
+  - minuit
+  - mollir
+  - montre
+  - monter
+  - mixeur
+  - muffin
+  - mulets
+  - moudra
+  - mythes
+  - myopie
+  - mygale
+  - mutant
+  - muscat
+  - navale
+  - neveux
+  - niaise
+  - navale
+  - native
+  - notera
+  - nougat
+  - nuance
+  - normes
+  - nuques
+  - nuises
+  - normes
+  - nouent
+  - nymphe
+  - noyaux
+  - novice
+  - ondule
+  - ombrer
+  - opiner
+  - odorat
+  - odeurs
+  - oignon
+  - oiseau
+  - ongles
+  - office
+  - oxydes
+  - ovuler
+  - oublia
+  - oublie
+  - ouvrer
+  - oublis
+  - pagaye
+  - paille
+  - pagure
+  - panier
+  - papier
+  - panner
+  - pauvre
+  - pavane
+  - partez
+  - parler
+  - parfum
+  - penser
+  - perdue
+  - permis
+  - phoque
+  - photos
+  - permis
+  - picole
+  - pichet
+  - persil
+  - piquer
+  - piques
+  - pilule
+  - pileur
+  - piment
+  - pirate
+  - pocher
+  - poiler
+  - plisse
+  - pleuve
+  - pleine
+  - pondue
+  - pollue
+  - porche
+  - posant
+  - poivre
+  - police
+  - points
+  - poings
+  - pomper
+  - python
+  - puiser
+  - punira
+  - purger
+  - pronom
+  - pudeur
+  - pseudo
+  - quarts
+  - quotas
+  - quartz
+  - quinoa
+  - quiche
+  - rachat
+  - rafler
+  - raidir
+  - radian
+  - rasoir
+  - rebord
+  - ravale
+  - refond
+  - refila
+  - rejeta
+  - relate
+  - renoms
+  - renard
+  - rentre
+  - relaxe
+  - repars
+  - ridage
+  - rideau
+  - revenu
+  - revend
+  - robots
+  - rinces
+  - rodait
+  - rocher
+  - rivale
+  - ronger
+  - rosser
+  - rougir
+  - rythme
+  - russes
+  - router
+  - routes
+  - rougir
+  - royale
+  - safari
+  - salade
+  - salons
+  - sabord
+  - salami
+  - saison
+  - salade
+  - savons
+  - savent
+  - seiche
+  - second
+  - savane
+  - seules
+  - simule
+  - sirops
+  - singes
+  - sonner
+  - sonnet
+  - sortie
+  - sortir
+  - sommer
+  - subite
+  - stylos
+  - subtil
+  - statue
+  - statua
+  - succin
+  - surgit
+  - surgir
+  - surfer
+  - survie
+  - sushis
+  - sucent
+  - sueurs
+  - suffit
+  - sphinx
+  - suisse
+  - france
+  - italie
+  - survol
+  - sujets
+  - surent
+  - tajine
+  - tables
+  - tacots
+  - tabacs
+  - tamise
+  - tables
+  - tabler
+  - tendre
+  - tendue
+  - tennis
+  - tenues
+  - taurin
+  - temple
+  - teneur
+  - tenons
+  - tendre
+  - tatane
+  - tigres
+  - tiques
+  - timide
+  - thymus
+  - urbain
+  - utopie
+  - ultime
+  - uniras
+  - unions
+  - unifie
+  - unique
+  - usages
+  - userai
+  - usurpa
+  - utopie
+  - valent
+  - valide
+  - vannes
+  - vagues
+  - valise
+  - vanter
+  - vaccin
+  - vapeur
+  - vaincu
+  - vernis
+  - verrou
+  - vendue
+  - vessie
+  - virils
+  - virage
+  - visant
+  - viseur
+  - virils
+  - vident
+  - votera
+  - voulus
+  - voulut
+  - voleur
+  - voiler
+  - voulez
+  - voulue
+  - volcan
+  - wambat
+  - wagons
+  - yaourt
+  - yourte
+  - yachts
+  - zombie
+  - zigzag
+  - zouave
+  - zinzin
   liste6:
   - ballon
   - enfant
@@ -161,10 +721,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e022bc2f5dc66ab4691a4930b9d6cd73, type: 3}
   - {fileID: 21300000, guid: b422b7cb86125b4499f4e51950947d34, type: 3}
   - {fileID: 21300000, guid: ba1d892701a11104d9427f21f30fcc09, type: 3}
-  - {fileID: 21300000, guid: 05eede4b1b6f52944b0c116a22151e5b, type: 3}
-  - {fileID: 21300000, guid: a57408b42e740ea4db88c3bc8944228c, type: 3}
-  - {fileID: 21300000, guid: 218222c370ca1c243b091e8497916561, type: 3}
-  - {fileID: 21300000, guid: 95ec827bb4729e44ca1f1230a54711e3, type: 3}
   scoreValue: 1
   scoreValue1: 1
   sonBonneLettre: {fileID: 0}
@@ -214,7 +770,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: alphabet.Array.size
-      value: 30
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: liste.Array.data[0]
@@ -367,6 +923,114 @@ Prefab:
       propertyPath: liste5.Array.data[2]
       value: "\xE9lire"
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: Clone
+      value: 
+      objectReference: {fileID: 136730}
+    - target: {fileID: 0}
+      propertyPath: letterPrefab
+      value: 
+      objectReference: {fileID: 138626, guid: ab112ceeda7e47c498fe41748e08a051, type: 2}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: ac99665bd0e9bc14fbc5f76761e58ee3,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: ab9cab6130ec5294fbe28611f452f1a6,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: b3c0771ebfc3a93458e3a0cafa28eb7a,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: e1b0e3933caedb140abb555f299f578a,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0f2b45a1f72e12e46b34fada7864fadf,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: c3cde0e4d8649634284bc423e5181782,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4ca7a1080da40464ca21a8794359852d,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: d38d49bdbcabdce4783a858d64e57e65,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[8]
+      value: 
+      objectReference: {fileID: 21300000, guid: 07252574a49591c41b5de1fcce3ed1c9,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[9]
+      value: 
+      objectReference: {fileID: 21300000, guid: 20ad1ccfdcfc6014d847851e869caf2d,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[10]
+      value: 
+      objectReference: {fileID: 21300000, guid: 00f1b59888364bb43b1664dc4bb4e590,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[11]
+      value: 
+      objectReference: {fileID: 21300000, guid: df9a298847c61f04c9c885857e39d6a4,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[12]
+      value: 
+      objectReference: {fileID: 21300000, guid: f93d83d38d6205c4d88edacf50c0058b,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[13]
+      value: 
+      objectReference: {fileID: 21300000, guid: 3df7574d61178ad40b0e7a19de0564e4,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[14]
+      value: 
+      objectReference: {fileID: 21300000, guid: 1a3fab8f1703b3641a5fa4fad7da866a,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[15]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9f49d63ac8a210c409b0f4082f328771,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[16]
+      value: 
+      objectReference: {fileID: 21300000, guid: 614c82c9921438649994b76eee076897,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[17]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7631b2ae7cbce1c459477c11000bd33d,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[18]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7c0d41629984f604c9042392e4a36177,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[19]
+      value: 
+      objectReference: {fileID: 21300000, guid: cdc090b01dd705144bd36877333cbac0,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 136730}
