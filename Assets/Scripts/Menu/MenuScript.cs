@@ -1,9 +1,20 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class MenuScript : MonoBehaviour {
 
     bool pause = false;
+
+    public static float currentVolume = 0;
+
+    
+
+    public void volumeSlider(float vo)
+    {
+        currentVolume = vo;
+        Debug.Log(currentVolume);
+    }
 
     //partie perso
     public void jouerPatirPerso()
@@ -43,10 +54,12 @@ public class MenuScript : MonoBehaviour {
         GenerateurFinDePartie.finDePartiePerso = 20;
         PersonalisablePartie.NbLettreAlea = 1;
     }
+    
 
     public void retourMenuNiveaux()
     {
         Application.LoadLevel("PartieNiveaux");
+        
     }
 
  

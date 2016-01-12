@@ -28,6 +28,8 @@ public class MotAleatoire : MonoBehaviour
     void Awake ()
     {
        source = GetComponent<AudioSource>();
+       source.volume = MenuScript.currentVolume;
+       Debug.Log(source.volume);
         
     }
     
@@ -148,6 +150,7 @@ public class MotAleatoire : MonoBehaviour
         {
 
             success = true;
+           
             for (i = 0; i < liste[rand].Length; i++)
             {
 
@@ -160,6 +163,7 @@ public class MotAleatoire : MonoBehaviour
             }
             // Ne pas oublier de detruire l'object mot éventuellement
             Destroy(Clone, 0.5f);
+            source.PlayOneShot(sonBonneLettre);
         }
         if (success == false) { clavier(); }
 
@@ -462,8 +466,8 @@ public class MotAleatoire : MonoBehaviour
 
         letter[x].GetComponent<SpriteRenderer>().color = Color.green;
 
-       //source.PlayOneShot(sonBonneLettre,1.0f);
-       source.PlayOneShot(sonBonneLettre);
+     
+   
         
 
         x++;
