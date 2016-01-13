@@ -729,8 +729,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2856b967bad32fe4ba3c85b58c9411af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: 10, y: 10}
-  direction: {x: -1, y: 0}
+  speed: {x: 0, y: 4}
+  direction: {x: 0, y: -1}
   letter: {fileID: 138626, guid: ab112ceeda7e47c498fe41748e08a051, type: 2}
   newPos: {x: 0, y: 8}
 --- !u!212 &21213280
@@ -1029,6 +1029,22 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: liste4.Array.data[0]
       value: "p\xEAche"
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: speed.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: direction.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: direction.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: speed.y
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
