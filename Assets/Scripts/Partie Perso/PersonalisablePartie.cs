@@ -209,5 +209,14 @@ public class PersonalisablePartie : MonoBehaviour {
         
     }
 
-   
+    public void OnToggleCarSpecMot(bool spec)
+    {
+        if (spec == true)
+        {
+            MotAleaPerso.spec = true;
+        }
+        else MotAleaPerso.spec = false;
+    }
+
+
 }

@@ -125,6 +125,7 @@ Transform:
   m_Children:
   - {fileID: 1383760082}
   - {fileID: 537297512}
+  - {fileID: 420375006}
   m_Father: {fileID: 2126293698}
   m_RootOrder: 15
 --- !u!1 &4852460
@@ -628,7 +629,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2126293698}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 235.699997, y: -32.5}
@@ -1051,7 +1052,7 @@ GameObject:
   - 224: {fileID: 420375006}
   - 114: {fileID: 420375007}
   m_Layer: 5
-  m_Name: Toggle (1)
+  m_Name: ToggleCarSpecMot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1070,11 +1071,11 @@ RectTransform:
   - {fileID: 446367177}
   - {fileID: 50981592}
   - {fileID: 195786318}
-  m_Father: {fileID: 2126293698}
-  m_RootOrder: 18
+  m_Father: {fileID: 1628998}
+  m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -410, y: -104}
+  m_AnchoredPosition: {x: -528, y: -110.75}
   m_SizeDelta: {x: 162, y: 39}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &420375007
@@ -1118,7 +1119,18 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 958205405}
+        m_MethodName: OnToggleCarSpecMot
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 1
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
@@ -6607,7 +6619,6 @@ RectTransform:
   - {fileID: 1628998}
   - {fileID: 217955459}
   - {fileID: 1433001536}
-  - {fileID: 420375006}
   - {fileID: 198844633}
   m_Father: {fileID: 0}
   m_RootOrder: 2

@@ -94,8 +94,12 @@ public class LettreAleatoire : MonoBehaviour
           speed.y * direction.y);
 
         // Récupère l'action sur le clavier
+        
+
         if (success== false) { clavier(); }
+
         if (activationCaret == true) { CaracSpeciaux(); }
+
 
     }
 
@@ -401,28 +405,28 @@ public class LettreAleatoire : MonoBehaviour
                 {
                     BonneLettre();
                 }
-
-
+                
                 break;
             case 1:
                 if (Input.GetKeyDown("a"))
                 {
                     BonneLettre();
                 }
-
+              
                 break;
             case 2:
                 if (Input.GetKeyDown("u"))
                 {
                     BonneLettre();
                 }
-
+              
                 break;
             case 3:
                 if (Input.GetKeyDown("i"))
                 {
                     BonneLettre();
                 }
+                
 
                 break;
             case 4:
@@ -430,6 +434,7 @@ public class LettreAleatoire : MonoBehaviour
                 {
                     BonneLettre();
                 }
+                
 
                 break;
             case 5:
@@ -437,6 +442,7 @@ public class LettreAleatoire : MonoBehaviour
                 {
                     BonneLettre();
                 }
+               
 
                 break;
             case 6:
@@ -444,6 +450,7 @@ public class LettreAleatoire : MonoBehaviour
                 {
                     BonneLettre();
                 }
+                
 
                 break;
             case 7:
@@ -451,6 +458,7 @@ public class LettreAleatoire : MonoBehaviour
                 {
                     BonneLettre();
                 }
+                
 
                 break;
         }
