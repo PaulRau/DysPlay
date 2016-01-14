@@ -43,6 +43,11 @@ MonoBehaviour:
   choixLettre: {fileID: 186886, guid: 52a96268fdeb88c4b8f19700f9584854, type: 2}
   choixMotChoisi: {fileID: 105058, guid: 965619d0610a1254dacd57a02301ccbe, type: 2}
   choixLettreChoisi: {fileID: 142874, guid: 88d9be0449aa4244f839813cfe39f9d4, type: 2}
+  fond:
+  - {fileID: 133422, guid: a01222843c81bdb41a4abbe0aad23fd6, type: 2}
+  - {fileID: 156360, guid: 8d35a30fcbe47cc44839406f7bba6936, type: 2}
+  sol:
+  - {fileID: 135394, guid: efbf6d27768f29b4fabba89e4f03e574, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

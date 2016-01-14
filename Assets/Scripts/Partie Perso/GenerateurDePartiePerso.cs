@@ -12,14 +12,19 @@ public class GenerateurDePartiePerso : MonoBehaviour {
     public GameObject choixLettre;
     public GameObject choixMotChoisi;
     public GameObject choixLettreChoisi;
-
-
+    
+    public GameObject[] fond;
+    public GameObject[] sol;
+    
+    private int rand;
+   
     
 
     // Use this for initialization
 
     void Start()
     {
+        rand = Random.Range(0, fond.Length);
 
         // mot.GetComponent<LettreChoisie>().speed = new Vector2(0, PersonalisablePartie.vitesse);
         vit = PersonalisablePartie.vitesse;
@@ -29,6 +34,19 @@ public class GenerateurDePartiePerso : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if (GameObject.Find("Paquerettes(Clone)") == null && GameObject.Find("Plage(Clone)") == null)
+        {
+            Instantiate(fond[rand]);
+        }
+
+        if (GameObject.Find("Sol Invisible(Clone)") == null)
+        {
+            Instantiate(sol[0]);
+            
+        }
+
+
+
         if (choixMota == true)
         {
             if (GameObject.Find("LettreChoisie(Clone)") == null)
