@@ -91,8 +91,8 @@ public class MenuScript : MonoBehaviour {
     //lancer niveau
     public void lancerNiveau1()
     {
-        Application.LoadLevel("Scene1.0.1");
-        Time.timeScale = 1.0f;
+        Application.LoadLevel("Lettre1");
+        Time.timeScale = 1;
         pause = false;
     }
     public void lancerNiveau2()
