@@ -16,15 +16,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PartieNiveaux.unity
   - enabled: 1
-    path: Assets/Scenes/Niveaux/Lettre1.unity
+    path: Assets/Scenes/Niveaux/Lettre1Pool8.unity
   - enabled: 1
-    path: Assets/Scenes/Niveaux/Lettre2.unity
+    path: Assets/Scenes/Niveaux/Lettre2Pool16.unity
   - enabled: 1
-    path: Assets/Scenes/Niveaux/Lettre3.unity
+    path: Assets/Scenes/Niveaux/Lettre3Pool26.unity
   - enabled: 1
-    path: Assets/Scenes/Niveaux/Lettre4.unity
-  - enabled: 1
-    path: Assets/Scenes/Niveaux/Lettre5.unity
+    path: Assets/Scenes/Niveaux/Lettre4PoolAccent.unity
   - enabled: 1
     path: Assets/Scenes/Niveaux/Mot1.unity
   - enabled: 1
