@@ -4,6 +4,8 @@ using System.Collections;
 public class Mot : MonoBehaviour {
 
     public static string liste;
+
+    private string[] newliste; 
     
     private int i = 0;
     private int j = 0;
@@ -42,8 +44,16 @@ public class Mot : MonoBehaviour {
 
         }
 
-        characters = liste.ToCharArray();
 
+       newliste= liste.Split(',');
+
+       for (int k = 0; k < 6; k++)
+       {
+           Debug.Log(newliste[k]);
+       }
+           
+        characters = liste.ToCharArray();
+        Debug.Log(liste);
 
         
         for (i = 0; i < liste.Length; i++)

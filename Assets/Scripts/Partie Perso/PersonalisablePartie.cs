@@ -136,7 +136,10 @@ public class PersonalisablePartie : MonoBehaviour {
 
     public void choixMot(string choix)
     {
-        Mot.liste = choix;
+        Mot.liste = choix; // a supprimer
+        MotChoisiePerso.listeChoisi = choix;
+
+
         
                
     }
