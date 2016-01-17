@@ -150,7 +150,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Choisissez le type des niveaux:'
+  m_Text: 'Choisissez le type de niveau :'
 --- !u!222 &3110849
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1218,7 +1218,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Niveaux de lettres
+  m_Text: Niveau de lettres
 --- !u!222 &1949736458
 CanvasRenderer:
   m_ObjectHideFlags: 0

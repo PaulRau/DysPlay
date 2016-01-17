@@ -91,46 +91,23 @@ public class MenuScript : MonoBehaviour {
     //lancer niveau
     public void lancerNiveau1()
     {
-        Application.LoadLevel("Lettre1");
+        Application.LoadLevel("Lettre1Pool8");
         Time.timeScale = 1;
         pause = false;
     }
     public void lancerNiveau2()
     {
-        Application.LoadLevel("Lettre1");
+        Application.LoadLevel("Lettre2Pool16");
     }
     public void lancerNiveau3()
     {
-        Application.LoadLevel("Lettre2");
+        Application.LoadLevel("Lettre3Pool26");
     }
     public void lancerNiveau4()
     {
-        Application.LoadLevel("Lettre3");
+        Application.LoadLevel("Lettre4PoolAccent");
     }
-    public void lancerNiveau5()
-    {
-        Application.LoadLevel("Lettre4");
-    }
-    public void lancerNiveau6()
-    {
-        Application.LoadLevel("Lettre5");
-    }
-    public void lancerNiveau7()
-    {
-        Application.LoadLevel("Mot1");
-    }
-    public void lancerNiveau8()
-    {
-        Application.LoadLevel("Mot2");
-    }
-    public void lancerNiveau9()
-    {
-        Application.LoadLevel("Mot3");
-    }
-    public void lancerNiveau10()
-    {
-        Application.LoadLevel("Mot4");
-    }
+
    
     //scene1.0.1
     public void butonPause()

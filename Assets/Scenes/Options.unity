@@ -230,7 +230,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "R\xE9solution : R\xE9glable au d\xE9marage du jeu"
+  m_Text: "R\xE9solution : R\xE9glable au d\xE9marrage du jeu"
 --- !u!222 &592011087
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -997,7 +997,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Qualit\xE9 des textures : R\xE9glable au d\xE9marage du jeu"
+  m_Text: "Qualit\xE9 des textures : R\xE9glable au d\xE9marrage du jeu"
 --- !u!222 &1057718371
 CanvasRenderer:
   m_ObjectHideFlags: 0
