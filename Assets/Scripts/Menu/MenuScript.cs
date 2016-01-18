@@ -38,6 +38,7 @@ public class MenuScript : MonoBehaviour {
         Application.LoadLevel(Application.loadedLevel);
         Time.timeScale = 1.0f;
         pause = false;
+        Compteur.timeRemaining = 4;
      
     }
 
@@ -53,6 +54,7 @@ public class MenuScript : MonoBehaviour {
         GenerateurDePartiePerso.choixLettrechoisia = false;
         GenerateurFinDePartie.finDePartiePerso = 20;
         PersonalisablePartie.NbLettreAlea = 1;
+        Compteur.timeRemaining = 4;
     }
     
 
