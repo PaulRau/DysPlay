@@ -34,62 +34,73 @@ public class GenerateurDePartiePerso : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.Find("Paquerettes(Clone)") == null && GameObject.Find("Plage(Clone)") == null)
-        {
-            Instantiate(fond[rand]);
-        }
 
-        if (GameObject.Find("Sol Invisible(Clone)") == null)
-        {
-            Instantiate(sol[0]);
-            
-        }
-
-
-
-        if (choixMota == true)
-        {
-            if (GameObject.Find("LettreChoisie(Clone)") == null)
+      
+            if (GameObject.Find("Paquerettes(Clone)") == null && GameObject.Find("Plage(Clone)") == null)
             {
-                Instantiate(choixMot);
-            }       
+                Instantiate(fond[rand]);
+            }
 
+            if (GameObject.Find("Sol Invisible(Clone)") == null)
+            {
+                Instantiate(sol[0]);
+
+         
         }
 
-        if (choixLettrea == true)
+        if (Compteur.timeRemaining < 0.01f)
         {
-            if (GameObject.Find("LettreAleatoire(Clone)") == null)
+            if (choixMota == true)
             {
-                if (vit == 0)
+                if (GameObject.Find("LettreChoisie(Clone)") == null)
                 {
-                    Instantiate(choixLettre, new Vector2(0, 0), Quaternion.identity);
+                    Instantiate(choixMot);
                 }
-                else Instantiate(choixLettre);
-             
-            } 
-        }
 
-        if (choixMotchoisia == true)
-        {
-            if (GameObject.Find("LettreChoisie(Clone)") == null)
-            {
-                Instantiate(choixMotChoisi);
             }
         }
 
-        if (choixLettrechoisia == true)
+
+        if (Compteur.timeRemaining < 0.01f)
         {
-            if (GameObject.Find("LettreChoisiPerso(Clone)") == null)
+            if (choixLettrea == true)
             {
-                if (vit == 0)
+                if (GameObject.Find("LettreAleatoire(Clone)") == null)
                 {
-                    Instantiate(choixLettreChoisi, new Vector2(0, 0), Quaternion.identity);
-                }else Instantiate(choixLettreChoisi);
+                    if (vit == 0)
+                    {
+                        Instantiate(choixLettre, new Vector2(0, 0), Quaternion.identity);
+                    }
+                    else Instantiate(choixLettre);
 
-
-
+                }
             }
         }
-     
+
+        if (Compteur.timeRemaining < 0.01f)
+        {
+            if (choixMotchoisia == true)
+            {
+                if (GameObject.Find("LettreChoisie(Clone)") == null)
+                {
+                    Instantiate(choixMotChoisi);
+                }
+            }
+
+            if (choixLettrechoisia == true)
+            {
+                if (GameObject.Find("LettreChoisiPerso(Clone)") == null)
+                {
+                    if (vit == 0)
+                    {
+                        Instantiate(choixLettreChoisi, new Vector2(0, 0), Quaternion.identity);
+                    }
+                    else Instantiate(choixLettreChoisi);
+
+
+
+                }
+            }
+        }
     }
 }
