@@ -42,6 +42,7 @@ public class ComportementSol : MonoBehaviour {
                 MotAleaPerso.success = true;
                 LettreChoisiePerso.success = true;
                 Mot.success = true;
+                NiveauUn.success = true;
 
                 Instantiate(canvas);
                 Time.timeScale = 0.0f;
@@ -78,6 +79,7 @@ public class ComportementSol : MonoBehaviour {
             MotAleaPerso.success = true;
             LettreChoisiePerso.success = true;
             Mot.success = true;
+            NiveauUn.success = true;
         }
 
         if (collision.gameObject.name == "LettreAleatoire(Clone)" || collision.gameObject.name == "LettreChoisiPerso(Clone)")
@@ -100,6 +102,7 @@ public class ComportementSol : MonoBehaviour {
             LettreAleatoire.success = true;
             LettreChoisiePerso.success = true;
             Mot.success = true;
+            NiveauUn.success = true;
 
             if (aVie == true)
             {
@@ -111,7 +114,7 @@ public class ComportementSol : MonoBehaviour {
         }
 
 
-        if (collision.gameObject.name == "Mot(Clone)" || collision.gameObject.name == "MotAleatoire(Clone)" || collision.gameObject.name == "MotPerso(Clone)" || collision.gameObject.name == "MotAleaPerso(Clone)")
+        if (collision.gameObject.name == "Mot(Clone)" || collision.gameObject.name == "MotAleatoire(Clone)" || collision.gameObject.name == "MotChoisiPerso(Clone)" || collision.gameObject.name == "MotAleaPerso(Clone)")
             {
                 
 
@@ -125,6 +128,7 @@ public class ComportementSol : MonoBehaviour {
                 LettreAleatoire.success = true;
                 LettreChoisiePerso.success = true;
                 Mot.success = true;
+                NiveauUn.success = true;
 
             if (aVie == true)
                 {
@@ -132,7 +136,7 @@ public class ComportementSol : MonoBehaviour {
                     {
                         vies--;
                     }// else fin de partie    
-                }
+                } 
             }
         
         

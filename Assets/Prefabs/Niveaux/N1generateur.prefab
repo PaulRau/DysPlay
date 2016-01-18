@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 453956}
   - 212: {fileID: 21218368}
   - 114: {fileID: 11447830}
+  - 114: {fileID: 11424850}
   m_Layer: 0
   m_Name: N1generateur
   m_TagString: Untagged
@@ -29,6 +30,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &11424850
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5235cb893231d7d4dbfa6817bdcca1e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fond:
+  - {fileID: 133422, guid: a01222843c81bdb41a4abbe0aad23fd6, type: 2}
+  - {fileID: 156360, guid: 8d35a30fcbe47cc44839406f7bba6936, type: 2}
+  sol:
+  - {fileID: 135394, guid: efbf6d27768f29b4fabba89e4f03e574, type: 2}
+  alphabet:
+  - {fileID: 21300000, guid: 0f2b45a1f72e12e46b34fada7864fadf, type: 3}
+  - {fileID: 21300000, guid: ac99665bd0e9bc14fbc5f76761e58ee3, type: 3}
+  - {fileID: 21300000, guid: 7c0d41629984f604c9042392e4a36177, type: 3}
+  - {fileID: 21300000, guid: 07252574a49591c41b5de1fcce3ed1c9, type: 3}
+  - {fileID: 21300000, guid: 3df7574d61178ad40b0e7a19de0564e4, type: 3}
+  - {fileID: 21300000, guid: cdc090b01dd705144bd36877333cbac0, type: 3}
+  - {fileID: 21300000, guid: 7631b2ae7cbce1c459477c11000bd33d, type: 3}
+  - {fileID: 21300000, guid: df9a298847c61f04c9c885857e39d6a4, type: 3}
+  lettre: {fileID: 138626, guid: ab112ceeda7e47c498fe41748e08a051, type: 2}
+  scoreValue: 1
 --- !u!114 &11447830
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -74,7 +102,75 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: sol.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: fond.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: sol.Array.data[0]
+      value: 
+      objectReference: {fileID: 135394, guid: efbf6d27768f29b4fabba89e4f03e574, type: 2}
+    - target: {fileID: 0}
+      propertyPath: fond.Array.data[0]
+      value: 
+      objectReference: {fileID: 133422, guid: a01222843c81bdb41a4abbe0aad23fd6, type: 2}
+    - target: {fileID: 0}
+      propertyPath: fond.Array.data[1]
+      value: 
+      objectReference: {fileID: 156360, guid: 8d35a30fcbe47cc44839406f7bba6936, type: 2}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0f2b45a1f72e12e46b34fada7864fadf,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: ac99665bd0e9bc14fbc5f76761e58ee3,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7c0d41629984f604c9042392e4a36177,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 07252574a49591c41b5de1fcce3ed1c9,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 3df7574d61178ad40b0e7a19de0564e4,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: cdc090b01dd705144bd36877333cbac0,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7631b2ae7cbce1c459477c11000bd33d,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: alphabet.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: df9a298847c61f04c9c885857e39d6a4,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: lettre
+      value: 
+      objectReference: {fileID: 138626, guid: ab112ceeda7e47c498fe41748e08a051, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 145100}
