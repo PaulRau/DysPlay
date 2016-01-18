@@ -71,10 +71,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2856b967bad32fe4ba3c85b58c9411af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: 0, y: 4}
+  speed: {x: 0, y: 9}
   direction: {x: 0, y: -1}
   letter: {fileID: 138626}
-  letterPrefab: {fileID: 138626}
   newPos: {x: 0, y: 8}
 --- !u!212 &21287576
 SpriteRenderer:
@@ -296,6 +295,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Size.y
       value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
