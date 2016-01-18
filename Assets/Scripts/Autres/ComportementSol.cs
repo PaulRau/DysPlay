@@ -80,9 +80,10 @@ public class ComportementSol : MonoBehaviour {
             LettreChoisiePerso.success = true;
             Mot.success = true;
             NiveauUn.success = true;
+            NiveauDeux.success = true;
         }
 
-        if (collision.gameObject.name == "LettreAleatoire(Clone)" || collision.gameObject.name == "LettreChoisiPerso(Clone)")
+        if (collision.gameObject.name == "LettreAleatoire(Clone)" || collision.gameObject.name == "LettreChoisiPerso(Clone)" || collision.gameObject.name == "LettreNiveau(Clone)")
         {
             //Modifie le score
             ScoreManager.score -= scoreValue;
@@ -103,6 +104,7 @@ public class ComportementSol : MonoBehaviour {
             LettreChoisiePerso.success = true;
             Mot.success = true;
             NiveauUn.success = true;
+            NiveauDeux.success = true;
 
             if (aVie == true)
             {
@@ -114,7 +116,7 @@ public class ComportementSol : MonoBehaviour {
         }
 
 
-        if (collision.gameObject.name == "Mot(Clone)" || collision.gameObject.name == "MotAleatoire(Clone)" || collision.gameObject.name == "MotChoisiPerso(Clone)" || collision.gameObject.name == "MotAleaPerso(Clone)" || collision.gameObject.name == "MarqueurPosLettre(Clone)")
+        if (collision.gameObject.name == "Mot(Clone)" || collision.gameObject.name == "MotAleatoire(Clone)" || collision.gameObject.name == "MotChoisiPerso(Clone)" || collision.gameObject.name == "MotAleaPerso(Clone)")
             {
                 
 
@@ -129,6 +131,7 @@ public class ComportementSol : MonoBehaviour {
                 LettreChoisiePerso.success = true;
                 Mot.success = true;
                 NiveauUn.success = true;
+                NiveauDeux.success = true;
 
             if (aVie == true)
                 {
