@@ -48,11 +48,47 @@ public class LettreAleatoire : MonoBehaviour
         letter.GetComponent<LettreAleatoire>().speed = new Vector2(0, PersonalisablePartie.vitesse);
         success = false;      
        
-        if (spec == true)
+
+
+        if (spec == true && PersonalisablePartie.caracspec == true && GenerateurDePartiePerso.choixLettrea == true)
         {
-            rand = Random.Range(0, alphabet.Length);                            //nombre aléatoire entre 0 et la taille de la liste Alphabet
+            rand = Random.Range(0, alphabet.Length);  //nombre aléatoire entre 0 et la taille de la liste Alphabet
         }
-        else rand = Random.Range(0, 25);  // Les 25 premiers caractères correspondent aux lettres A à Z, sans caractères spéciaux.
+        else if (spec == true && PersonalisablePartie.caracspec == true)
+        {
+            rand = Random.Range(26, 52); // Les x premiers caractères correspondent aux  caractères accentués et spéciaux
+        }
+        else if (spec == true && GenerateurDePartiePerso.choixLettrea == true)
+        {
+            rand = Random.Range(0, 37); // Les 25 premiers caractères correspondent aux lettres A à Z + les caractères accentués
+        }
+        else if (GenerateurDePartiePerso.choixLettrea == true && PersonalisablePartie.caracspec == true)
+        {
+            rand = Random.Range(0, 52);  // Les 0-25 premier ou les 38-52 dernier
+            if(rand >= 26 || rand <= 31)
+            {
+                rand = rand - 6;
+            }
+            else if(rand >= 32 || rand <= 37)
+            {
+                rand = rand + 6;
+            }
+        }
+        else if (GenerateurDePartiePerso.choixLettrea == true)
+        {
+            rand = Random.Range(0, 25);  // Les 25 premiers caractères correspondent aux lettres A à Z, sans caractères spéciaux.
+        }
+        else if ( PersonalisablePartie.caracspec == true)
+        {
+           rand = Random.Range(38, 52);  // Les 15 derniers caractères correspondent aux caractères spéciaux.
+        }
+        else if (spec == true )
+        {
+            rand = Random.Range(26,37); // Les 12 caractères accentués
+        }
+
+
+        Debug.Log(rand);
 
         letter.GetComponent<SpriteRenderer>().sprite = alphabet[rand];      //ajoute le sprite correspondant à l'object lettre
 

@@ -63,7 +63,7 @@ public class GenerateurDePartiePerso : MonoBehaviour {
 
         if (Compteur.timeRemaining < 0.01f)
         {
-            if (choixLettrea == true)
+            if (choixLettrea == true || LettreAleatoire.spec == true || PersonalisablePartie.caracspec == true)
             {
                 if (GameObject.Find("LettreAleatoire(Clone)") == null)
                 {

@@ -53,6 +53,10 @@ public class MenuScript : MonoBehaviour {
         GenerateurDePartiePerso.choixLettrea = false;
         GenerateurDePartiePerso.choixMotchoisia = false;
         GenerateurDePartiePerso.choixLettrechoisia = false;
+
+        PersonalisablePartie.caracspec = false;
+        LettreAleatoire.spec = false;
+
         GenerateurFinDePartie.finDePartiePerso = 20;
         PersonalisablePartie.NbLettreAlea = 1;
         Compteur.timeRemaining = 4;

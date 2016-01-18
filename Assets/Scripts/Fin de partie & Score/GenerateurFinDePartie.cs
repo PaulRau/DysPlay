@@ -40,6 +40,8 @@ public class GenerateurFinDePartie : MonoBehaviour {
                     ratio = ScoreManager.bonneLettre / ratio;
                 
                     ratio = ratio * 100;
+
+                    ratio = (int)ratio;
                
                 }
                 else

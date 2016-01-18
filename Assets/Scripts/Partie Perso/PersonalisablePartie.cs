@@ -16,6 +16,8 @@ public class PersonalisablePartie : MonoBehaviour {
     public static float NbLettreAlea;
     public static float vitesse = 4;
 
+    public static bool caracspec;
+
    public GameObject but;
    public GameObject but2;
    public GameObject but3;
@@ -260,6 +262,7 @@ public class PersonalisablePartie : MonoBehaviour {
             if(truespec == true)
             {
                 but4.GetComponent<Toggle>().isOn = false;
+                caracspec = truespec;
             }
         
 
