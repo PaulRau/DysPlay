@@ -282,6 +282,18 @@ Prefab:
       propertyPath: text
       value: 
       objectReference: {fileID: 721545882}
+    - target: {fileID: 11496796, guid: aa6f15b40e6f9c8419fd915002c30734, type: 2}
+      propertyPath: but5
+      value: 
+      objectReference: {fileID: 420375005}
+    - target: {fileID: 11496796, guid: aa6f15b40e6f9c8419fd915002c30734, type: 2}
+      propertyPath: but6
+      value: 
+      objectReference: {fileID: 223621039}
+    - target: {fileID: 11496796, guid: aa6f15b40e6f9c8419fd915002c30734, type: 2}
+      propertyPath: but7
+      value: 
+      objectReference: {fileID: 327690057}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aa6f15b40e6f9c8419fd915002c30734, type: 2}
   m_IsPrefabParent: 0
@@ -933,7 +945,18 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 958205405}
+        m_MethodName: OnToggleTRUEspec
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
@@ -1090,7 +1113,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 958205405}
         m_MethodName: OnToggleCarSpecLettre
-        m_Mode: 6
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2645,6 +2668,9 @@ MonoBehaviour:
   but2: {fileID: 0}
   but3: {fileID: 0}
   but4: {fileID: 0}
+  but5: {fileID: 0}
+  but6: {fileID: 0}
+  but7: {fileID: 0}
   text: {fileID: 721545882}
 --- !u!1 &727369813
 GameObject:
