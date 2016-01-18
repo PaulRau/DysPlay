@@ -123,6 +123,7 @@ public class MenuScript : MonoBehaviour {
             MotAleaPerso.success = true;
             Mot.success = true;
             NiveauUn.success = true;
+            NiveauDeux.success = true;
 
             Time.timeScale = 0.0f;
             pause = true;
@@ -135,6 +136,7 @@ public class MenuScript : MonoBehaviour {
             MotAleaPerso.success = false;
             Mot.success = false;
             NiveauUn.success = false;
+            NiveauDeux.success = false;
 
             Time.timeScale = 1.0f;
             pause = false;

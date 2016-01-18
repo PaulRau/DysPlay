@@ -6,7 +6,7 @@ public class NiveauUn : MonoBehaviour {
     private int rand;
     private int frand;
 
-    public GameObject marqueurPosLettre; 
+    
 
     public GameObject[] fond;
     public GameObject[] sol;
@@ -33,15 +33,16 @@ public class NiveauUn : MonoBehaviour {
 
        
 
-        if (GameObject.Find("LettreChoisie(Clone)") == null)
+        if (GameObject.Find("LettreNiveau(Clone)") == null)
         {
-            Instantiate(marqueurPosLettre);
+            
 
             success = false;
             rand = Random.Range(0, alphabet.Length);
 
             lettre=Instantiate(lettrePrefab);
-            lettre.GetComponent<LettreChoisie>().speed = new Vector2(0, 1f);
+
+            lettre.GetComponent<LettreNiveau>().speed = new Vector2(0, 1.5f);
 
             lettre.GetComponent<SpriteRenderer>().sprite = alphabet[rand];
             lettre.GetComponent<SpriteRenderer>().color = Color.white;
@@ -63,13 +64,14 @@ public class NiveauUn : MonoBehaviour {
             lettre.GetComponent<SpriteRenderer>().color = Color.green;
 
             //Stope le mouvement de la lettre
-            lettre.GetComponent<LettreChoisie>().speed = new Vector2(0, 0);
+            lettre.GetComponent<LettreNiveau>().speed = new Vector2(0, 0);
 
             //Incremente le score
             ScoreManager.score += scoreValue;
 
             //Detruit la lettre dans un délai de 0.5 secondes
             Destroy(lettre, 0.5f);
+           
 
             //Empêche le joueur de faire quoi que ce soit pendant ce délai
             success = true;
