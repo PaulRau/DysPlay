@@ -24,11 +24,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Niveaux/Lettre4PoolAccent.unity
   - enabled: 1
-    path: Assets/Scenes/Niveaux/Mot1.unity
+    path: Assets/Scenes/Niveaux/MotJungle1.unity
   - enabled: 1
-    path: Assets/Scenes/Niveaux/Mot2.unity
+    path: Assets/Scenes/Niveaux/MotJungle2.unity
   - enabled: 1
-    path: Assets/Scenes/Niveaux/Mot3.unity
+    path: Assets/Scenes/Niveaux/MotVacances1.unity
   - enabled: 1
     path: Assets/Scenes/Niveaux/PartieNiveauxLettre.unity
   - enabled: 1
