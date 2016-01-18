@@ -192,8 +192,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: e37fc995686e97c44b78d72fa2e651e5, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -271,7 +271,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: NIVEAU DESSINS ANIMES 2
+  m_Text: ANIMES 2
 --- !u!222 &144114734
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -443,7 +443,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: NIVEAU DESSINS ANIMES 1
+  m_Text: DESSINS ANIMES 1
 --- !u!222 &305733409
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -614,7 +614,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: NIVEAU JUNGLE 1
+  m_Text: JUNGLE 1
 --- !u!222 &465941423
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -848,8 +848,8 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 636, y: -90.7549973}
-  m_SizeDelta: {x: 249, y: 85.0009995}
+  m_AnchoredPosition: {x: 650, y: -101.520027}
+  m_SizeDelta: {x: 255, y: 92}
   m_Pivot: {x: 2.37359452, y: -.538057625}
 --- !u!114 &722261551
 MonoBehaviour:
@@ -922,8 +922,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: e37fc995686e97c44b78d72fa2e651e5, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -969,7 +969,7 @@ RectTransform:
   m_RootOrder: 9
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 34, y: -204}
+  m_AnchoredPosition: {x: 34, y: -239}
   m_SizeDelta: {x: 265, y: 85.0019989}
   m_Pivot: {x: 2.37359452, y: -.538057625}
 --- !u!114 &827403970
@@ -1122,7 +1122,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: NIVEAU VACANCES 2
+  m_Text: VACANCES 2
 --- !u!222 &853637109
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1289,7 +1289,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: NIVEAU SPORT 2
+  m_Text: SPORT 2
 --- !u!222 &903471581
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1403,8 +1403,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 80eaa28a55306f246895ac5489b3e813, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1598,7 +1598,7 @@ RectTransform:
   m_RootOrder: 11
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 34, y: -328}
+  m_AnchoredPosition: {x: 668.73999, y: -229}
   m_SizeDelta: {x: 265, y: 85.0019989}
   m_Pivot: {x: 2.37359452, y: -.538057625}
 --- !u!114 &1083969486
@@ -1719,7 +1719,7 @@ RectTransform:
   m_RootOrder: 7
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 449.5, y: -347}
+  m_AnchoredPosition: {x: 235, y: -347}
   m_SizeDelta: {x: 262, y: 95}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1150270060
@@ -2117,7 +2117,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: NIVEAU JUNGLE 2
+  m_Text: JUNGLE 2
 --- !u!222 &1828826483
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2157,7 +2157,7 @@ RectTransform:
   m_RootOrder: 8
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 364, y: -204}
+  m_AnchoredPosition: {x: 364, y: -239}
   m_SizeDelta: {x: 265, y: 85.0019989}
   m_Pivot: {x: 2.37359452, y: -.538057625}
 --- !u!114 &1880816570
@@ -2310,7 +2310,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: NIVEAU VACANCES 1
+  m_Text: VACANCES 1
 --- !u!222 &1927360332
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2382,7 +2382,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: NIVEAU SPORT 1
+  m_Text: SPORT 1
 --- !u!222 &1952695924
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2422,7 +2422,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 449.5, y: -226}
+  m_AnchoredPosition: {x: -77, y: -347}
   m_SizeDelta: {x: 262, y: 95}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1988819880
@@ -2543,7 +2543,7 @@ RectTransform:
   m_RootOrder: 10
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 360, y: -328}
+  m_AnchoredPosition: {x: 954.849976, y: -229}
   m_SizeDelta: {x: 265, y: 85.0019989}
   m_Pivot: {x: 2.37359452, y: -.538057625}
 --- !u!114 &2021858867
