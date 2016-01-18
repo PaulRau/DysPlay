@@ -780,6 +780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5235cb893231d7d4dbfa6817bdcca1e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  marqueurPosLettre: {fileID: 147252, guid: 9854494c3f17d824889c73057ae3d7ce, type: 2}
   fond:
   - {fileID: 133422, guid: a01222843c81bdb41a4abbe0aad23fd6, type: 2}
   - {fileID: 156360, guid: 8d35a30fcbe47cc44839406f7bba6936, type: 2}

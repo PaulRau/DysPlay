@@ -9,7 +9,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 453956}
   - 212: {fileID: 21218368}
-  - 114: {fileID: 11447830}
   - 114: {fileID: 11424850}
   m_Layer: 0
   m_Name: N1generateur
@@ -41,6 +40,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5235cb893231d7d4dbfa6817bdcca1e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  marqueurPosLettre: {fileID: 147252, guid: 9854494c3f17d824889c73057ae3d7ce, type: 2}
   fond:
   - {fileID: 133422, guid: a01222843c81bdb41a4abbe0aad23fd6, type: 2}
   - {fileID: 156360, guid: 8d35a30fcbe47cc44839406f7bba6936, type: 2}
@@ -55,19 +55,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: cdc090b01dd705144bd36877333cbac0, type: 3}
   - {fileID: 21300000, guid: 7631b2ae7cbce1c459477c11000bd33d, type: 3}
   - {fileID: 21300000, guid: df9a298847c61f04c9c885857e39d6a4, type: 3}
+  lettrePrefab: {fileID: 0}
   lettre: {fileID: 138626, guid: ab112ceeda7e47c498fe41748e08a051, type: 2}
   scoreValue: 1
---- !u!114 &11447830
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 145100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a38c9f36e183864e9b8258f146e32fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &21218368
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -171,6 +161,10 @@ Prefab:
       propertyPath: lettre
       value: 
       objectReference: {fileID: 138626, guid: ab112ceeda7e47c498fe41748e08a051, type: 2}
+    - target: {fileID: 0}
+      propertyPath: marqueurPosLettre
+      value: 
+      objectReference: {fileID: 147252, guid: 9854494c3f17d824889c73057ae3d7ce, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 145100}

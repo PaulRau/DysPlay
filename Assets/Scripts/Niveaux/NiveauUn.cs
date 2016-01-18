@@ -6,6 +6,8 @@ public class NiveauUn : MonoBehaviour {
     private int rand;
     private int frand;
 
+    public GameObject marqueurPosLettre; 
+
     public GameObject[] fond;
     public GameObject[] sol;
     public Sprite[] alphabet;
@@ -33,11 +35,13 @@ public class NiveauUn : MonoBehaviour {
 
         if (GameObject.Find("LettreChoisie(Clone)") == null)
         {
+            Instantiate(marqueurPosLettre);
+
             success = false;
             rand = Random.Range(0, alphabet.Length);
 
             lettre=Instantiate(lettrePrefab);
-            lettre.GetComponent<LettreChoisie>().speed = new Vector2(0, 2.5f);
+            lettre.GetComponent<LettreChoisie>().speed = new Vector2(0, 1f);
 
             lettre.GetComponent<SpriteRenderer>().sprite = alphabet[rand];
             lettre.GetComponent<SpriteRenderer>().color = Color.white;
