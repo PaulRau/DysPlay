@@ -12,6 +12,7 @@ public class LettreAleatoire : MonoBehaviour
     // 1 - Designer variables
 
     public int scoreValue = 1;
+    public int scoreValue1 = 1;
 
     /// <summary>
     /// Vitesse de déplacement
@@ -125,7 +126,9 @@ public class LettreAleatoire : MonoBehaviour
         letter.GetComponent<LettreAleatoire>().speed = new Vector2(0, 0);
 
         //Incremente le score
+
         ScoreManager.score += scoreValue;
+        ScoreManager.bonneLettre += scoreValue1;
 
         //Detruit la lettre dans un délai de 0.5 secondes
         Destroy(letter, 0.5f);
@@ -139,6 +142,7 @@ public class LettreAleatoire : MonoBehaviour
         if (Input.anyKeyDown)
         {
             if (Input.GetMouseButtonDown(0)) { } else letter.GetComponent<SpriteRenderer>().color = Color.red;
+            ScoreManager.mauvaiseLettre += scoreValue1;
 
         }
     }

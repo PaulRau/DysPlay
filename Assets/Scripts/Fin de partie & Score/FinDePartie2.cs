@@ -32,7 +32,7 @@ public class FinDePartie2 : MonoBehaviour
         // Set the displayed text to be the word "Score" followed by the score value.
       //  text.text = "Score: " + ScoreManager.score;
         // text1.text = "Nombres de bonnes lettres : " + ScoreManager.bonneLettre;
-        text2.text = "Nombre de mauvaises lettres: " + ScoreManager.mauvaiseLettre;
+        text2.text = "Nombre de vies restantes : " + ComportementSol.vies;
 
 
 

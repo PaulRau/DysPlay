@@ -39,6 +39,7 @@ public class MenuScript : MonoBehaviour {
         Time.timeScale = 1.0f;
         pause = false;
         Compteur.timeRemaining = 4;
+        Compteur.timeForAPM = 0;
      
     }
 
@@ -55,6 +56,7 @@ public class MenuScript : MonoBehaviour {
         GenerateurFinDePartie.finDePartiePerso = 20;
         PersonalisablePartie.NbLettreAlea = 1;
         Compteur.timeRemaining = 4;
+        Compteur.timeForAPM = 0;
     }
     
 

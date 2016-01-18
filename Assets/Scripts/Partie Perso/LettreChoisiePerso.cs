@@ -301,6 +301,7 @@ public class LettreChoisiePerso : MonoBehaviour {
 
         //Incremente le score
         ScoreManager.score += scoreValue;
+        ScoreManager.bonneLettre += scoreValue1;
 
         //Detruit la lettre dans un délai de 0.5 secondes
         Destroy(choixLettreChoisi, 0.5f);

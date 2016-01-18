@@ -93,6 +93,12 @@ public class MotAleaPerso : MonoBehaviour
                 case 6:
                     liste = liste6;
                     break;
+                case 7:
+                    liste = liste7;
+                    break;
+                case 8:
+                    liste = liste8;
+                    break;
             }
         }else {
             switch (nb)
@@ -112,7 +118,13 @@ public class MotAleaPerso : MonoBehaviour
                     liste = sliste5;
                     break;
                 case 6:
-                    liste = liste6;
+                    liste = sliste6;
+                    break;
+                case 7:
+                    liste = sliste7;
+                    break;
+                case 8:
+                    liste = sliste8;
                     break;
             }
         }

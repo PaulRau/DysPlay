@@ -8,6 +8,8 @@ public class GenerateurFinDePartie : MonoBehaviour {
     public static float ratio;
 
     public static float finDePartiePerso = 20;
+
+    public static int apm;
    
 	// Use this for initialization
 	void Start () {
@@ -24,28 +26,27 @@ public class GenerateurFinDePartie : MonoBehaviour {
             if (ScoreManager.score >= finDePartiePerso)
             {
 
-
+               
+                    apm = ScoreManager.bonneLettre * 60 / (int)Compteur.timeForAPM;
+                
+                
+           
 
                 if(ScoreManager.mauvaiseLettre != 0)
                 {
-                    Debug.Log(ratio);
+                    
                     ratio = ScoreManager.bonneLettre + ScoreManager.mauvaiseLettre;
-                    Debug.Log(ratio);
+                   
                     ratio = ScoreManager.bonneLettre / ratio;
-                    Debug.Log(ratio);
+                
                     ratio = ratio * 100;
-                    Debug.Log(ratio);
-                    Debug.Log(ScoreManager.bonneLettre);
-                    Debug.Log(ScoreManager.mauvaiseLettre);
-                    Debug.Log(ratio);
+               
                 }
                 else
                 {
                     
                     ratio = 100;
-                    Debug.Log(ScoreManager.bonneLettre);
-                    Debug.Log(ScoreManager.mauvaiseLettre);
-                    Debug.Log(ratio);
+                
                 }
 
 

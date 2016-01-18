@@ -10,6 +10,8 @@ public class PersonalisablePartie : MonoBehaviour {
 
     public static bool bloc = false;
     public static bool bloc1 = false;
+    public static bool bloc2 = false;
+    public static bool bloc3 = false;
 
     public static float NbLettreAlea;
     public static float vitesse = 4;
@@ -18,6 +20,9 @@ public class PersonalisablePartie : MonoBehaviour {
    public GameObject but2;
    public GameObject but3;
    public GameObject but4;
+   public GameObject but5;
+   public GameObject but6;
+   public GameObject but7;
 
 
     public Text text;
@@ -32,6 +37,7 @@ public class PersonalisablePartie : MonoBehaviour {
         nombrescore = 20;
         bloc = false;
         bloc1 = false;
+        bloc2 = false;
      
     }
 
@@ -64,19 +70,26 @@ public class PersonalisablePartie : MonoBehaviour {
     public void MOTtoggle(bool sel)
     {
         bloc = sel;
+        but6.GetComponent<Toggle>().isOn = false;
+        but7.GetComponent<Toggle>().isOn = false;
+        but4.GetComponent<Toggle>().isOn = false;
+        but3.GetComponent<Toggle>().isOn = false;
        
     }
 
     public void LETTREtoggle(bool sela)
     {
         bloc1 = sela;
+        but.GetComponent<Toggle>().isOn = false;
+        but2.GetComponent<Toggle>().isOn = false;
+        but5.GetComponent<Toggle>().isOn = false;
         
     }
 
     public void OnToggleMot(bool selected)
     {
 
-
+        bloc2 = selected;
            if(bloc == true)
            {
                if (selected == true)
@@ -182,6 +195,8 @@ public class PersonalisablePartie : MonoBehaviour {
         if (ch == true)
         {
             GenerateurDePartiePerso.choixLettrechoisia = true;
+            but6.GetComponent<Toggle>().isOn = false;
+            but7.GetComponent<Toggle>().isOn = false;
 
         }
         else
@@ -197,11 +212,18 @@ public class PersonalisablePartie : MonoBehaviour {
      
     public void OnToggleCarSpecLettre (bool spec)
     {
-        if (spec == true)
+
+        if (bloc1 == true)
         {
-            LettreAleatoire.spec = true;
+            if (spec == true)
+            {
+                but4.GetComponent<Toggle>().isOn = false;
+                LettreAleatoire.spec = true;
+            }
+            else LettreAleatoire.spec = false;
         }
-        else LettreAleatoire.spec = false;
+        else but7.GetComponent<Toggle>().isOn = false;
+     
     }
 
     public void longeurPartie(float lon)
@@ -214,12 +236,38 @@ public class PersonalisablePartie : MonoBehaviour {
 
     public void OnToggleCarSpecMot(bool spec)
     {
-        if (spec == true)
+        if(bloc2==true)
         {
-            MotAleaPerso.spec = true;
+            if (spec == true)
+            {
+                MotAleaPerso.spec = true;
+            }
+            else MotAleaPerso.spec = false;
         }
-        else MotAleaPerso.spec = false;
+        else
+        {
+            but5.GetComponent<Toggle>().isOn = false;
+        } 
+
+        }
+
+    public void OnToggleTRUEspec(bool truespec)
+    {
+
+        if(bloc1 == true)
+        {
+
+            if(truespec == true)
+            {
+                but4.GetComponent<Toggle>().isOn = false;
+            }
+        
+
+
+        }
+        else but6.GetComponent<Toggle>().isOn = false;
+
+
     }
-
-
-}
+      
+    }

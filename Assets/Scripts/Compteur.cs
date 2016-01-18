@@ -5,6 +5,8 @@ using System.Collections;
 public class Compteur : MonoBehaviour {
 
   public static  float timeRemaining = 4;
+  public static  float timeForAPM = 0;
+
    Text compteurDebut;
 	// Use this for initialization
 	void Awake () {
@@ -21,9 +23,11 @@ public class Compteur : MonoBehaviour {
         {
             timeRemaining -= Time.deltaTime;
        
+       
         }
+
+        timeForAPM += Time.deltaTime;
       
-        
 
 
         if (timeRemaining > 0.01f)

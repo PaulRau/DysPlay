@@ -7,7 +7,7 @@ public class ComportementSol : MonoBehaviour {
     public GameObject coeur;
     public GameObject canvas;
     public Sprite[] nbcoeur;
-    private int vies;
+   public static int vies;
 
     private bool aVie;
 
@@ -37,6 +37,28 @@ public class ComportementSol : MonoBehaviour {
         {
             if (vies==0)
             {
+
+
+                GenerateurFinDePartie.apm = ScoreManager.bonneLettre * 60 / (int)Compteur.timeForAPM;
+
+
+                if (ScoreManager.mauvaiseLettre != 0)
+                {
+
+                  GenerateurFinDePartie.ratio = ScoreManager.bonneLettre + ScoreManager.mauvaiseLettre;
+
+                  GenerateurFinDePartie.ratio = ScoreManager.bonneLettre / GenerateurFinDePartie.ratio;
+
+                  GenerateurFinDePartie.ratio = GenerateurFinDePartie.ratio * 100;
+
+                }
+                else
+                {
+
+                    GenerateurFinDePartie.ratio = 100;
+
+                }
+                
                 MotAleatoire.success = true;
                 LettreAleatoire.success = true;
                 MotAleaPerso.success = true;
