@@ -5,6 +5,8 @@ public class GenerateurFinDePartie : MonoBehaviour {
 
     public GameObject canvas;
 
+    public static float ratio;
+
     public static float finDePartiePerso = 20;
    
 	// Use this for initialization
@@ -21,6 +23,32 @@ public class GenerateurFinDePartie : MonoBehaviour {
         {
             if (ScoreManager.score >= finDePartiePerso)
             {
+
+
+
+                if(ScoreManager.mauvaiseLettre != 0)
+                {
+                    Debug.Log(ratio);
+                    ratio = ScoreManager.bonneLettre + ScoreManager.mauvaiseLettre;
+                    Debug.Log(ratio);
+                    ratio = ScoreManager.bonneLettre / ratio;
+                    Debug.Log(ratio);
+                    ratio = ratio * 100;
+                    Debug.Log(ratio);
+                    Debug.Log(ScoreManager.bonneLettre);
+                    Debug.Log(ScoreManager.mauvaiseLettre);
+                    Debug.Log(ratio);
+                }
+                else
+                {
+                    
+                    ratio = 100;
+                    Debug.Log(ScoreManager.bonneLettre);
+                    Debug.Log(ScoreManager.mauvaiseLettre);
+                    Debug.Log(ratio);
+                }
+
+
                 Instantiate(canvas);
                 Time.timeScale = 0.0f;
                 

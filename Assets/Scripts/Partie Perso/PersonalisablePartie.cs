@@ -106,7 +106,7 @@ public class PersonalisablePartie : MonoBehaviour {
     public void OnToggleVie(bool vita)
     {
         OuiNonVie = vita;
-        Debug.Log(OuiNonVie);
+       
     }
 
     public void OnToggleLettre(bool selected)
@@ -208,7 +208,7 @@ public class PersonalisablePartie : MonoBehaviour {
     {
         GenerateurFinDePartie.finDePartiePerso = lon;
         nombrescore = lon;
-        Debug.Log(lon);
+       
         
     }
 
