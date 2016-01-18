@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class NiveauDeux : MonoBehaviour
+public class NiveauTrois : MonoBehaviour
 {
 
     private int rand;
     private int frand;
 
-    
+
 
     public GameObject[] fond;
     public GameObject[] sol;
@@ -38,13 +38,13 @@ public class NiveauDeux : MonoBehaviour
 
         if (GameObject.Find("LettreNiveau(Clone)") == null)
         {
-           
+
 
             success = false;
             rand = Random.Range(0, alphabet.Length);
 
             lettre = Instantiate(lettrePrefab);
-            lettre.GetComponent<LettreNiveau>().speed = new Vector2(0, 5);
+            lettre.GetComponent<LettreNiveau>().speed = new Vector2(0, 7);
 
             lettre.GetComponent<SpriteRenderer>().sprite = alphabet[rand];
             lettre.GetComponent<SpriteRenderer>().color = Color.white;
@@ -73,7 +73,7 @@ public class NiveauDeux : MonoBehaviour
 
         //Detruit la lettre dans un délai de 0.5 secondes
         Destroy(lettre, 0.5f);
-        
+
         NiveauDeux.success = true;
 
         //Empêche le joueur de faire quoi que ce soit pendant ce délai
@@ -215,7 +215,77 @@ public class NiveauDeux : MonoBehaviour
                 }
                 else MauvaiseLettre();
                 break;
-           
+            case 16:
+                if (Input.GetKeyDown("f"))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 17:
+                if (Input.GetKeyDown("b"))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 18:
+                if (Input.GetKeyDown("g"))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 19:
+                if (Input.GetKeyDown("h"))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 20:
+                if (Input.GetKeyDown("j"))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 21:
+                if (Input.GetKeyDown("x"))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 22:
+                if (Input.GetKeyDown("y"))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 23:
+                if (Input.GetKeyDown("z"))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 24:
+                if (Input.GetKeyDown("w"))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 25:
+                if(Input.GetKeyDown("k"))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+
         }
     }
 }

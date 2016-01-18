@@ -122,6 +122,8 @@ public class MenuScript : MonoBehaviour {
             Mot.success = true;
             NiveauUn.success = true;
             NiveauDeux.success = true;
+            NiveauTrois.success = true;
+            NiveauQuatre.success = true;
 
             Time.timeScale = 0.0f;
             pause = true;
@@ -135,6 +137,8 @@ public class MenuScript : MonoBehaviour {
             Mot.success = false;
             NiveauUn.success = false;
             NiveauDeux.success = false;
+            NiveauTrois.success = false;
+            NiveauQuatre.success = false;
 
             Time.timeScale = 1.0f;
             pause = false;

@@ -43,6 +43,9 @@ public class ComportementSol : MonoBehaviour {
                 LettreChoisiePerso.success = true;
                 Mot.success = true;
                 NiveauUn.success = true;
+                NiveauDeux.success = true;
+                NiveauTrois.success = true;
+                NiveauQuatre.success = true;
 
                 Instantiate(canvas);
                 Time.timeScale = 0.0f;
@@ -81,6 +84,8 @@ public class ComportementSol : MonoBehaviour {
             Mot.success = true;
             NiveauUn.success = true;
             NiveauDeux.success = true;
+            NiveauTrois.success = true;
+            NiveauQuatre.success = true;
         }
 
         if (collision.gameObject.name == "LettreAleatoire(Clone)" || collision.gameObject.name == "LettreChoisiPerso(Clone)" || collision.gameObject.name == "LettreNiveau(Clone)")
@@ -105,6 +110,8 @@ public class ComportementSol : MonoBehaviour {
             Mot.success = true;
             NiveauUn.success = true;
             NiveauDeux.success = true;
+            NiveauTrois.success = true;
+            NiveauQuatre.success = true;
 
             if (aVie == true)
             {
