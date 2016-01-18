@@ -18,10 +18,14 @@ public class GenererMotAleatoire : MonoBehaviour
     void Update()
     {
 
-        if (GameObject.Find("LettreChoisie(Clone)") == null)
+        if(Compteur.timeRemaining < 0.01f)
         {
-            Instantiate(mot);
+            if (GameObject.Find("LettreChoisie(Clone)") == null)
+            {
+                Instantiate(mot);
+            }
         }
+      
 
     }
 }
