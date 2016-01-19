@@ -1,43 +1,43 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &134364
+--- !u!1 &113132
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 449144}
-  - 212: {fileID: 21280360}
-  - 114: {fileID: 11461586}
+  - 4: {fileID: 467504}
+  - 212: {fileID: 21248142}
+  - 114: {fileID: 11448888}
   m_Layer: 0
-  m_Name: V1generateur
+  m_Name: V2Generateur
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &449144
+--- !u!4 &467504
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 134364}
+  m_GameObject: {fileID: 113132}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.77124453, y: -.88478899, z: -10}
+  m_LocalPosition: {x: -18, y: 8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11461586
+--- !u!114 &11448888
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 134364}
+  m_GameObject: {fileID: 113132}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e831e4dd37dba4f4ca86e102744e8d31, type: 3}
+  m_Script: {fileID: 11500000, guid: 795e778219638bf48b57aa1822de18aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ClonePrefab: {fileID: 196366, guid: 31a30b1a53b80f149887c23c6d455994, type: 2}
@@ -90,12 +90,12 @@ MonoBehaviour:
   - {fileID: 156360, guid: 8d35a30fcbe47cc44839406f7bba6936, type: 2}
   sol:
   - {fileID: 135394, guid: efbf6d27768f29b4fabba89e4f03e574, type: 2}
---- !u!212 &21280360
+--- !u!212 &21248142
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 134364}
+  m_GameObject: {fileID: 113132}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -144,7 +144,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: letterPrefab
       value: 
-      objectReference: {fileID: 192156, guid: d59d21745322f2c42bd690558b1fb47b, type: 2}
+      objectReference: {fileID: 107174, guid: f04aa2abfb829b943a5275727b591baa, type: 2}
     - target: {fileID: 0}
       propertyPath: alphabet.Array.data[0]
       value: 
@@ -276,26 +276,6 @@ Prefab:
       objectReference: {fileID: 21300000, guid: ba1d892701a11104d9427f21f30fcc09,
         type: 3}
     - target: {fileID: 0}
-      propertyPath: sonBonneLettre
-      value: 
-      objectReference: {fileID: 8300000, guid: 5952017146d231c478e38c89163fd523, type: 3}
-    - target: {fileID: 0}
-      propertyPath: sonMauvaiseLettre
-      value: 
-      objectReference: {fileID: 8300000, guid: 66226e67174cb4847879d7428d8ca641, type: 3}
-    - target: {fileID: 0}
-      propertyPath: fond.Array.data[0]
-      value: 
-      objectReference: {fileID: 156360, guid: 8d35a30fcbe47cc44839406f7bba6936, type: 2}
-    - target: {fileID: 0}
-      propertyPath: fond.Array.data[1]
-      value: 
-      objectReference: {fileID: 156360, guid: 8d35a30fcbe47cc44839406f7bba6936, type: 2}
-    - target: {fileID: 0}
-      propertyPath: sol.Array.data[0]
-      value: 
-      objectReference: {fileID: 135394, guid: efbf6d27768f29b4fabba89e4f03e574, type: 2}
-    - target: {fileID: 0}
       propertyPath: alphabet.Array.data[26]
       value: 
       objectReference: {fileID: 21300000, guid: 05eede4b1b6f52944b0c116a22151e5b,
@@ -355,7 +335,23 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 9867fe8682bba4441af2e9ba54d94295,
         type: 3}
+    - target: {fileID: 0}
+      propertyPath: sonBonneLettre
+      value: 
+      objectReference: {fileID: 8300000, guid: 5952017146d231c478e38c89163fd523, type: 3}
+    - target: {fileID: 0}
+      propertyPath: sonMauvaiseLettre
+      value: 
+      objectReference: {fileID: 8300000, guid: 66226e67174cb4847879d7428d8ca641, type: 3}
+    - target: {fileID: 0}
+      propertyPath: fond.Array.data[0]
+      value: 
+      objectReference: {fileID: 156360, guid: 8d35a30fcbe47cc44839406f7bba6936, type: 2}
+    - target: {fileID: 0}
+      propertyPath: sol.Array.data[0]
+      value: 
+      objectReference: {fileID: 135394, guid: efbf6d27768f29b4fabba89e4f03e574, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 134364}
+  m_RootGameObject: {fileID: 113132}
   m_IsPrefabParent: 1
