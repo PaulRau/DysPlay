@@ -68,6 +68,7 @@ public class ComportementSol : MonoBehaviour {
                 NiveauDeux.success = true;
                 NiveauTrois.success = true;
                 NiveauQuatre.success = true;
+                Vacances1.success = true;
 
                 Instantiate(canvas);
                 Time.timeScale = 0.0f;
@@ -83,7 +84,7 @@ public class ComportementSol : MonoBehaviour {
     {
             
 
-        if (collision.gameObject.name == "LettreChoisie(Clone)" )
+        if (collision.gameObject.name == "LettreChoisie(Clone)" || collision.gameObject.name == "LettreMotNiveau(Clone)" )
         {
             //Modifie le score
             ScoreManager.score -= scoreValue;
@@ -108,6 +109,7 @@ public class ComportementSol : MonoBehaviour {
             NiveauDeux.success = true;
             NiveauTrois.success = true;
             NiveauQuatre.success = true;
+            
         }
 
         if (collision.gameObject.name == "LettreAleatoire(Clone)" || collision.gameObject.name == "LettreChoisiPerso(Clone)" || collision.gameObject.name == "LettreNiveau(Clone)")
@@ -134,6 +136,7 @@ public class ComportementSol : MonoBehaviour {
             NiveauDeux.success = true;
             NiveauTrois.success = true;
             NiveauQuatre.success = true;
+            
 
             if (aVie == true)
             {
@@ -145,7 +148,7 @@ public class ComportementSol : MonoBehaviour {
         }
 
 
-        if (collision.gameObject.name == "Mot(Clone)" || collision.gameObject.name == "MotAleatoire(Clone)" || collision.gameObject.name == "MotChoisiPerso(Clone)" || collision.gameObject.name == "MotAleaPerso(Clone)")
+        if (collision.gameObject.name == "Mot(Clone)" || collision.gameObject.name == "MotAleatoire(Clone)" || collision.gameObject.name == "MotChoisiPerso(Clone)" || collision.gameObject.name == "MotAleaPerso(Clone)" || collision.gameObject.name == "Clone(Clone)")
             {
                 
 
@@ -161,6 +164,7 @@ public class ComportementSol : MonoBehaviour {
                 Mot.success = true;
                 NiveauUn.success = true;
                 NiveauDeux.success = true;
+                Vacances1.success = true;
 
             if (aVie == true)
                 {

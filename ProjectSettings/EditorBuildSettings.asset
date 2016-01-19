@@ -6,26 +6,26 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
+    path: Assets/Scenes/Menus/Menu.unity
   - enabled: 1
     path: Assets/Scenes/Scene1.0.1.unity
   - enabled: 1
-    path: Assets/Scenes/Options.unity
+    path: Assets/Scenes/Menus/Options.unity
   - enabled: 1
-    path: Assets/Scenes/PartiePerso.unity
+    path: Assets/Scenes/PartiePerso/PartiePerso.unity
   - enabled: 1
-    path: Assets/Scenes/PartieNiveaux.unity
+    path: Assets/Scenes/Menus/PartieNiveaux.unity
   - enabled: 1
-    path: Assets/Scenes/Niveaux/Lettre1Pool8.unity
+    path: Assets/Scenes/Niveaux/Lettres/Lettre1Pool8.unity
   - enabled: 1
-    path: Assets/Scenes/Niveaux/Lettre2Pool16.unity
+    path: Assets/Scenes/Niveaux/Lettres/Lettre2Pool16.unity
   - enabled: 1
-    path: Assets/Scenes/Niveaux/Lettre3Pool26.unity
+    path: Assets/Scenes/Niveaux/Lettres/Lettre3Pool26.unity
   - enabled: 1
-    path: Assets/Scenes/Niveaux/Lettre4PoolAccent.unity
+    path: Assets/Scenes/Niveaux/Lettres/Lettre4PoolAccent.unity
   - enabled: 1
-    path: Assets/Scenes/Niveaux/PartieNiveauxLettre.unity
+    path: Assets/Scenes/Menus/PartieNiveauxLettre.unity
   - enabled: 1
-    path: Assets/Scenes/Niveaux/PartieNiveauxMot.unity
+    path: Assets/Scenes/Menus/PartieNiveauxMot.unity
   - enabled: 1
-    path: Assets/Scenes/PersonalisablePartie.unity
+    path: Assets/Scenes/PartiePerso/PersonalisablePartie.unity

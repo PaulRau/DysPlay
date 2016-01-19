@@ -20,11 +20,12 @@ public class NiveauUn : MonoBehaviour {
 
 
     // Use this for initialization
-    void Start () { 
+    void Start () {
 
-        Instantiate(fond[rand]);
-        Instantiate(sol[0]);
         frand = Random.Range(0, fond.Length);
+        Instantiate(fond[frand]);
+        Instantiate(sol[0]);
+        
        
     }
 	

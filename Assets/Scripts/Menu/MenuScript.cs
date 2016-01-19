@@ -115,8 +115,39 @@ public class MenuScript : MonoBehaviour {
     {
         Application.LoadLevel("Lettre4PoolAccent");
     }
+    public void jungle1()
+    {
+        Application.LoadLevel("jungle1");
+    }
+    public void jungle2()
+    {
+        Application.LoadLevel("jungle2");
+    }
+    public void vacances1()
+    {
+        Application.LoadLevel("vacances1");
+    }
+    public void vacances2()
+    {
+        Application.LoadLevel("vacances2");
+    }
+    public void sport1()
+    {
+        Application.LoadLevel("sport1");
+    }
+    public void sport2()
+    {
+        Application.LoadLevel("sport2");
+    }
+    public void dessinanime1()
+    {
+        Application.LoadLevel("dessinanime1");
+    }
+    public void dessinanime2()
+    {
+        Application.LoadLevel("dessinanime2");
+    }
 
-   
     //scene1.0.1
     public void butonPause()
     {
@@ -132,6 +163,7 @@ public class MenuScript : MonoBehaviour {
             NiveauDeux.success = true;
             NiveauTrois.success = true;
             NiveauQuatre.success = true;
+            Vacances1.success = true;
 
             Time.timeScale = 0.0f;
             pause = true;
@@ -147,6 +179,7 @@ public class MenuScript : MonoBehaviour {
             NiveauDeux.success = false;
             NiveauTrois.success = false;
             NiveauQuatre.success = false;
+            Vacances1.success = false;
 
             Time.timeScale = 1.0f;
             pause = false;

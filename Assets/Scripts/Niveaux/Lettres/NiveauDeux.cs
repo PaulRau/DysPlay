@@ -1,14 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class NiveauQuatre : MonoBehaviour
+public class NiveauDeux : MonoBehaviour
 {
 
     private int rand;
     private int frand;
-    private bool activationCaret;
-    private bool caret;
 
+    
 
     public GameObject[] fond;
     public GameObject[] sol;
@@ -19,17 +18,15 @@ public class NiveauQuatre : MonoBehaviour
     public static bool success = false;
 
     public int scoreValue = 1;
-    private int ctype;
+
 
     // Use this for initialization
     void Start()
     {
-
-        Instantiate(fond[rand]);
-        Instantiate(sol[0]);
         frand = Random.Range(0, fond.Length);
-        activationCaret = false;
-        caret = false;
+        Instantiate(fond[frand]);
+        Instantiate(sol[0]);
+        
 
     }
 
@@ -41,53 +38,20 @@ public class NiveauQuatre : MonoBehaviour
 
         if (GameObject.Find("LettreNiveau(Clone)") == null)
         {
+           
 
-            activationCaret = false;
             success = false;
             rand = Random.Range(0, alphabet.Length);
 
             lettre = Instantiate(lettrePrefab);
-            lettre.GetComponent<LettreNiveau>().speed = new Vector2(0, 7);
+            lettre.GetComponent<LettreNiveau>().speed = new Vector2(0, 5);
 
             lettre.GetComponent<SpriteRenderer>().sprite = alphabet[rand];
             lettre.GetComponent<SpriteRenderer>().color = Color.white;
 
-            switch (rand)
-            {
-                case (9):
-                    ctype = 0;
-                    break;
-                case (10):
-                    ctype = 1;
-                    break;
-                case (11):
-                    ctype = 2;
-                    break;
-                case (12):
-                    ctype = 3;
-                    break;
-                case (13):
-                    ctype = 4;
-                    break;
-                case (14):
-                    ctype = 5;
-                    break;
-                case (15):
-                    ctype = 6;
-                    break;
-                case (16):
-                    ctype = 7;
-                    break;
-            }
-
         }
 
-
-        if (activationCaret == true) { CaracSpeciaux(); }
-
         if (success == false) { clavier(); }
-
-        
 
     }
 
@@ -97,8 +61,6 @@ public class NiveauQuatre : MonoBehaviour
 
     void BonneLettre()
     {
-        caret = false;
-        activationCaret = false;
 
         //Change la couleur de la lettre
         lettre.GetComponent<SpriteRenderer>().color = Color.green;
@@ -111,7 +73,7 @@ public class NiveauQuatre : MonoBehaviour
 
         //Detruit la lettre dans un délai de 0.5 secondes
         Destroy(lettre, 0.5f);
-
+        
         NiveauDeux.success = true;
 
         //Empêche le joueur de faire quoi que ce soit pendant ce délai
@@ -142,165 +104,118 @@ public class NiveauQuatre : MonoBehaviour
         switch (rand)
         {
             case 0:
-                if (Input.GetKeyDown("a"))
-                {
-                    BonneLettre();
-                }
-                else MauvaiseLettre();
-                break;
-            case 1:
                 if (Input.GetKeyDown("e"))
                 {
                     BonneLettre();
                 }
                 else MauvaiseLettre();
                 break;
+            case 1:
+                if (Input.GetKeyDown("a"))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
             case 2:
-                if (Input.GetKeyDown("i"))
+                if (Input.GetKeyDown("s"))
                 {
                     BonneLettre();
                 }
                 else MauvaiseLettre();
                 break;
             case 3:
-                if (Input.GetKeyDown("o"))
+                if (Input.GetKeyDown("i"))
                 {
                     BonneLettre();
                 }
                 else MauvaiseLettre();
                 break;
             case 4:
-                if (Input.GetKeyDown("u"))
+                if (Input.GetKeyDown("n"))
                 {
                     BonneLettre();
                 }
                 else MauvaiseLettre();
                 break;
             case 5:
-                if (Input.GetKeyDown("0"))
+                if (Input.GetKeyDown("t"))
                 {
                     BonneLettre();
                 }
                 else MauvaiseLettre();
                 break;
             case 6:
-                if (Input.GetKeyDown("2"))
+                if (Input.GetKeyDown("r"))
                 {
                     BonneLettre();
                 }
                 else MauvaiseLettre();
                 break;
             case 7:
-                if (Input.GetKeyDown("7"))
+                if (Input.GetKeyDown("l"))
                 {
                     BonneLettre();
                 }
                 else MauvaiseLettre();
                 break;
             case 8:
-                if (Input.GetKeyDown("9"))
+                if (Input.GetKeyDown("u"))
                 {
                     BonneLettre();
                 }
                 else MauvaiseLettre();
                 break;
             case 9:
-            case 10:
-            case 11:
-            case 12:
-            case 13:
-                if (caret == false)
-                {
-                    if (Input.GetKeyDown(KeyCode.RightBracket) && !Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.RightShift))
-                    {
-                        activationCaret = true;
-                        lettre.GetComponent<SpriteRenderer>().color = Color.cyan;
-                        caret = true;
-                    }
-                    else MauvaiseLettre();
-                }
-                break;
-            case 14:
-            case 15:
-            case 16:
-                if (caret == false)
-                {
-                    if (Input.GetKeyDown(KeyCode.RightBracket) && (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))
-                    {
-                        activationCaret = true;
-                        lettre.GetComponent<SpriteRenderer>().color = Color.cyan;
-                        caret = true;
-                    }
-                    else if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) { } else MauvaiseLettre();
-                }
-
-                break;
-
-        }
-    }
-
-    void CaracSpeciaux()
-    {
-
-        switch (ctype)
-        {
-            case 0:
-                if (Input.GetKeyDown("a"))
-                {
-                    BonneLettre();
-                }
-
-
-                break;
-            case 1:
-                if (Input.GetKeyDown("e"))
-                {
-                    BonneLettre();
-                }
-
-                break;
-            case 2:
-                if (Input.GetKeyDown("i"))
-                {
-                    BonneLettre();
-                }
-
-                break;
-            case 3:
                 if (Input.GetKeyDown("o"))
                 {
                     BonneLettre();
                 }
-
+                else MauvaiseLettre();
                 break;
-            case 4:
-                if (Input.GetKeyDown("u"))
+            case 10:
+                if (Input.GetKeyDown("d"))
                 {
                     BonneLettre();
                 }
-
+                else MauvaiseLettre();
                 break;
-            case 5:
-                if (Input.GetKeyDown("e"))
+            case 11:
+                if (Input.GetKeyDown("c"))
                 {
                     BonneLettre();
                 }
-
+                else MauvaiseLettre();
                 break;
-            case 6:
-                if (Input.GetKeyDown("i"))
+            case 12:
+                if (Input.GetKeyDown("p"))
                 {
                     BonneLettre();
                 }
-
+                else MauvaiseLettre();
                 break;
-            case 7:
-                if (Input.GetKeyDown("u"))
+            case 13:
+                if (Input.GetKeyDown("m"))
                 {
                     BonneLettre();
                 }
-
+                else MauvaiseLettre();
                 break;
+            case 14:
+                if (Input.GetKeyDown("v"))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 15:
+                if (Input.GetKeyDown("q"))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+           
         }
     }
 }
