@@ -34,25 +34,27 @@ public class NiveauDeux : MonoBehaviour
     void Update()
     {
 
-
-
-        if (GameObject.Find("LettreNiveau(Clone)") == null)
+        if (Compteur.timeRemaining < 0.01f)
         {
-           
 
-            success = false;
-            rand = Random.Range(0, alphabet.Length);
+            if (GameObject.Find("LettreNiveau(Clone)") == null)
+            {
 
-            lettre = Instantiate(lettrePrefab);
-            lettre.GetComponent<LettreNiveau>().speed = new Vector2(0, 5);
 
-            lettre.GetComponent<SpriteRenderer>().sprite = alphabet[rand];
-            lettre.GetComponent<SpriteRenderer>().color = Color.white;
+                success = false;
+                rand = Random.Range(0, alphabet.Length);
+
+                lettre = Instantiate(lettrePrefab);
+                lettre.GetComponent<LettreNiveau>().speed = new Vector2(0, 5);
+
+                lettre.GetComponent<SpriteRenderer>().sprite = alphabet[rand];
+                lettre.GetComponent<SpriteRenderer>().color = Color.white;
+
+            }
+
+            if (success == false) { clavier(); }
 
         }
-
-        if (success == false) { clavier(); }
-
     }
 
 

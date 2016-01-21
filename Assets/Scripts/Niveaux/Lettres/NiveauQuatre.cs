@@ -38,57 +38,59 @@ public class NiveauQuatre : MonoBehaviour
     {
 
 
-
-        if (GameObject.Find("LettreNiveau(Clone)") == null)
+        if (Compteur.timeRemaining < 0.01f)
         {
-
-            activationCaret = false;
-            success = false;
-            rand = Random.Range(0, alphabet.Length);
-
-            lettre = Instantiate(lettrePrefab);
-            lettre.GetComponent<LettreNiveau>().speed = new Vector2(0, 7);
-
-            lettre.GetComponent<SpriteRenderer>().sprite = alphabet[rand];
-            lettre.GetComponent<SpriteRenderer>().color = Color.white;
-
-            switch (rand)
+            if (GameObject.Find("LettreNiveau(Clone)") == null)
             {
-                case (9):
-                    ctype = 0;
-                    break;
-                case (10):
-                    ctype = 1;
-                    break;
-                case (11):
-                    ctype = 2;
-                    break;
-                case (12):
-                    ctype = 3;
-                    break;
-                case (13):
-                    ctype = 4;
-                    break;
-                case (14):
-                    ctype = 5;
-                    break;
-                case (15):
-                    ctype = 6;
-                    break;
-                case (16):
-                    ctype = 7;
-                    break;
+
+                activationCaret = false;
+                success = false;
+                rand = Random.Range(0, alphabet.Length);
+
+                lettre = Instantiate(lettrePrefab);
+                lettre.GetComponent<LettreNiveau>().speed = new Vector2(0, 7);
+
+                lettre.GetComponent<SpriteRenderer>().sprite = alphabet[rand];
+                lettre.GetComponent<SpriteRenderer>().color = Color.white;
+
+                switch (rand)
+                {
+                    case (9):
+                        ctype = 0;
+                        break;
+                    case (10):
+                        ctype = 1;
+                        break;
+                    case (11):
+                        ctype = 2;
+                        break;
+                    case (12):
+                        ctype = 3;
+                        break;
+                    case (13):
+                        ctype = 4;
+                        break;
+                    case (14):
+                        ctype = 5;
+                        break;
+                    case (15):
+                        ctype = 6;
+                        break;
+                    case (16):
+                        ctype = 7;
+                        break;
+                }
+
             }
 
+
+            if (activationCaret == true) { CaracSpeciaux(); }
+
+            if (success == false) { clavier(); }
+
+
+
         }
-
-
-        if (activationCaret == true) { CaracSpeciaux(); }
-
-        if (success == false) { clavier(); }
-
-        
-
     }
 
 

@@ -30,28 +30,31 @@ public class NiveauUn : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
+    void Update()
+    {
 
-       
-
-        if (GameObject.Find("LettreNiveau(Clone)") == null)
+        if (Compteur.timeRemaining < 0.01f)
         {
-            
 
-            success = false;
-            rand = Random.Range(0, alphabet.Length);
+            if (GameObject.Find("LettreNiveau(Clone)") == null)
+            {
 
-            lettre=Instantiate(lettrePrefab);
 
-            lettre.GetComponent<LettreNiveau>().speed = new Vector2(0, 1.5f);
+                success = false;
+                rand = Random.Range(0, alphabet.Length);
 
-            lettre.GetComponent<SpriteRenderer>().sprite = alphabet[rand];
-            lettre.GetComponent<SpriteRenderer>().color = Color.white;
+                lettre = Instantiate(lettrePrefab);
+
+                lettre.GetComponent<LettreNiveau>().speed = new Vector2(0, 1.5f);
+
+                lettre.GetComponent<SpriteRenderer>().sprite = alphabet[rand];
+                lettre.GetComponent<SpriteRenderer>().color = Color.white;
+
+            }
+
+            if (success == false) { clavier(); }
 
         }
-
-        if (success == false) { clavier(); }
-
     }
 
     

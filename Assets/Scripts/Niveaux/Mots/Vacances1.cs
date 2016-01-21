@@ -60,180 +60,183 @@ public class Vacances1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
 
-        if (GameObject.Find("LettreMotNiveau(Clone)") == null)
+
+        if (Compteur.timeRemaining < 0.01f)
         {
-            success = false;
-            x = 0;
-
-            rand = Random.Range(0, liste.Length);
-
-            characters = liste[rand].ToCharArray();
-
-            Clone = Instantiate(ClonePrefab);
-            Clone.GetComponent<LettreMotNiveau>().speed = new Vector2(0, vit);
-
-            for (i = 0; i < liste[rand].Length; i++)
+            if (GameObject.Find("LettreMotNiveau(Clone)") == null)
             {
-                AfficheLettre(characters[i]);
-                letter[i].GetComponent<LettreMotNiveau>().speed = new Vector2(0, vit);
+                success = false;
+                x = 0;
 
+                rand = Random.Range(0, liste.Length);
+
+                characters = liste[rand].ToCharArray();
+
+                Clone = Instantiate(ClonePrefab);
+                Clone.GetComponent<LettreMotNiveau>().speed = new Vector2(0, vit);
+
+                for (i = 0; i < liste[rand].Length; i++)
+                {
+                    AfficheLettre(characters[i]);
+                    letter[i].GetComponent<LettreMotNiveau>().speed = new Vector2(0, vit);
+
+                }
             }
-        }
 
 
-        if (x < liste[rand].Length)
-        {
-            switch (characters[x])
+            if (x < liste[rand].Length)
             {
-                case 'a':
-                    currenttype = 0;
-                    break;
-                case 'b':
-                    currenttype = 1;
-                    break;
-                case 'c':
-                    currenttype = 2;
-                    break;
-                case 'd':
-                    currenttype = 3;
-                    break;
-                case 'e':
-                    currenttype = 4;
-                    break;
-                case 'f':
-                    currenttype = 5;
-                    break;
-                case 'g':
-                    currenttype = 6;
-                    break;
-                case 'h':
-                    currenttype = 7;
-                    break;
-                case 'i':
-                    currenttype = 8;
-                    break;
-                case 'j':
-                    currenttype = 9;
-                    break;
-                case 'k':
-                    currenttype = 10;
-                    break;
-                case 'l':
-                    currenttype = 11;
-                    break;
-                case 'm':
-                    currenttype = 12;
-                    break;
-                case 'n':
-                    currenttype = 13;
-                    break;
-                case 'o':
-                    currenttype = 14;
-                    break;
-                case 'p':
-                    currenttype = 15;
-                    break;
-                case 'q':
-                    currenttype = 16;
-                    break;
-                case 'r':
-                    currenttype = 17;
-                    break;
-                case 's':
-                    currenttype = 18;
-                    break;
-                case 't':
-                    currenttype = 19;
-                    break;
-                case 'u':
-                    currenttype = 20;
-                    break;
-                case 'v':
-                    currenttype = 21;
-                    break;
-                case 'w':
-                    currenttype = 22;
-                    break;
-                case 'x':
-                    currenttype = 23;
-                    break;
-                case 'y':
-                    currenttype = 24;
-                    break;
-                case 'z':
-                    currenttype = 25;
-                    break;
-                case 'é':
-                    currenttype = 26;
-                    break;
-                case 'è':
-                    currenttype = 27;
-                    break;
-                case 'à':
-                    currenttype = 28;
-                    break;
-                case 'ç':
-                    currenttype = 29;
-                    break;
-                case 'ê':
-                    currenttype = 30;
-                    Ctype = 0;
-                    break;
-                case 'â':
-                    currenttype = 31;
-                    Ctype = 1;
-                    break;
-                case 'û':
-                    currenttype = 32;
-                    Ctype = 2;
-                    break;
-                case 'î':
-                    currenttype = 33;
-                    Ctype = 3;
-                    break;
-                case 'ô':
-                    currenttype = 34;
-                    Ctype = 4;
-                    break;
-                case 'ë':
-                    currenttype = 35;
-                    Ctype = 5;
-                    break;
-                case 'ü':
-                    currenttype = 36;
-                    Ctype = 6;
-                    break;
-                case 'ï':
-                    currenttype = 37;
-                    Ctype = 7;
-                    break;
+                switch (characters[x])
+                {
+                    case 'a':
+                        currenttype = 0;
+                        break;
+                    case 'b':
+                        currenttype = 1;
+                        break;
+                    case 'c':
+                        currenttype = 2;
+                        break;
+                    case 'd':
+                        currenttype = 3;
+                        break;
+                    case 'e':
+                        currenttype = 4;
+                        break;
+                    case 'f':
+                        currenttype = 5;
+                        break;
+                    case 'g':
+                        currenttype = 6;
+                        break;
+                    case 'h':
+                        currenttype = 7;
+                        break;
+                    case 'i':
+                        currenttype = 8;
+                        break;
+                    case 'j':
+                        currenttype = 9;
+                        break;
+                    case 'k':
+                        currenttype = 10;
+                        break;
+                    case 'l':
+                        currenttype = 11;
+                        break;
+                    case 'm':
+                        currenttype = 12;
+                        break;
+                    case 'n':
+                        currenttype = 13;
+                        break;
+                    case 'o':
+                        currenttype = 14;
+                        break;
+                    case 'p':
+                        currenttype = 15;
+                        break;
+                    case 'q':
+                        currenttype = 16;
+                        break;
+                    case 'r':
+                        currenttype = 17;
+                        break;
+                    case 's':
+                        currenttype = 18;
+                        break;
+                    case 't':
+                        currenttype = 19;
+                        break;
+                    case 'u':
+                        currenttype = 20;
+                        break;
+                    case 'v':
+                        currenttype = 21;
+                        break;
+                    case 'w':
+                        currenttype = 22;
+                        break;
+                    case 'x':
+                        currenttype = 23;
+                        break;
+                    case 'y':
+                        currenttype = 24;
+                        break;
+                    case 'z':
+                        currenttype = 25;
+                        break;
+                    case 'é':
+                        currenttype = 26;
+                        break;
+                    case 'è':
+                        currenttype = 27;
+                        break;
+                    case 'à':
+                        currenttype = 28;
+                        break;
+                    case 'ç':
+                        currenttype = 29;
+                        break;
+                    case 'ê':
+                        currenttype = 30;
+                        Ctype = 0;
+                        break;
+                    case 'â':
+                        currenttype = 31;
+                        Ctype = 1;
+                        break;
+                    case 'û':
+                        currenttype = 32;
+                        Ctype = 2;
+                        break;
+                    case 'î':
+                        currenttype = 33;
+                        Ctype = 3;
+                        break;
+                    case 'ô':
+                        currenttype = 34;
+                        Ctype = 4;
+                        break;
+                    case 'ë':
+                        currenttype = 35;
+                        Ctype = 5;
+                        break;
+                    case 'ü':
+                        currenttype = 36;
+                        Ctype = 6;
+                        break;
+                    case 'ï':
+                        currenttype = 37;
+                        Ctype = 7;
+                        break;
+                }
             }
-        }
-        else
-        {
-
-            success = true;
-            for (i = 0; i < liste[rand].Length; i++)
+            else
             {
 
-                // Arrête le mouvement de chaque lettre 
-                letter[i].GetComponent<LettreMotNiveau>().speed = new Vector2(0, 0);
+                success = true;
+                for (i = 0; i < liste[rand].Length; i++)
+                {
 
-                // Detruit chaque lettre après un délai de 0.5 secondes
-                Destroy(letter[i], 0.5f);
+                    // Arrête le mouvement de chaque lettre 
+                    letter[i].GetComponent<LettreMotNiveau>().speed = new Vector2(0, 0);
 
+                    // Detruit chaque lettre après un délai de 0.5 secondes
+                    Destroy(letter[i], 0.5f);
+
+                }
+                // Ne pas oublier de detruire l'object mot éventuellement
+                Destroy(Clone, 0.5f);
             }
-            // Ne pas oublier de detruire l'object mot éventuellement
-            Destroy(Clone, 0.5f);
+
+
+            if (success == false) { clavier(); }
+
+            if (activationCaret == true) { CaracSpeciaux(); }
+
         }
-
-
-        if (success == false) { clavier(); }
-
-        if (activationCaret == true) { CaracSpeciaux(); }
-
     }
 
 
