@@ -35,3 +35,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Niveaux/Mots/vacances2.unity
   - enabled: 1
     path: Assets/Scenes/Niveaux/Mots/vacances1.unity
+  - enabled: 1
+    path: Assets/Scenes/Niveaux/Mots/jungle1.unity
+  - enabled: 1
+    path: Assets/Scenes/Niveaux/Mots/jungle2.unity
+  - enabled: 1
+    path: Assets/Scenes/Niveaux/Mots/campagne1.unity
+  - enabled: 1
+    path: Assets/Scenes/Niveaux/Mots/campagne2.unity
+  - enabled: 1
+    path: Assets/Scenes/Niveaux/Mots/sport1.unity
+  - enabled: 1
+    path: Assets/Scenes/Niveaux/Mots/sport2.unity

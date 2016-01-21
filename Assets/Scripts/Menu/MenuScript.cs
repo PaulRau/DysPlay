@@ -141,11 +141,11 @@ public class MenuScript : MonoBehaviour {
     }
     public void dessinanime1()
     {
-        Application.LoadLevel("dessinanime1");
+        Application.LoadLevel("campagne1");
     }
     public void dessinanime2()
     {
-        Application.LoadLevel("dessinanime2");
+        Application.LoadLevel("campagne2");
     }
 
     //scene1.0.1
@@ -164,6 +164,13 @@ public class MenuScript : MonoBehaviour {
             NiveauTrois.success = true;
             NiveauQuatre.success = true;
             Vacances1.success = true;
+            Vacances2.success = true;
+            Sport1.success = true;
+            Sport2.success = true;
+            Jungle1.success = true;
+            Jungle2.success = true;
+            Campagne1.success = true;
+            Campagne2.success = true;
 
             Time.timeScale = 0.0f;
             pause = true;
@@ -180,6 +187,13 @@ public class MenuScript : MonoBehaviour {
             NiveauTrois.success = false;
             NiveauQuatre.success = false;
             Vacances1.success = false;
+            Vacances2.success = false;
+            Sport1.success = false;
+            Sport2.success = false;
+            Jungle1.success = false;
+            Jungle2.success = false;
+            Campagne1.success = false;
+            Campagne2.success = false;
 
             Time.timeScale = 1.0f;
             pause = false;
