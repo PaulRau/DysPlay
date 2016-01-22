@@ -56,7 +56,7 @@ public class LettreAleatoire : MonoBehaviour
         }
         else if (spec == true && PersonalisablePartie.caracspec == true)
         {
-            rand = Random.Range(26, 52); // Les x premiers caractères correspondent aux  caractères accentués et spéciaux
+            rand = Random.Range(26, 53); // Les x premiers caractères correspondent aux  caractères accentués et spéciaux
         }
         else if (spec == true && GenerateurDePartiePerso.choixLettrea == true)
         {
@@ -64,7 +64,7 @@ public class LettreAleatoire : MonoBehaviour
         }
         else if (GenerateurDePartiePerso.choixLettrea == true && PersonalisablePartie.caracspec == true)
         {
-            rand = Random.Range(0, 52);  // Les 0-25 premier ou les 38-52 dernier
+            rand = Random.Range(0, 53);  // Les 0-25 premier ou les 38-52 dernier
             if(rand >= 26 || rand <= 31)
             {
                 rand = rand - 6;
@@ -80,7 +80,7 @@ public class LettreAleatoire : MonoBehaviour
         }
         else if ( PersonalisablePartie.caracspec == true)
         {
-           rand = Random.Range(38, 52);  // Les 15 derniers caractères correspondent aux caractères spéciaux.
+           rand = Random.Range(38, 48);  // Les 15 derniers caractères correspondent aux caractères spéciaux.
         }
         else if (spec == true )
         {
@@ -432,6 +432,81 @@ public class LettreAleatoire : MonoBehaviour
                 }
 
                 break;
+            case 38: 
+                if (Input.GetKeyDown("5"))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 39: 
+                if (Input.GetKeyDown(KeyCode.LeftBracket))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 40:
+                 if (Input.GetKeyDown(KeyCode.Comma))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 41:
+                 if (Input.GetKeyDown(KeyCode.Period))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 42:
+                 if (Input.GetKeyDown(KeyCode.Slash))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 43:
+                 if (Input.GetKeyDown(KeyCode.BackQuote))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 44:
+                      if (Input.GetKeyDown(KeyCode.Alpha3))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 45:
+                if (Input.GetKeyDown(KeyCode.Alpha4))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 46:
+                if (Input.GetKeyDown(KeyCode.Alpha6))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 47:
+                if (Input.GetKeyDown(KeyCode.Alpha8))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 48:
+            case 49:
+            case 50:
+          
+                  break;
 
         }
     }
