@@ -69,6 +69,13 @@ public class ComportementSol : MonoBehaviour {
                 NiveauTrois.success = true;
                 NiveauQuatre.success = true;
                 Vacances1.success = true;
+                Vacances2.success = true;
+                Sport1.success = true;
+                Sport2.success = true;
+                Jungle1.success = true;
+                Jungle2.success = true;
+                Campagne1.success = true;
+                Campagne2.success = true;
 
                 Instantiate(canvas);
                 Time.timeScale = 0.0f;
@@ -165,6 +172,13 @@ public class ComportementSol : MonoBehaviour {
                 NiveauUn.success = true;
                 NiveauDeux.success = true;
                 Vacances1.success = true;
+            Vacances2.success = true;
+            Sport1.success = true;
+            Sport2.success = true;
+            Jungle1.success = true;
+            Jungle2.success = true;
+            Campagne1.success = true;
+            Campagne2.success = true;
 
             if (aVie == true)
                 {
