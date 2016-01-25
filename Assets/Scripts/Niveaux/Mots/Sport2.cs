@@ -5,7 +5,7 @@ public class Sport2 : MonoBehaviour
 {
 
 
-    private string[] liste = { "aerobic", "agility", "aikido", "aviron", "aviation", "ballet", "soccer", "volley", "biathlon", "billard", "nageur", "bowling", "bridge", "hockey", "jetski", "karaté", "karting", "kravmaga", "kungfu", "squash", "spéléo", "tennis", "sportif", "tumbling", "défense", "capoeira", "cirque", "combat", "course", "cyclisme", "marche", "natation", "ninjitsu", "patinage", "pelote", "pétanque", "planche", "plongée", "frisbee", "escrime", "escalade", "fitness", "football", "futsal", "plongeon", "quilles", "rafting", "rallye", "roller", "podium", "champion", "compétition", "entrainer", "effort", "blessure", "combat", "qualifier", "sauts", "courir", "raquette", "badminton"};
+    private string[] liste = { "aerobic", "agility", "aikido", "aviron", "aviation", "ballet", "soccer", "volley", "biathlon", "billard", "nageur", "bowling", "bridge", "hockey", "jetski", "karaté", "karting", "kravmaga", "kungfu", "squash", "spéléo", "tennis", "sportif", "tumbling", "défense", "capoeira", "cirque", "combat", "course", "cyclisme", "marche", "natation", "ninjitsu", "patinage", "pelote", "pétanque", "planche", "plongée", "frisbee", "escrime", "escalade", "fitness", "football", "futsal", "plongeon", "quilles", "rafting", "rallye", "roller", "podium", "champion", "compétition", "entrainer", "effort", "blessure", "combat", "qualifier", "sauts", "courir", "raquette", "badminton", "echecs", "fairplay", "triche", "dopage", "objectif", "médaille", "supporter", "équipe", "entraide"};
     private int i = 0;
     private int j = 0;
 
