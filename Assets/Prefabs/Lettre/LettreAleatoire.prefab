@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 186886}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 8, z: 0}
-  m_LocalScale: {x: .449999988, y: .449999988, z: 1}
+  m_LocalScale: {x: 0.45, y: 0.45, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -38,9 +38,10 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186886}
+  m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: 0.05
   m_GravityScale: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -54,6 +55,7 @@ BoxCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186886}
   m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
@@ -128,8 +130,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b77697c6a17223047bacb6fc68f2ad13, type: 3}
   - {fileID: 21300000, guid: 304b980942d0af44c9dc1701d37328f6, type: 3}
   - {fileID: 21300000, guid: 3e2c85dfb4077cb4cbf5d66b5fdd8b17, type: 3}
-  - {fileID: 21300000, guid: ad913f9ba3a187040b0435dbae585074, type: 3}
-  - {fileID: 21300000, guid: 26a7d0c1c9a1b904884fe5e99b2cc576, type: 3}
+  - {fileID: 21300000, guid: a531329e7a60d4247a51ff46c495f4a9, type: 3}
   newPos: {x: 0, y: 8}
 --- !u!212 &21264620
 SpriteRenderer:
@@ -152,13 +153,15 @@ SpriteRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -168,7 +171,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: alphabet.Array.size
-      value: 53
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: letter
@@ -472,7 +475,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: alphabet.Array.data[51]
       value: 
-      objectReference: {fileID: 21300000, guid: ad913f9ba3a187040b0435dbae585074,
+      objectReference: {fileID: 21300000, guid: a531329e7a60d4247a51ff46c495f4a9,
         type: 3}
     - target: {fileID: 0}
       propertyPath: alphabet.Array.data[52]

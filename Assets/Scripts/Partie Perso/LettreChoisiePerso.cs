@@ -280,6 +280,99 @@ public class LettreChoisiePerso : MonoBehaviour {
                 choixLettreChoisi.GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 
                 break;
+            case '(':
+                type = 38;
+                
+                choixLettreChoisi.GetComponent<SpriteRenderer>().sprite = alphabet[type];
+
+                break;
+            case ')':
+                type = 39;
+                
+
+                choixLettreChoisi.GetComponent<SpriteRenderer>().sprite = alphabet[type];
+
+                break;
+            case ',':
+                type = 40;
+                
+                choixLettreChoisi.GetComponent<SpriteRenderer>().sprite = alphabet[type];
+
+                break;
+            case ';':
+                type = 41;
+               
+
+                choixLettreChoisi.GetComponent<SpriteRenderer>().sprite = alphabet[type];
+
+                break;
+            case ':':
+                type = 42;
+                
+                choixLettreChoisi.GetComponent<SpriteRenderer>().sprite = alphabet[type];
+
+                break;
+            case '!':
+                type = 43;
+                
+
+                choixLettreChoisi.GetComponent<SpriteRenderer>().sprite = alphabet[type];
+
+                break;
+            case '\"':
+                type = 44;
+               
+
+                choixLettreChoisi.GetComponent<SpriteRenderer>().sprite = alphabet[type];
+
+                break;
+            case '\'':
+                type = 45;
+                Ctype = 7;
+                choixLettreChoisi.GetComponent<SpriteRenderer>().sprite = alphabet[type];
+
+                break;
+            case '-':
+                type = 46;
+                
+
+                choixLettreChoisi.GetComponent<SpriteRenderer>().sprite = alphabet[type];
+
+                break;
+            case '_':
+                type = 47;
+                
+
+                choixLettreChoisi.GetComponent<SpriteRenderer>().sprite = alphabet[type];
+
+                break;
+            case '?':
+                type = 48;
+             
+
+                choixLettreChoisi.GetComponent<SpriteRenderer>().sprite = alphabet[type];
+
+                break;
+            case '.':
+                type = 49;
+              
+
+                choixLettreChoisi.GetComponent<SpriteRenderer>().sprite = alphabet[type];
+
+                break;
+            case '/':
+                type = 50;
+               
+                choixLettreChoisi.GetComponent<SpriteRenderer>().sprite = alphabet[type];
+
+                break;
+            case ' ':
+                type = 51;
+
+                choixLettreChoisi.GetComponent<SpriteRenderer>().sprite = alphabet[type];
+
+                break;
+            
 
         }
         if (activationCaret== true) { CaracSpeciaux(); }
@@ -575,6 +668,104 @@ public class LettreChoisiePerso : MonoBehaviour {
                     else if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) { } else MauvaiseLettre();
                 }
 
+                break;
+            case 38:
+                if (Input.GetKeyDown("5"))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 39:
+                if (Input.GetKeyDown(KeyCode.LeftBracket))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 40:
+                if (Input.GetKeyDown(KeyCode.Comma))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 41:
+                if (Input.GetKeyDown(KeyCode.Period))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 42:
+                if (Input.GetKeyDown(KeyCode.Slash))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 43:
+                if (Input.GetKeyDown(KeyCode.BackQuote))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 44:
+                if (Input.GetKeyDown(KeyCode.Alpha3))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 45:
+                if (Input.GetKeyDown(KeyCode.Alpha4))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 46:
+                if (Input.GetKeyDown(KeyCode.Alpha6))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 47:
+                if (Input.GetKeyDown(KeyCode.Alpha8))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+            case 48:
+                if (Input.GetKeyDown(KeyCode.Comma) && (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))
+                {
+                    BonneLettre();
+                }
+                else if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) { } else MauvaiseLettre();
+                break;
+            case 49:
+                if (Input.GetKeyDown(KeyCode.Period) && (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))
+                {
+                    BonneLettre();
+                }
+                else if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) { } else MauvaiseLettre();
+                break;
+            case 50:
+                if (Input.GetKeyDown(KeyCode.Slash) && (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))
+                {
+                    BonneLettre();
+                }
+                else if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) { } else MauvaiseLettre();
+                break;
+            case 51:
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
                 break;
 
         }
