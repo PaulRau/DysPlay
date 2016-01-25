@@ -5,7 +5,7 @@ public class Vacances1 : MonoBehaviour
 {
     
 
-    private string[] liste = { "sable", "plage", "dodo", "mer", "eau", "sel", "apero", "bleue", "calme", "jouer", "repos", "train", "avion", "chaud", "ski", "froid", "fleur", "canoë", "lac", "pêche", "frais", "cool", "neige", "calme", "zoo", "port", "ports", "sac", "bain", "hôtel", "ferry", "louer", "tente", "kart", "vélo", "vegas", "sud", "suède", "île", "rame", "ramer", "ski", "océan", "congé" };
+    private string[] liste = { "baïne", "sable", "plage", "dodo", "mer", "eau", "sel", "apero", "bleue", "calme", "jouer", "repos", "train", "avion", "chaud", "ski", "froid", "fleur", "canoë", "lac", "pêche", "frais", "cool", "neige", "calme", "zoo", "port", "ports", "sac", "bain", "hôtel", "ferry", "louer", "tente", "kart", "vélo", "vegas", "sud", "suède", "île", "rame", "ramer", "ski", "océan", "congé" };
    
     private int i = 0;
     private int j = 0;
