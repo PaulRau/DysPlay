@@ -5,7 +5,7 @@ public class Jungle2 : MonoBehaviour
 {
 
 
-    private string[] liste = { "feuilles", "arbres", "racines", "lianes", "fougères", "mousson", "animaux", "humide", "sauvage", "naturel", "sauvages", "jaguar", "tigres", "tamanoir", "reptiles", "serpents", "iguanes", "singes", "tamarins", "oiseaux", "toucans", "toucan", "colibri", "insectes", "mygales", "piranha", "tarzan" };
+    private string[] liste = { "feuilles", "arbres", "racines", "lianes", "fougères", "mousson", "animaux", "humide", "sauvage", "naturel", "sauvages", "jaguar", "tigres", "tamanoir", "reptiles", "serpents", "iguanes", "singes", "tamarins", "oiseaux", "toucans", "toucan", "colibri", "insectes", "mygales", "piranha", "tarzan", "rivière", "aligator" };
     private int i = 0;
     private int j = 0;
 
@@ -46,8 +46,12 @@ public class Jungle2 : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        GenerateurFinDePartie.finDePartiePerso = 500000;
+        GenerateurFinDePartie.But = 25;
+        GenerateurFinDePartie.MotsValide = 0;
+
         activationCaret = false;
-        vit = 3;                          //C'est ici que l'on règle la vitesse des lettres
+        vit = 5;                          //C'est ici que l'on règle la vitesse des lettres
 
         success = false;
 
@@ -214,6 +218,12 @@ public class Jungle2 : MonoBehaviour
             }
             else
             {
+                if (success == false)
+                {
+                    GenerateurFinDePartie.MotsValide++;
+                    Debug.Log(GenerateurFinDePartie.MotsValide);
+                }
+
 
                 success = true;
                 for (i = 0; i < liste[rand].Length; i++)

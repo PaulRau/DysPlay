@@ -5,7 +5,7 @@ public class Vacances1 : MonoBehaviour
 {
     
 
-    private string[] liste = { "sable", "plage", "dodo", "mer", "eau", "sel", "apero", "bleue", "calme", "jouer", "repos", "train", "avion", "chaud", "ski", "froid", "fleur", "canoë", "lac", "pêche", "frais", "cool", "neige", "calme", "zoo", "port", "ports", "sac", "bain", "hôtel", "ferry", "louer", "tente", "kart", "vélo" };
+    private string[] liste = { "sable", "plage", "dodo", "mer", "eau", "sel", "apero", "bleue", "calme", "jouer", "repos", "train", "avion", "chaud", "ski", "froid", "fleur", "canoë", "lac", "pêche", "frais", "cool", "neige", "calme", "zoo", "port", "ports", "sac", "bain", "hôtel", "ferry", "louer", "tente", "kart", "vélo", "vegas", "sud", "suède", "île", "rame", "ramer", "ski" };
    
     private int i = 0;
     private int j = 0;
@@ -47,8 +47,12 @@ public class Vacances1 : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        GenerateurFinDePartie.finDePartiePerso = 500000;
+        GenerateurFinDePartie.But = 10;
+        GenerateurFinDePartie.MotsValide = 0;
+
         activationCaret = false;
-        vit = 3;                          //C'est ici que l'on règle la vitesse des lettres
+        vit = 1;                          //C'est ici que l'on règle la vitesse des lettres
 
         success = false;
 
@@ -215,7 +219,11 @@ public class Vacances1 : MonoBehaviour
             }
             else
             {
-
+                if (success == false) {
+                    GenerateurFinDePartie.MotsValide++;
+                    Debug.Log(GenerateurFinDePartie.MotsValide);
+                }
+                
                 success = true;
                 for (i = 0; i < liste[rand].Length; i++)
                 {
@@ -225,6 +233,9 @@ public class Vacances1 : MonoBehaviour
 
                     // Detruit chaque lettre après un délai de 0.5 secondes
                     Destroy(letter[i], 0.5f);
+
+                    
+                   
 
                 }
                 // Ne pas oublier de detruire l'object mot éventuellement

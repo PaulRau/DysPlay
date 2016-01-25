@@ -5,7 +5,7 @@ public class Jungle1 : MonoBehaviour
 {
 
 
-    private string[] liste = { "vert", "eau", "bois", "arbre", "dense", "biome", "félin", "tigre", "puma", "lion", "singe", "verte", "lions", "pumas", "pluie" };
+    private string[] liste = { "vert", "eau", "bois", "arbre", "dense", "biome", "félin", "tigre", "puma", "lion", "liane", " terre", "singe", "verte", "lions", "pumas", "pluie" };
     private int i = 0;
     private int j = 0;
 
@@ -46,8 +46,12 @@ public class Jungle1 : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        GenerateurFinDePartie.finDePartiePerso = 500000;
+        GenerateurFinDePartie.But = 25;
+        GenerateurFinDePartie.MotsValide = 0;
+
         activationCaret = false;
-        vit = 3;                          //C'est ici que l'on règle la vitesse des lettres
+        vit = 5;                          //C'est ici que l'on règle la vitesse des lettres
 
         success = false;
 
@@ -213,6 +217,12 @@ public class Jungle1 : MonoBehaviour
             }
             else
             {
+                if (success == false)
+                {
+                    GenerateurFinDePartie.MotsValide++;
+                    Debug.Log(GenerateurFinDePartie.MotsValide);
+                }
+
 
                 success = true;
                 for (i = 0; i < liste[rand].Length; i++)

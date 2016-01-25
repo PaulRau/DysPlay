@@ -5,7 +5,7 @@ public class Campagne1 : MonoBehaviour
 {
 
 
-    private string[] liste = { "lumière", "bonheur", "vacance", "vacances", "camping", "verdure", "fleurs", "coucher", "soleil", "dormir", "repose", "reposer", "feuille", "montagne", "poisson", "poissons", "oiseau", "oiseaux", "animal", "animaux", "balade", "marche", "parasol", "solaire", "plaisir", "visite", "visites", "touriste", "explorer", "explore", "voyage", "voyages", "aéroport", "sacoche", "valise", "auberge", "nuitée", "circuit", "matinée" };
+    private string[] liste = { "champ", "pré", "ferme", "blé", "orge", "chat", "chien", "vigne", "vin", "maïs", "riz", "pain", "fruit", "rural", "boue", "vache", "oie", "herbe", "coq", "poule", "veau", "poney", "mulet", "âne", "roche", "oeuf", "foin", "lapin" };
     private int i = 0;
     private int j = 0;
 
@@ -46,8 +46,12 @@ public class Campagne1 : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        GenerateurFinDePartie.finDePartiePerso = 500000;
+        GenerateurFinDePartie.But = 15;
+        GenerateurFinDePartie.MotsValide = 0;
+
         activationCaret = false;
-        vit = 3;                          //C'est ici que l'on règle la vitesse des lettres
+        vit = 2;                          //C'est ici que l'on règle la vitesse des lettres
 
         success = false;
 
@@ -213,6 +217,11 @@ public class Campagne1 : MonoBehaviour
             }
             else
             {
+                if (success == false)
+                {
+                    GenerateurFinDePartie.MotsValide++;
+                    Debug.Log(GenerateurFinDePartie.MotsValide);
+                }
 
                 success = true;
                 for (i = 0; i < liste[rand].Length; i++)

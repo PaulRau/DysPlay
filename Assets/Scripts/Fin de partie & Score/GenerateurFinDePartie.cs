@@ -8,6 +8,8 @@ public class GenerateurFinDePartie : MonoBehaviour {
     public static float ratio;
 
     public static float finDePartiePerso = 20;
+    public static int But;
+    public static int MotsValide = 0;
 
     public static int apm;
    
@@ -23,7 +25,7 @@ public class GenerateurFinDePartie : MonoBehaviour {
 
         if (GameObject.Find("FinDePartie (Canvas)(Clone)") == null)
         {
-            if (ScoreManager.score >= finDePartiePerso)
+            if (ScoreManager.score >= finDePartiePerso || MotsValide >= But)
             {
 
                

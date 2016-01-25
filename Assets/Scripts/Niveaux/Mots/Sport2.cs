@@ -46,6 +46,10 @@ public class Sport2 : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        GenerateurFinDePartie.finDePartiePerso = 500000;
+        GenerateurFinDePartie.But = 20;
+        GenerateurFinDePartie.MotsValide = 0;
+
         activationCaret = false;
         vit = 3;                          //C'est ici que l'on règle la vitesse des lettres
 
@@ -214,6 +218,12 @@ public class Sport2 : MonoBehaviour
             }
             else
             {
+                if (success == false)
+                {
+                    GenerateurFinDePartie.MotsValide++;
+                    Debug.Log(GenerateurFinDePartie.MotsValide);
+                }
+
 
                 success = true;
                 for (i = 0; i < liste[rand].Length; i++)

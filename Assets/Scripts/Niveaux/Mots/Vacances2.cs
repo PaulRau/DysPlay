@@ -5,7 +5,7 @@ public class Vacances2 : MonoBehaviour
 {
 
 
-    private string[] liste = { "lumière", "bonheur", "vacance", "vacances", "camping", "verdure", "fleurs", "coucher", "soleil", "dormir", "repose", "reposer", "feuille", "montagne", "poisson", "poissons", "oiseau", "oiseaux", "animal", "animaux", "balade", "marche", "parasol", "solaire", "plaisir", "visite", "visites", "touriste", "explorer", "explore", "voyage", "voyages", "aéroport", "sacoche", "valise", "auberge", "nuitée", "circuit", "matinée" };
+    private string[] liste = { "lumière", "bonheur", "vacance", "vacances", "camping", "verdure", "fleurs", "coucher", "soleil", "dormir", "repose", "reposer", "feuille", "montagne", "poisson", "poissons", "oiseau", "oiseaux", "animal", "animaux", "balade", "marche", "parasol", "solaire", "plaisir", "visite", "visites", "touriste", "explorer", "explore", "voyage", "voyages", "aéroport", "sacoche", "valise", "auberge", "nuitée", "circuit", "matinée", "noyées", "bahines", "irlande", "espagne", "bretagne", "ballon", "escalade", "requin", "floride", "californie", "bateau", "nautique", "plongée" };
     private int i = 0;
     private int j = 0;
 
@@ -46,8 +46,12 @@ public class Vacances2 : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        GenerateurFinDePartie.finDePartiePerso = 500000;
+        GenerateurFinDePartie.But = 10;
+        GenerateurFinDePartie.MotsValide = 0;
+
         activationCaret = false;
-        vit = 3;                          //C'est ici que l'on règle la vitesse des lettres
+        vit = 1;                          //C'est ici que l'on règle la vitesse des lettres
 
         success = false;
 
@@ -214,6 +218,12 @@ public class Vacances2 : MonoBehaviour
             }
             else
             {
+                if (success == false)
+                {
+                    GenerateurFinDePartie.MotsValide++;
+                    Debug.Log(GenerateurFinDePartie.MotsValide);
+                }
+
 
                 success = true;
                 for (i = 0; i < liste[rand].Length; i++)
