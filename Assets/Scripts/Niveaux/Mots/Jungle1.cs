@@ -5,7 +5,7 @@ public class Jungle1 : MonoBehaviour
 {
 
 
-    private string[] liste = { "vert", "eau", "bois", "arbre", "dense", "biome", "félin", "tigre", "puma", "lion", "liane", " terre", "singe", "verte", "lions", "pumas", "pluie" };
+    private string[] liste = { "vert", "eau", "bois", "arbre", "dense", "biome", "félin", "tigre", "puma", "lion", "liane", " terre", "singe", "verte", "lions", "pumas", "pluie", "maya", "toile", "singe", "panda", "zèbre", "alizé" };
     private int i = 0;
     private int j = 0;
 
