@@ -80,7 +80,7 @@ public class LettreAleatoire : MonoBehaviour
         }
         else if ( PersonalisablePartie.caracspec == true)
         {
-           rand = Random.Range(38, 48);  // Les 15 derniers caractères correspondent aux caractères spéciaux.
+           rand = Random.Range(38, 51);  // Les 15 derniers caractères correspondent aux caractères spéciaux.
         }
         else if (spec == true )
         {
@@ -503,11 +503,26 @@ public class LettreAleatoire : MonoBehaviour
                 else MauvaiseLettre();
                 break;
             case 48:
+                if (Input.GetKeyDown(KeyCode.Comma) && (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))
+                {
+                    BonneLettre();
+                }
+                else if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) { } else MauvaiseLettre();
+                break;
             case 49:
+                if (Input.GetKeyDown(KeyCode.Period) && (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))
+                {
+                    BonneLettre();
+                }
+                else if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) { } else MauvaiseLettre();
+                break;
             case 50:
-          
-                  break;
-
+                if (Input.GetKeyDown(KeyCode.Slash) && (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))
+                {
+                    BonneLettre();
+                }
+                else if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) { } else MauvaiseLettre();
+                break;
         }
     }
     void CaracSpeciaux()
