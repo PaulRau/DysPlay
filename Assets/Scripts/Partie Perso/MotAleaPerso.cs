@@ -130,6 +130,19 @@ public class MotAleaPerso : MonoBehaviour
         }
 
         rand = Random.Range(0, liste.Length);
+
+        if (liste[rand].Length > 5)
+        {
+           Clone.GetComponent<Transform>().localScale = new Vector2(3.8f, 3.8f);
+
+        }
+
+        if (liste[rand].Length > 9)
+        {
+            Clone.GetComponent<Transform>().localScale = new Vector2(3f, 3f);
+
+        }
+
         success = false;
 
         for (j = 0; j < 12; j++)
@@ -290,6 +303,7 @@ public class MotAleaPerso : MonoBehaviour
 
                 // Arrête le mouvement de chaque lettre 
                 letter[i].GetComponent<LettreChoisie>().speed = new Vector2(0, 0);
+                Clone.GetComponent<LettreChoisie>().speed = new Vector2(0, 0);
 
                 // Detruit chaque lettre après un délai de 0.5 secondes
                 Destroy(letter[i], 0.5f);

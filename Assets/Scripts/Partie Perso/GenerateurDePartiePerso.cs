@@ -36,7 +36,7 @@ public class GenerateurDePartiePerso : MonoBehaviour {
     {
 
       
-            if (GameObject.Find("Paquerettes(Clone)") == null && GameObject.Find("Plage(Clone)") == null)
+            if (GameObject.Find("Paquerettes(Clone)") == null && GameObject.Find("Sport(Clone)") == null && GameObject.Find("Jungle(Clone)") == null && GameObject.Find("Plage(Clone)") == null)
             {
                 Instantiate(fond[rand]);
             }

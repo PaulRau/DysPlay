@@ -73,6 +73,7 @@ public class Jungle2 : MonoBehaviour
 
                 Clone = Instantiate(ClonePrefab);
                 Clone.GetComponent<LettreMotNiveau>().speed = new Vector2(0, vit);
+                Clone.GetComponent<Transform>().localScale = new Vector2(0.3f, 0.3f);
 
                 for (i = 0; i < liste[rand].Length; i++)
                 {
@@ -220,6 +221,7 @@ public class Jungle2 : MonoBehaviour
 
                     // Arrête le mouvement de chaque lettre 
                     letter[i].GetComponent<LettreMotNiveau>().speed = new Vector2(0, 0);
+                    Clone.GetComponent<LettreMotNiveau>().speed = new Vector2(0, 0);
 
                     // Detruit chaque lettre après un délai de 0.5 secondes
                     Destroy(letter[i], 0.5f);
