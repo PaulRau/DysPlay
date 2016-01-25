@@ -24,6 +24,7 @@ public class GenerateurDePartiePerso : MonoBehaviour {
 
     void Start()
     {
+        GenerateurFinDePartie.But = 50000;
         rand = Random.Range(0, fond.Length);
 
         // mot.GetComponent<LettreChoisie>().speed = new Vector2(0, PersonalisablePartie.vitesse);
