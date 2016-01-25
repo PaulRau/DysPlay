@@ -5,7 +5,7 @@ public class Sport1 : MonoBehaviour
 {
 
 
-    private string[] liste = { "apnée", "gym", "arts", "aqua", "foot", "ball", "balle", "nage", "bmx", "beach", "boxe", "hand", "salsa", "samba", "surf", "sumo", "iaido", "judo", "kite", "surf", "ski", "skate", "rando", "tir", "canoë", "char", "voile", "danse", "luge", "lutte", "lutta", "moto", "vtt", "ulm", "vol", "yoga", "polo", "golf", "muscu", "echec", "flag", "force", "quad", "raid", "pock", "rando", "rugby", "sueur"};
+    private string[] liste = { "apnée", "gym", "arts", "aqua", "foot", "ball", "balle", "nage", "bmx", "beach", "boxe", "hand", "salsa", "samba", "surf", "sumo", "iaido", "judo", "kite", "surf", "ski", "skate", "rando", "tir", "canoë", "char", "voile", "danse", "luge", "lutte", "lutta", "moto", "vtt", "ulm", "vol", "yoga", "polo", "golf", "muscu", "echec", "flag", "force", "quad", "raid", "pock", "rando", "rugby", "sueur", "stade", "coupe", "fan", "ligue", "battu", "jouer", "juge", "match", "club", "roller", "patin", "vélo"};
     private int i = 0;
     private int j = 0;
 

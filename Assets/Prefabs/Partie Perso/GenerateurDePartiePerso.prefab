@@ -47,6 +47,7 @@ MonoBehaviour:
   - {fileID: 133422, guid: a01222843c81bdb41a4abbe0aad23fd6, type: 2}
   - {fileID: 156360, guid: 8d35a30fcbe47cc44839406f7bba6936, type: 2}
   - {fileID: 180604, guid: 5b41a7bbb45f8ad4f8b3676a6dd63d34, type: 2}
+  - {fileID: 138712, guid: 6b927a9e3a32c784b852158a079763da, type: 2}
   sol:
   - {fileID: 135394, guid: efbf6d27768f29b4fabba89e4f03e574, type: 2}
 --- !u!1001 &100100000
@@ -58,7 +59,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: fond.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: alphabet.Array.size
@@ -198,7 +199,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: fond.Array.data[3]
       value: 
-      objectReference: {fileID: 156360, guid: 8d35a30fcbe47cc44839406f7bba6936, type: 2}
+      objectReference: {fileID: 138712, guid: 6b927a9e3a32c784b852158a079763da, type: 2}
     - target: {fileID: 0}
       propertyPath: fond.Array.data[4]
       value: 
