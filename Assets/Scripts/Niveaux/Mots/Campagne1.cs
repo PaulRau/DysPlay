@@ -5,7 +5,7 @@ public class Campagne1 : MonoBehaviour
 {
 
 
-    private string[] liste = { "champ", "pré", "ferme", "blé", "orge", "chat", "chien", "vigne", "vin", "maïs", "riz", "pain", "fruit", "rural", "boue", "vache", "oie", "herbe", "coq", "poule", "veau", "poney", "mulet", "âne", "roche", "oeuf", "foin", "lapin" };
+    private string[] liste = { "champ", "pré", "ferme", "blé", "orge", "chat", "chien", "vigne", "vin", "maïs", "riz", "pain", "fruit", "rural", "boue", "vache", "oie", "herbe", "coq", "poule", "veau", "poney", "mulet", "âne", "roche", "oeuf", "foin", "lapin", "pêche", "flore", "faune", "bio", "nid", "lait" };
     private int i = 0;
     private int j = 0;
 
