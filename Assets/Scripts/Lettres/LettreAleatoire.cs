@@ -56,7 +56,7 @@ public class LettreAleatoire : MonoBehaviour
         }
         else if (spec == true && PersonalisablePartie.caracspec == true)
         {
-            rand = Random.Range(26, 53); // Les x premiers caractères correspondent aux  caractères accentués et spéciaux
+            rand = Random.Range(26, 52); // Les x premiers caractères correspondent aux  caractères accentués et spéciaux
         }
         else if (spec == true && GenerateurDePartiePerso.choixLettrea == true)
         {
@@ -64,7 +64,7 @@ public class LettreAleatoire : MonoBehaviour
         }
         else if (GenerateurDePartiePerso.choixLettrea == true && PersonalisablePartie.caracspec == true)
         {
-            rand = Random.Range(0, 53);  // Les 0-25 premier ou les 38-52 dernier
+            rand = Random.Range(0, 52);  // Les 0-25 premier ou les 38-52 dernier
             if(rand >= 26 || rand <= 31)
             {
                 rand = rand - 6;
@@ -80,7 +80,7 @@ public class LettreAleatoire : MonoBehaviour
         }
         else if ( PersonalisablePartie.caracspec == true)
         {
-           rand = Random.Range(38, 51);  // Les 15 derniers caractères correspondent aux caractères spéciaux.
+           rand = Random.Range(38, 52);  // Les 15 derniers caractères correspondent aux caractères spéciaux.
         }
         else if (spec == true )
         {
@@ -523,6 +523,14 @@ public class LettreAleatoire : MonoBehaviour
                 }
                 else if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) { } else MauvaiseLettre();
                 break;
+            case 51:
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    BonneLettre();
+                }
+                else MauvaiseLettre();
+                break;
+
         }
     }
     void CaracSpeciaux()
