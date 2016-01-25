@@ -43,7 +43,7 @@ public class LettreAleatoire : MonoBehaviour
 
     void Start()
     {
-        
+        GenerateurFinDePartie.But = 50000;
 
         letter.GetComponent<LettreAleatoire>().speed = new Vector2(0, PersonalisablePartie.vitesse);
         success = false;      

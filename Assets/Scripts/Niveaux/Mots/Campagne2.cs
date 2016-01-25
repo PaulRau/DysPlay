@@ -3,8 +3,6 @@ using System.Collections;
 
 public class Campagne2 : MonoBehaviour
 {
-
-
     private string[] liste = { "lumière", "bonheur", "vacance", "vacances", "camping", "verdure", "fleurs", "coucher", "soleil", "dormir", "repose", "reposer", "feuille", "montagne", "poisson", "poissons", "oiseau", "oiseaux", "animal", "animaux", "balade", "marche", "parasol", "solaire", "plaisir", "visite", "visites", "touriste", "explorer", "explore", "voyage", "voyages", "aéroport", "sacoche", "valise", "auberge", "nuitée", "circuit", "matinée", "randonnée", "cheval", "canard", "ruisseau", "grenouille", "canasson", "champignon", "chèvre", "serpent", "brebis", "mouton", "fromage", "clapier", "poulailler", "porcherie", "poussin", "écurie"};
     private int i = 0;
     private int j = 0;

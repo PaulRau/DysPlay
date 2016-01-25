@@ -24,6 +24,7 @@ public class NiveauQuatre : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        GenerateurFinDePartie.But = 50000;
         frand = Random.Range(0, fond.Length);
         Instantiate(fond[frand]);
         Instantiate(sol[0]);

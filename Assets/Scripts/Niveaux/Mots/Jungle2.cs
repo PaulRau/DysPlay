@@ -5,7 +5,7 @@ public class Jungle2 : MonoBehaviour
 {
 
 
-    private string[] liste = { "feuilles", "arbres", "racines", "lianes", "fougères", "mousson", "animaux", "humide", "sauvage", "naturel", "sauvages", "jaguar", "tigres", "tamanoir", "reptiles", "serpents", "iguanes", "singes", "tamarins", "oiseaux", "toucans", "toucan", "colibri", "insectes", "mygales", "piranha", "tarzan", "rivière", "aligator" };
+    private string[] liste = { "feuilles", "arbres", "racines", "lianes", "fougères", "mousson", "animaux", "humide", "sauvage", "naturel", "sauvages", "jaguar", "tigres", "tamanoir", "reptiles", "serpents", "iguanes", "singes", "tamarins", "oiseaux", "toucans", "toucan", "colibri", "insectes", "mygales", "piranha", "tarzan", "rivière", "aligator", "humidité" };
     private int i = 0;
     private int j = 0;
 

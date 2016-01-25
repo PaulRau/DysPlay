@@ -27,6 +27,7 @@ public class LettreChoisiePerso : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+        GenerateurFinDePartie.But = 50000;
         charactere = cara.ToCharArray();
         choixLettreChoisi.GetComponent<LettreChoisie>().speed = new Vector2(0, PersonalisablePartie.vitesse);
         success = false;

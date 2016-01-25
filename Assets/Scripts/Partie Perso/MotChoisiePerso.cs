@@ -52,6 +52,7 @@ public class MotChoisiePerso : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        GenerateurFinDePartie.But = 50000;
         activationCaret = false;
 
         Clone.GetComponent<LettreChoisie>().speed = new Vector2(0, PersonalisablePartie.vitesse);
