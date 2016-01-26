@@ -49,6 +49,7 @@ public class Vacances1 : MonoBehaviour
     {
         GenerateurFinDePartie.finDePartiePerso = 500000;
         GenerateurFinDePartie.But = 10;
+        MotsRestants.motsrestant = 10;
         GenerateurFinDePartie.MotsValide = 0;
 
         activationCaret = false;
@@ -221,7 +222,7 @@ public class Vacances1 : MonoBehaviour
             {
                 if (success == false) {
                     GenerateurFinDePartie.MotsValide++;
-                    Debug.Log(GenerateurFinDePartie.MotsValide);
+                    if (MotsRestants.motsrestant > 0) { MotsRestants.motsrestant--; }
                 }
                 
                 success = true;

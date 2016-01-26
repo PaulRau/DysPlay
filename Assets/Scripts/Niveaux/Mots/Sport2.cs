@@ -48,6 +48,7 @@ public class Sport2 : MonoBehaviour
     {
         GenerateurFinDePartie.finDePartiePerso = 500000;
         GenerateurFinDePartie.But = 20;
+        MotsRestants.motsrestant = 20;
         GenerateurFinDePartie.MotsValide = 0;
 
         activationCaret = false;
@@ -221,7 +222,7 @@ public class Sport2 : MonoBehaviour
                 if (success == false)
                 {
                     GenerateurFinDePartie.MotsValide++;
-                    Debug.Log(GenerateurFinDePartie.MotsValide);
+                    if (MotsRestants.motsrestant > 0) { MotsRestants.motsrestant--; }
                 }
 
 

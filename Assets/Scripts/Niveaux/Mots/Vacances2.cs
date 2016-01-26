@@ -5,7 +5,7 @@ public class Vacances2 : MonoBehaviour
 {
 
 
-    private string[] liste = { "lumière", "bonheur", "vacance", "vacances", "camping", "verdure", "fleurs", "coucher", "soleil", "dormir", "repose", "reposer", "feuille", "montagne", "poisson", "poissons", "oiseau", "oiseaux", "animal", "animaux", "balade", "marche", "parasol", "solaire", "plaisir", "visite", "visites", "touriste", "explorer", "explore", "voyage", "voyages", "aéroport", "sacoche", "valise", "auberge", "nuitée", "circuit", "matinée", "noyées", "bahines", "irlande", "espagne", "bretagne", "ballon", "escalade", "requin", "floride", "californie", "bateau", "nautique", "plongée", "coktail", "chaleur", "palmier", "croisière", "souvenir" };
+    private string[] liste = { "lumière", "bonheur", "vacance", "vacances", "camping", "verdure", "fleurs", "coucher", "soleil", "dormir", "repose", "reposer", "feuille", "montagne", "poisson", "poissons", "oiseau", "oiseaux", "animal", "animaux", "balade", "marche", "parasol", "solaire", "plaisir", "visite", "visites", "touriste", "explorer", "explore", "voyage", "voyages", "aéroport", "sacoche", "valise", "auberge", "nuitée", "circuit", "matinée", "noyées", "irlande", "espagne", "bretagne", "ballon", "escalade", "requin", "floride", "californie", "bateau", "nautique", "plongée", "coktail", "chaleur", "palmier", "croisière", "souvenir" };
     private int i = 0;
     private int j = 0;
 
@@ -48,6 +48,7 @@ public class Vacances2 : MonoBehaviour
     {
         GenerateurFinDePartie.finDePartiePerso = 500000;
         GenerateurFinDePartie.But = 10;
+        MotsRestants.motsrestant = 10;
         GenerateurFinDePartie.MotsValide = 0;
 
         activationCaret = false;
@@ -221,7 +222,7 @@ public class Vacances2 : MonoBehaviour
                 if (success == false)
                 {
                     GenerateurFinDePartie.MotsValide++;
-                    Debug.Log(GenerateurFinDePartie.MotsValide);
+                    if (MotsRestants.motsrestant > 0) { MotsRestants.motsrestant--; }
                 }
 
 

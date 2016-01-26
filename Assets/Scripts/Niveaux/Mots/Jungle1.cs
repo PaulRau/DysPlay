@@ -48,10 +48,11 @@ public class Jungle1 : MonoBehaviour
     {
         GenerateurFinDePartie.finDePartiePerso = 500000;
         GenerateurFinDePartie.But = 25;
+        MotsRestants.motsrestant = 25;
         GenerateurFinDePartie.MotsValide = 0;
 
         activationCaret = false;
-        vit = 5;                          //C'est ici que l'on règle la vitesse des lettres
+        vit = 4;                          //C'est ici que l'on règle la vitesse des lettres
 
         success = false;
 
@@ -220,7 +221,7 @@ public class Jungle1 : MonoBehaviour
                 if (success == false)
                 {
                     GenerateurFinDePartie.MotsValide++;
-                    Debug.Log(GenerateurFinDePartie.MotsValide);
+                    if (MotsRestants.motsrestant > 0) { MotsRestants.motsrestant--; }
                 }
 
 

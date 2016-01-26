@@ -48,6 +48,7 @@ public class Campagne1 : MonoBehaviour
     {
         GenerateurFinDePartie.finDePartiePerso = 500000;
         GenerateurFinDePartie.But = 15;
+        MotsRestants.motsrestant = 15;
         GenerateurFinDePartie.MotsValide = 0;
 
         activationCaret = false;
@@ -221,6 +222,7 @@ public class Campagne1 : MonoBehaviour
                 {
                     GenerateurFinDePartie.MotsValide++;
                     Debug.Log(GenerateurFinDePartie.MotsValide);
+                    if (MotsRestants.motsrestant > 0) { MotsRestants.motsrestant--; }
                 }
 
                 success = true;
