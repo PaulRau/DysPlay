@@ -48,6 +48,7 @@ public class Campagne2 : MonoBehaviour
         GenerateurFinDePartie.But = 15;
         MotsRestants.motsrestant = 15;
         GenerateurFinDePartie.MotsValide = 0;
+        Combo.combo = 0;
 
         activationCaret = false;
         vit = 2;                          //C'est ici que l'on règle la vitesse des lettres
@@ -62,6 +63,12 @@ public class Campagne2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Combo.combo == 5)
+        {
+            scoreValue = 2;
+        }
+        else scoreValue = 1;
+
         if (Compteur.timeRemaining < 0.01f)
         {
 
@@ -1102,6 +1109,11 @@ public class Campagne2 : MonoBehaviour
         caret = false;
         activationCaret = false;
 
+        if (Combo.combo < 5)
+        {
+            Combo.combo++;
+        }
+
         ScoreManager.score += scoreValue;
         ScoreManager.bonneLettre += scoreValue1;
 
@@ -1123,6 +1135,7 @@ public class Campagne2 : MonoBehaviour
             }
             else
             {
+                Combo.combo = 0;
                 letter[x].GetComponent<SpriteRenderer>().color = Color.red;
                 ScoreManager.mauvaiseLettre += scoreValue1;
             }

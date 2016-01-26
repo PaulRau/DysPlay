@@ -50,6 +50,7 @@ public class Vacances1 : MonoBehaviour
         GenerateurFinDePartie.finDePartiePerso = 500000;
         GenerateurFinDePartie.But = 10;
         MotsRestants.motsrestant = 10;
+        Combo.combo = 0;
         GenerateurFinDePartie.MotsValide = 0;
 
         activationCaret = false;
@@ -65,6 +66,11 @@ public class Vacances1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Combo.combo == 5)
+        {
+            scoreValue = 2;
+        }
+        else scoreValue = 1;
 
 
         if (Compteur.timeRemaining < 0.01f)
@@ -1109,6 +1115,10 @@ public class Vacances1 : MonoBehaviour
     {
         caret = false;
         activationCaret = false;
+        if (Combo.combo < 5)
+        {
+            Combo.combo++;
+        }
 
         ScoreManager.score += scoreValue;
         ScoreManager.bonneLettre += scoreValue1;
@@ -1131,6 +1141,7 @@ public class Vacances1 : MonoBehaviour
             }
             else
             {
+                Combo.combo =0;
                 letter[x].GetComponent<SpriteRenderer>().color = Color.red;
                 ScoreManager.mauvaiseLettre += scoreValue1;
             }

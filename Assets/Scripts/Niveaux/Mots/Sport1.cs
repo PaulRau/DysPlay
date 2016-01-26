@@ -50,6 +50,7 @@ public class Sport1 : MonoBehaviour
         GenerateurFinDePartie.But = 20;
         MotsRestants.motsrestant = 20;
         GenerateurFinDePartie.MotsValide = 0;
+        Combo.combo = 0;
 
         activationCaret = false;
         vit = 3;                          //C'est ici que l'on règle la vitesse des lettres
@@ -64,6 +65,12 @@ public class Sport1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Combo.combo == 5)
+        {
+            scoreValue = 2;
+        }
+        else scoreValue = 1;
+
         if (Compteur.timeRemaining < 0.01f)
         {
 
@@ -1107,6 +1114,11 @@ public class Sport1 : MonoBehaviour
         caret = false;
         activationCaret = false;
 
+        if (Combo.combo < 5)
+        {
+            Combo.combo++;
+        }
+
         ScoreManager.score += scoreValue;
         ScoreManager.bonneLettre += scoreValue1;
 
@@ -1128,6 +1140,7 @@ public class Sport1 : MonoBehaviour
             }
             else
             {
+                Combo.combo = 0;
                 letter[x].GetComponent<SpriteRenderer>().color = Color.red;
                 ScoreManager.mauvaiseLettre += scoreValue1;
             }
