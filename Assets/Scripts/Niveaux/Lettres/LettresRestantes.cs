@@ -2,11 +2,9 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class Combo : MonoBehaviour
+public class LettresRestantes : MonoBehaviour
 {
-    public static int combo;    
-   
-
+    public static int lettresrestant;        // The player's score.
 
     Text text;                      // Reference to the Text component.
 
@@ -16,14 +14,12 @@ public class Combo : MonoBehaviour
         // Set up the reference.
         text = GetComponent<Text>();
 
-        
     }
 
 
     void Update()
     {
         // Set the displayed text to be the word "Score" followed by the score value.
-        if (combo == 5) { text.text = "Combo !"; } else text.text = "";
-        if ( NiveauUn.frand == 3 || NiveauDeux.frand == 3 || NiveauTrois.frand == 3 || NiveauQuatre.frand == 3) { text.color = Color.white; }
+        text.text = "Lettres Restantes: " + lettresrestant;
     }
 }

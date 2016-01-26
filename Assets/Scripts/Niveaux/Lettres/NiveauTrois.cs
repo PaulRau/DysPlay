@@ -5,7 +5,7 @@ public class NiveauTrois : MonoBehaviour
 {
 
     private int rand;
-    private int frand;
+    public static int frand;
 
 
 
@@ -23,8 +23,12 @@ public class NiveauTrois : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        GenerateurFinDePartie.But = 50000;
-        GenerateurFinDePartie.finDePartiePerso = 20;
+        GenerateurFinDePartie.finDePartiePerso = 500000;
+        GenerateurFinDePartie.But = 20;
+        LettresRestantes.lettresrestant = 20;
+        Combo.combo = 0;
+        GenerateurFinDePartie.MotsValide = 0;
+
         frand = Random.Range(0, fond.Length);
         Instantiate(fond[frand]);
         Instantiate(sol[0]);
@@ -35,7 +39,11 @@ public class NiveauTrois : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Combo.combo == 5)
+        {
+            scoreValue = 2;
+        }
+        else scoreValue = 1;
 
         if (Compteur.timeRemaining < 0.01f)
         {
@@ -65,6 +73,10 @@ public class NiveauTrois : MonoBehaviour
 
     void BonneLettre()
     {
+        if (Combo.combo < 5)
+        {
+            Combo.combo++;
+        }
 
         //Change la couleur de la lettre
         lettre.GetComponent<SpriteRenderer>().color = Color.green;
@@ -75,10 +87,16 @@ public class NiveauTrois : MonoBehaviour
         //Incremente le score
         ScoreManager.score += scoreValue;
 
+        if (LettresRestantes.lettresrestant > 0) { LettresRestantes.lettresrestant--; }
+
+        GenerateurFinDePartie.MotsValide++;
+
         //Detruit la lettre dans un délai de 0.5 secondes
         Destroy(lettre, 0.5f);
 
         NiveauDeux.success = true;
+
+        
 
         //Empêche le joueur de faire quoi que ce soit pendant ce délai
         success = true;
@@ -95,6 +113,7 @@ public class NiveauTrois : MonoBehaviour
             }
             else
             {
+                Combo.combo = 0;
                 lettre.GetComponent<SpriteRenderer>().color = Color.red;
                 ScoreManager.mauvaiseLettre += scoreValue;
             }

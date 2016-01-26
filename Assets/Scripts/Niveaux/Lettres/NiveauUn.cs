@@ -4,7 +4,7 @@ using System.Collections;
 public class NiveauUn : MonoBehaviour {
 
     private int rand;
-    private int frand;
+    public static int frand;
 
     
 
@@ -21,8 +21,12 @@ public class NiveauUn : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        GenerateurFinDePartie.But = 50000;
-        GenerateurFinDePartie.finDePartiePerso = 20;
+        GenerateurFinDePartie.finDePartiePerso = 500000;
+        GenerateurFinDePartie.But = 15;
+        Combo.combo = 0;
+        LettresRestantes.lettresrestant = 15;
+        GenerateurFinDePartie.MotsValide = 0;
+
         frand = Random.Range(0, fond.Length);
         Instantiate(fond[frand]);
         Instantiate(sol[0]);
@@ -33,6 +37,11 @@ public class NiveauUn : MonoBehaviour {
 	// Update is called once per frame
     void Update()
     {
+        if (Combo.combo == 5)
+        {
+            scoreValue = 2;
+        }
+        else scoreValue = 1;
 
         if (Compteur.timeRemaining < 0.01f)
         {
@@ -64,9 +73,12 @@ public class NiveauUn : MonoBehaviour {
 
     void BonneLettre()
     {
-            
-            //Change la couleur de la lettre
-            lettre.GetComponent<SpriteRenderer>().color = Color.green;
+        if (Combo.combo < 5)
+        {
+            Combo.combo++;
+        }
+        //Change la couleur de la lettre
+        lettre.GetComponent<SpriteRenderer>().color = Color.green;
 
             //Stope le mouvement de la lettre
             lettre.GetComponent<LettreNiveau>().speed = new Vector2(0, 0);
@@ -76,10 +88,13 @@ public class NiveauUn : MonoBehaviour {
 
             //Detruit la lettre dans un délai de 0.5 secondes
             Destroy(lettre, 0.5f);
-           
 
-            //Empêche le joueur de faire quoi que ce soit pendant ce délai
-            success = true;
+            if (LettresRestantes.lettresrestant > 0) { LettresRestantes.lettresrestant--; }
+
+            GenerateurFinDePartie.MotsValide++;
+
+        //Empêche le joueur de faire quoi que ce soit pendant ce délai
+        success = true;
 
         }
 
@@ -93,6 +108,7 @@ public class NiveauUn : MonoBehaviour {
                 }
                 else
                 {
+                    Combo.combo = 0;
                     lettre.GetComponent<SpriteRenderer>().color = Color.red;
                     ScoreManager.mauvaiseLettre += scoreValue;
                 }
