@@ -5,7 +5,7 @@ public class Vacances1 : MonoBehaviour
 {
     
 
-    private string[] liste = { "sable", "plage", "dodo", "mer", "eau", "sel", "apero", "bleue", "calme", "jouer", "repos", "train", "avion", "chaud", "ski", "froid", "fleur", "canoë", "lac", "pêche", "frais", "cool", "neige", "calme", "zoo", "port", "ports", "sac", "bain", "hôtel", "ferry", "louer", "tente", "kart", "vélo", "vegas", "sud", "suède", "île", "rame", "ramer", "ski", "océan", "congé" };
+    private string[] liste = { "baïne", "sable", "plage", "dodo", "mer", "eau", "sel", "apero", "bleue", "calme", "jouer", "repos", "train", "avion", "chaud", "ski", "froid", "fleur", "canoë", "lac", "pêche", "frais", "cool", "neige", "calme", "zoo", "port", "ports", "sac", "bain", "hôtel", "ferry", "louer", "tente", "kart", "vélo", "vegas", "sud", "suède", "île", "rame", "ramer", "ski", "océan", "congé" };
    
     private int i = 0;
     private int j = 0;
@@ -49,6 +49,8 @@ public class Vacances1 : MonoBehaviour
     {
         GenerateurFinDePartie.finDePartiePerso = 500000;
         GenerateurFinDePartie.But = 10;
+        MotsRestants.motsrestant = 10;
+        Combo.combo = 0;
         GenerateurFinDePartie.MotsValide = 0;
 
         activationCaret = false;
@@ -64,6 +66,11 @@ public class Vacances1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Combo.combo == 5)
+        {
+            scoreValue = 2;
+        }
+        else scoreValue = 1;
 
 
         if (Compteur.timeRemaining < 0.01f)
@@ -221,7 +228,7 @@ public class Vacances1 : MonoBehaviour
             {
                 if (success == false) {
                     GenerateurFinDePartie.MotsValide++;
-                    Debug.Log(GenerateurFinDePartie.MotsValide);
+                    if (MotsRestants.motsrestant > 0) { MotsRestants.motsrestant--; }
                 }
                 
                 success = true;
@@ -1108,6 +1115,10 @@ public class Vacances1 : MonoBehaviour
     {
         caret = false;
         activationCaret = false;
+        if (Combo.combo < 5)
+        {
+            Combo.combo++;
+        }
 
         ScoreManager.score += scoreValue;
         ScoreManager.bonneLettre += scoreValue1;
@@ -1130,6 +1141,7 @@ public class Vacances1 : MonoBehaviour
             }
             else
             {
+                Combo.combo =0;
                 letter[x].GetComponent<SpriteRenderer>().color = Color.red;
                 ScoreManager.mauvaiseLettre += scoreValue1;
             }

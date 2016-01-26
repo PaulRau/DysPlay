@@ -5,7 +5,7 @@ public class Sport2 : MonoBehaviour
 {
 
 
-    private string[] liste = { "aerobic", "agility", "aikido", "aviron", "aviation", "ballet", "soccer", "volley", "biathlon", "billard", "nageur", "bowling", "bridge", "hockey", "jetski", "karaté", "karting", "kravmaga", "kungfu", "squash", "spéléo", "tennis", "sportif", "tumbling", "défense", "capoeira", "cirque", "combat", "course", "cyclisme", "marche", "natation", "ninjitsu", "patinage", "pelote", "pétanque", "planche", "plongée", "frisbee", "escrime", "escalade", "fitness", "football", "futsal", "plongeon", "quilles", "rafting", "rallye", "roller", "podium", "champion", "compétition", "entrainer", "effort", "blessure", "combat", "qualifier", "sauts", "courir", "raquette", "badminton", "echecs", "fairplay", "triche", "dopage", "objectif", "médaille", "supporter", "équipe", "entraide"};
+    private string[] liste = { "aerobic", "agility", "aikido", "aviron", "aviation", "ballet", "soccer", "volley", "biathlon", "billard", "nageur", "bowling", "bridge", "hockey", "jetski", "karaté", "karting", "kravmaga", "kungfu", "squash", "spéléo", "tennis", "sportif", "tumbling", "défense", "capoeira", "cirque", "combat", "course", "cyclisme", "marche", "natation", "ninjitsu", "patinage", "pelote", "pétanque", "planche", "plongée", "frisbee", "escrime", "escalade", "fitness", "football", "futsal", "plongeon", "quilles", "rafting", "rallye", "roller", "podium", "champion", "compétition", "entrainer", "effort", "blessure", "combat", "qualifier", "sauts", "courir", "raquette", "badminton", "echecs", "fairplay", "triche", "dopage", "objectif", "médaille", "supporter", "équipe", "entraide", "battre", "battant", "activité", "sport", "sportif", "sportive", "jogger", "marathonien", "joueur", "arbitre", "motiver", "motivation", "émulation", "récompense", "patiner", "basket", "basketteur", "oplympique"};
     private int i = 0;
     private int j = 0;
 
@@ -48,7 +48,9 @@ public class Sport2 : MonoBehaviour
     {
         GenerateurFinDePartie.finDePartiePerso = 500000;
         GenerateurFinDePartie.But = 20;
+        MotsRestants.motsrestant = 20;
         GenerateurFinDePartie.MotsValide = 0;
+        Combo.combo = 0;
 
         activationCaret = false;
         vit = 3;                          //C'est ici que l'on règle la vitesse des lettres
@@ -63,6 +65,12 @@ public class Sport2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Combo.combo == 5)
+        {
+            scoreValue = 2;
+        }
+        else scoreValue = 1;
+
         if (Compteur.timeRemaining < 0.01f)
         {
 
@@ -221,7 +229,7 @@ public class Sport2 : MonoBehaviour
                 if (success == false)
                 {
                     GenerateurFinDePartie.MotsValide++;
-                    Debug.Log(GenerateurFinDePartie.MotsValide);
+                    if (MotsRestants.motsrestant > 0) { MotsRestants.motsrestant--; }
                 }
 
 
@@ -1108,6 +1116,11 @@ public class Sport2 : MonoBehaviour
         caret = false;
         activationCaret = false;
 
+        if (Combo.combo < 5)
+        {
+            Combo.combo++;
+        }
+
         ScoreManager.score += scoreValue;
         ScoreManager.bonneLettre += scoreValue1;
 
@@ -1129,6 +1142,7 @@ public class Sport2 : MonoBehaviour
             }
             else
             {
+                Combo.combo = 0;
                 letter[x].GetComponent<SpriteRenderer>().color = Color.red;
                 ScoreManager.mauvaiseLettre += scoreValue1;
             }

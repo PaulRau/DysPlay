@@ -5,7 +5,7 @@ public class Sport1 : MonoBehaviour
 {
 
 
-    private string[] liste = { "apnée", "gym", "arts", "aqua", "foot", "ball", "balle", "nage", "bmx", "beach", "boxe", "hand", "salsa", "samba", "surf", "sumo", "iaido", "judo", "kite", "surf", "ski", "skate", "rando", "tir", "canoë", "char", "voile", "danse", "luge", "lutte", "lutta", "moto", "vtt", "ulm", "vol", "yoga", "polo", "golf", "muscu", "echec", "flag", "force", "quad", "raid", "pock", "rando", "rugby", "sueur"};
+    private string[] liste = { "apnée", "gym", "arts", "aqua", "foot", "ball", "balle", "nage", "bmx", "beach", "boxe", "hand", "salsa", "samba", "surf", "sumo", "iaido", "judo", "kite", "surf", "ski", "skate", "rando", "tir", "canoë", "char", "voile", "danse", "luge", "lutte", "lutta", "moto", "vtt", "ulm", "vol", "yoga", "polo", "golf", "muscu", "echec", "flag", "force", "quad", "raid", "pock", "rando", "rugby", "sueur", "stade", "coupe", "fan", "ligue", "battu", "jouer", "juge", "match", "club", "roller", "patin", "vélo"};
     private int i = 0;
     private int j = 0;
 
@@ -48,7 +48,9 @@ public class Sport1 : MonoBehaviour
     {
         GenerateurFinDePartie.finDePartiePerso = 500000;
         GenerateurFinDePartie.But = 20;
+        MotsRestants.motsrestant = 20;
         GenerateurFinDePartie.MotsValide = 0;
+        Combo.combo = 0;
 
         activationCaret = false;
         vit = 3;                          //C'est ici que l'on règle la vitesse des lettres
@@ -63,6 +65,12 @@ public class Sport1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Combo.combo == 5)
+        {
+            scoreValue = 2;
+        }
+        else scoreValue = 1;
+
         if (Compteur.timeRemaining < 0.01f)
         {
 
@@ -220,7 +228,7 @@ public class Sport1 : MonoBehaviour
                 if (success == false)
                 {
                     GenerateurFinDePartie.MotsValide++;
-                    Debug.Log(GenerateurFinDePartie.MotsValide);
+                    if (MotsRestants.motsrestant > 0) { MotsRestants.motsrestant--; }
                 }
 
 
@@ -1106,6 +1114,11 @@ public class Sport1 : MonoBehaviour
         caret = false;
         activationCaret = false;
 
+        if (Combo.combo < 5)
+        {
+            Combo.combo++;
+        }
+
         ScoreManager.score += scoreValue;
         ScoreManager.bonneLettre += scoreValue1;
 
@@ -1127,6 +1140,7 @@ public class Sport1 : MonoBehaviour
             }
             else
             {
+                Combo.combo = 0;
                 letter[x].GetComponent<SpriteRenderer>().color = Color.red;
                 ScoreManager.mauvaiseLettre += scoreValue1;
             }
