@@ -17,6 +17,9 @@ public class GenerateurDePartiePerso : MonoBehaviour {
     public GameObject[] sol;
     
     private int rand;
+
+   public static int compteurNbPartie = 0;
+   public static bool statPartiePerso = true;
    
     
 
@@ -40,6 +43,9 @@ public class GenerateurDePartiePerso : MonoBehaviour {
             if (GameObject.Find("Paquerettes(Clone)") == null && GameObject.Find("Sport(Clone)") == null && GameObject.Find("Jungle(Clone)") == null && GameObject.Find("Plage(Clone)") == null)
             {
                 Instantiate(fond[rand]);
+                compteurNbPartie++;
+                statPartiePerso = true;
+                Debug.Log(compteurNbPartie);
             }
 
             if (GameObject.Find("Sol Invisible(Clone)") == null)
@@ -55,6 +61,8 @@ public class GenerateurDePartiePerso : MonoBehaviour {
             {
                 if (GameObject.Find("LettreChoisie(Clone)") == null)
                 {
+                    //compteurNbPartie++;
+                   // Debug.Log(compteurNbPartie);
                     Instantiate(choixMot);
                 }
 
@@ -70,9 +78,14 @@ public class GenerateurDePartiePerso : MonoBehaviour {
                 {
                     if (vit == 0)
                     {
+                        
                         Instantiate(choixLettre, new Vector2(0, 0), Quaternion.identity);
                     }
-                    else Instantiate(choixLettre);
+                    else
+                    {
+                        
+                        Instantiate(choixLettre);
+                    }
 
                 }
             }
@@ -84,6 +97,7 @@ public class GenerateurDePartiePerso : MonoBehaviour {
             {
                 if (GameObject.Find("LettreChoisie(Clone)") == null)
                 {
+                    
                     Instantiate(choixMotChoisi);
                 }
             }
@@ -94,9 +108,14 @@ public class GenerateurDePartiePerso : MonoBehaviour {
                 {
                     if (vit == 0)
                     {
+                      ;
                         Instantiate(choixLettreChoisi, new Vector2(0, 0), Quaternion.identity);
                     }
-                    else Instantiate(choixLettreChoisi);
+                    else
+                    {
+                        
+                        Instantiate(choixLettreChoisi);
+                    }
 
 
 

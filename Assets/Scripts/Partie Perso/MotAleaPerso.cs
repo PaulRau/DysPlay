@@ -69,7 +69,7 @@ public class MotAleaPerso : MonoBehaviour
         Clone.GetComponent<LettreChoisie>().speed = new Vector2(0, PersonalisablePartie.vitesse);
         vit = PersonalisablePartie.vitesse;
         nb = (int)PersonalisablePartie.NbLettreAlea;
-        Debug.Log(nb);
+        
 
         if (spec == false)
         {

@@ -26,6 +26,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menus/PartieNiveauxLettre.unity
   - enabled: 1
+    path: Assets/Scenes/Menus/Statistiques.unity
+  - enabled: 1
     path: Assets/Scenes/Menus/PartieNiveauxMot.unity
   - enabled: 1
     path: Assets/Scenes/PartiePerso/PersonalisablePartie.unity

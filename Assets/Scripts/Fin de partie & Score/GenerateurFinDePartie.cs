@@ -1,5 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.IO;
+using System.Text;
+using System;
+
 
 public class GenerateurFinDePartie : MonoBehaviour {
 
@@ -12,7 +16,17 @@ public class GenerateurFinDePartie : MonoBehaviour {
     public static int MotsValide = 0;
 
     public static int apm;
-   
+
+    string[] lines = { "First line", "Second line", "Third" };
+    string scoreStat;
+    string partieStat;
+    string blmStat;
+    string ratioStat;
+    string tempsStat;
+    string typeStat;
+    int cutToInt;
+
+
 	// Use this for initialization
 	void Start () {
        
@@ -30,8 +44,8 @@ public class GenerateurFinDePartie : MonoBehaviour {
 
                
                     apm = ScoreManager.bonneLettre * 60 / (int)Compteur.timeForAPM;
-                
-                
+
+                   
            
 
                 if(ScoreManager.mauvaiseLettre != 0)
@@ -52,6 +66,61 @@ public class GenerateurFinDePartie : MonoBehaviour {
                     ratio = 100;
                 
                 }
+                            
+                
+                cutToInt = (int)Compteur.timeForAPM;
+                tempsStat = cutToInt.ToString();
+
+                if (GenerateurDePartiePerso.statPartiePerso == true)
+                {
+                    typeStat = "Personnalisable";
+                }
+                else typeStat = "Niveaux";
+
+                scoreStat = ScoreManager.score.ToString();
+                ratioStat = ratio.ToString();
+                blmStat = apm.ToString();
+                partieStat = GenerateurDePartiePerso.compteurNbPartie.ToString();
+
+               // System.IO.File.WriteAllText(@"C:\Users\Paul\Documents\DysPlay\test.txt", scoreStat);
+
+                using (System.IO.StreamWriter file =
+            new System.IO.StreamWriter(@"C:\Users\Paul\Documents\DysPlay\Stats\Partie.txt", true))
+                {
+                    file.WriteLine(partieStat);
+                }
+
+                using (System.IO.StreamWriter file =
+         new System.IO.StreamWriter(@"C:\Users\Paul\Documents\DysPlay\Stats\Type.txt", true))
+                {
+                    file.WriteLine(typeStat);
+                }
+
+                using (System.IO.StreamWriter file =
+          new System.IO.StreamWriter(@"C:\Users\Paul\Documents\DysPlay\Stats\Score.txt", true))
+                {
+                    file.WriteLine(scoreStat);
+                }
+
+                using (System.IO.StreamWriter file =
+          new System.IO.StreamWriter(@"C:\Users\Paul\Documents\DysPlay\Stats\Ratio.txt", true))
+                {
+                    file.WriteLine(ratioStat);
+                }
+
+                using (System.IO.StreamWriter file =
+          new System.IO.StreamWriter(@"C:\Users\Paul\Documents\DysPlay\Stats\BLM.txt", true))
+                {
+                    file.WriteLine(blmStat + " %");
+                }
+
+                using (System.IO.StreamWriter file =
+          new System.IO.StreamWriter(@"C:\Users\Paul\Documents\DysPlay\Stats\Temps.txt", true))
+                {
+                    file.WriteLine(tempsStat + " secondes");
+                }
+
+
 
 
                 Instantiate(canvas);
@@ -63,4 +132,20 @@ public class GenerateurFinDePartie : MonoBehaviour {
           
      
             }
+
+    public void supprimerTout()
+    {
+        System.IO.File.WriteAllText(@"C:\Users\Paul\Documents\DysPlay\Stats\Partie.txt", "");
+        System.IO.File.WriteAllText(@"C:\Users\Paul\Documents\DysPlay\Stats\Score.txt", "");
+        System.IO.File.WriteAllText(@"C:\Users\Paul\Documents\DysPlay\Stats\Ratio.txt", "");
+        System.IO.File.WriteAllText(@"C:\Users\Paul\Documents\DysPlay\Stats\BLM.txt", "");
+        System.IO.File.WriteAllText(@"C:\Users\Paul\Documents\DysPlay\Stats\Temps.txt", "");
+        System.IO.File.WriteAllText(@"C:\Users\Paul\Documents\DysPlay\Stats\Type.txt", "");
+        Application.LoadLevel("Statistiques");
+       GenerateurDePartiePerso.compteurNbPartie = 0;
+     
+
+    }
+    
+
 }

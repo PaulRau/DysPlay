@@ -9,6 +9,10 @@ public class MenuScript : MonoBehaviour {
     public static float currentVolume = 0;
 
     
+    public void goToStats()
+    {
+        Application.LoadLevel("Statistiques");
+    }
 
     public void volumeSlider(float vo)
     {
@@ -63,6 +67,8 @@ public class MenuScript : MonoBehaviour {
         Compteur.timeForAPM = 0;
     }
     
+
+
 
     public void retourMenuNiveaux()
     {
