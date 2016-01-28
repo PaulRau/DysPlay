@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class StatsType : MonoBehaviour {
 
     Text textScoreStatType;
-    string text = System.IO.File.ReadAllText(@"C:\Users\Paul\Documents\DysPlay\Stats\Type.txt");
+    string text = System.IO.File.ReadAllText(Application.persistentDataPath + "/Type.txt");
 
 
 

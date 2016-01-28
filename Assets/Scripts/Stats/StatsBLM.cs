@@ -2,16 +2,21 @@
 using System.Collections;
 using UnityEngine.UI;
 
+using System.IO;
+using System.Text;
+using System;
+
 public class StatsBLM : MonoBehaviour {
 
     Text textScoreStatBLM;
-    string text = System.IO.File.ReadAllText(@"C:\Users\Paul\Documents\DysPlay\Stats\BLM.txt");
+    string text = System.IO.File.ReadAllText(Application.persistentDataPath + "/BLM.txt");
 
 
 
     // Use this for initialization
     void Start()
     {
+       
         textScoreStatBLM = GetComponent<Text>();
 
     }

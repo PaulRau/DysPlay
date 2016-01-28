@@ -5,13 +5,14 @@ using UnityEngine.UI;
 public class StatsPartie : MonoBehaviour {
 
     Text textScoreStatBLM;
-    string text = System.IO.File.ReadAllText(@"C:\Users\Paul\Documents\DysPlay\Stats\Partie.txt");
+    string text = System.IO.File.ReadAllText(Application.persistentDataPath + "/Partie.txt");
 
 
 
     // Use this for initialization
     void Start()
     {
+      
         textScoreStatBLM = GetComponent<Text>();
 
     }

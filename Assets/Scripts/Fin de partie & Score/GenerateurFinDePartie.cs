@@ -29,7 +29,7 @@ public class GenerateurFinDePartie : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-       
+        DirectoryInfo dir = new DirectoryInfo(Application.persistentDataPath + "/");
 	}    
     
 
@@ -82,40 +82,72 @@ public class GenerateurFinDePartie : MonoBehaviour {
                 blmStat = apm.ToString();
                 partieStat = GenerateurDePartiePerso.compteurNbPartie.ToString();
 
-               // System.IO.File.WriteAllText(@"C:\Users\Paul\Documents\DysPlay\test.txt", scoreStat);
 
+               // FileStream filaz = File.Open(Application.persistentDataPath + "/Test.txt", FileMode.Open);
+              //  Debug.Log(Application.persistentDataPath);
+                if (!System.IO.File.Exists(Application.persistentDataPath + "/Partie.txt"))
+                {
+                    System.IO.File.WriteAllText(Application.persistentDataPath + "/Partie.txt", "");
+                }
+
+                if (!System.IO.File.Exists(Application.persistentDataPath + "/Type.txt"))
+                {
+                    System.IO.File.WriteAllText(Application.persistentDataPath + "/Type.txt", "");
+                }
+
+                if (!System.IO.File.Exists(Application.persistentDataPath + "/Score.txt"))
+                {
+                    System.IO.File.WriteAllText(Application.persistentDataPath + "/Score.txt", "");
+                }
+
+                if (!System.IO.File.Exists(Application.persistentDataPath + "/Ratio.txt"))
+                {
+                    System.IO.File.WriteAllText(Application.persistentDataPath + "/Ratio.txt", "");
+                }
+
+                if (!System.IO.File.Exists(Application.persistentDataPath + "/BLM.txt"))
+                {
+                    System.IO.File.WriteAllText(Application.persistentDataPath + "/BLM.txt", "");
+                }
+
+                if (!System.IO.File.Exists(Application.persistentDataPath + "/Temps.txt"))
+                {
+                    System.IO.File.WriteAllText(Application.persistentDataPath + "/Temps.txt", "");
+                }
+
+               
                 using (System.IO.StreamWriter file =
-            new System.IO.StreamWriter(@"C:\Users\Paul\Documents\DysPlay\Stats\Partie.txt", true))
+            new System.IO.StreamWriter(Application.persistentDataPath + "/Partie.txt", true))
                 {
                     file.WriteLine(partieStat);
                 }
 
                 using (System.IO.StreamWriter file =
-         new System.IO.StreamWriter(@"C:\Users\Paul\Documents\DysPlay\Stats\Type.txt", true))
+         new System.IO.StreamWriter(Application.persistentDataPath + "/Type.txt", true))
                 {
                     file.WriteLine(typeStat);
                 }
 
                 using (System.IO.StreamWriter file =
-          new System.IO.StreamWriter(@"C:\Users\Paul\Documents\DysPlay\Stats\Score.txt", true))
+        new System.IO.StreamWriter(Application.persistentDataPath + "/Score.txt", true))
                 {
                     file.WriteLine(scoreStat);
                 }
 
                 using (System.IO.StreamWriter file =
-          new System.IO.StreamWriter(@"C:\Users\Paul\Documents\DysPlay\Stats\Ratio.txt", true))
+          new System.IO.StreamWriter(Application.persistentDataPath + "/Ratio.txt", true))
                 {
                     file.WriteLine(ratioStat);
                 }
 
                 using (System.IO.StreamWriter file =
-          new System.IO.StreamWriter(@"C:\Users\Paul\Documents\DysPlay\Stats\BLM.txt", true))
+          new System.IO.StreamWriter(Application.persistentDataPath + "/BLM.txt", true))
                 {
                     file.WriteLine(blmStat + " %");
                 }
 
                 using (System.IO.StreamWriter file =
-          new System.IO.StreamWriter(@"C:\Users\Paul\Documents\DysPlay\Stats\Temps.txt", true))
+          new System.IO.StreamWriter(Application.persistentDataPath + "/Temps.txt", true))
                 {
                     file.WriteLine(tempsStat + " secondes");
                 }
@@ -135,12 +167,12 @@ public class GenerateurFinDePartie : MonoBehaviour {
 
     public void supprimerTout()
     {
-        System.IO.File.WriteAllText(@"C:\Users\Paul\Documents\DysPlay\Stats\Partie.txt", "");
-        System.IO.File.WriteAllText(@"C:\Users\Paul\Documents\DysPlay\Stats\Score.txt", "");
-        System.IO.File.WriteAllText(@"C:\Users\Paul\Documents\DysPlay\Stats\Ratio.txt", "");
-        System.IO.File.WriteAllText(@"C:\Users\Paul\Documents\DysPlay\Stats\BLM.txt", "");
-        System.IO.File.WriteAllText(@"C:\Users\Paul\Documents\DysPlay\Stats\Temps.txt", "");
-        System.IO.File.WriteAllText(@"C:\Users\Paul\Documents\DysPlay\Stats\Type.txt", "");
+        System.IO.File.WriteAllText(Application.persistentDataPath + "/Partie.txt", "");
+        System.IO.File.WriteAllText(Application.persistentDataPath + "/Score.txt", "");
+        System.IO.File.WriteAllText(Application.persistentDataPath + "/Ratio.txt", "");
+        System.IO.File.WriteAllText(Application.persistentDataPath + "/BLM.txt", "");
+        System.IO.File.WriteAllText(Application.persistentDataPath + "/Temps.txt", "");
+        System.IO.File.WriteAllText(Application.persistentDataPath + "/Type.txt", "");
         Application.LoadLevel("Statistiques");
        GenerateurDePartiePerso.compteurNbPartie = 0;
      

@@ -4,13 +4,14 @@ using UnityEngine.UI;
 
 public class StatsRatio : MonoBehaviour {
     Text textScoreStatBLM;
-    string text = System.IO.File.ReadAllText(@"C:\Users\Paul\Documents\DysPlay\Stats\Ratio.txt");
+    string text = System.IO.File.ReadAllText(Application.persistentDataPath + "/Ratio.txt");
 
 
 
     // Use this for initialization
     void Start()
     {
+
         textScoreStatBLM = GetComponent<Text>();
 
     }
