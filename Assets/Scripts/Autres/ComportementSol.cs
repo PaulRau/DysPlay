@@ -57,7 +57,7 @@ public class ComportementSol : MonoBehaviour {
 
                   GenerateurFinDePartie.ratio = ScoreManager.bonneLettre / GenerateurFinDePartie.ratio;
 
-                  GenerateurFinDePartie.ratio = GenerateurFinDePartie.ratio * 100;
+                  GenerateurFinDePartie.ratio = (int)(GenerateurFinDePartie.ratio * 100);
 
                 }
                 else
