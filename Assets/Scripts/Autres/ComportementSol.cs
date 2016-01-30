@@ -11,6 +11,14 @@ public class ComportementSol : MonoBehaviour {
 
     private bool aVie;
 
+    string scoreStat;
+    string partieStat;
+    string blmStat;
+    string ratioStat;
+    string tempsStat;
+    string typeStat;
+    int cutToInt;
+
     void Start()
     {
         vies = 5;
@@ -76,6 +84,97 @@ public class ComportementSol : MonoBehaviour {
                 Jungle2.success = true;
                 Campagne1.success = true;
                 Campagne2.success = true;
+
+
+                cutToInt = (int)Compteur.timeForAPM;
+                tempsStat = cutToInt.ToString();
+
+                if (GenerateurDePartiePerso.statPartiePerso == true)
+                {
+                    typeStat = "Personnalisable";
+                }
+                else typeStat = "Niveaux";
+
+
+                scoreStat = ScoreManager.score.ToString();
+                ratioStat = GenerateurFinDePartie.ratio.ToString();
+                blmStat = GenerateurFinDePartie.apm.ToString();
+                partieStat = GenerateurDePartiePerso.compteurNbPartie.ToString();
+
+
+                // FileStream filaz = File.Open(Application.persistentDataPath + "/Test.txt", FileMode.Open);
+                // Debug.Log(Application.persistentDataPath);
+
+                if (!System.IO.File.Exists(Application.persistentDataPath + "/Partie.txt"))
+                {
+                    System.IO.File.WriteAllText(Application.persistentDataPath + "/Partie.txt", "");
+                }
+
+                if (!System.IO.File.Exists(Application.persistentDataPath + "/Type.txt"))
+                {
+                    System.IO.File.WriteAllText(Application.persistentDataPath + "/Type.txt", "");
+                }
+
+                if (!System.IO.File.Exists(Application.persistentDataPath + "/Score.txt"))
+                {
+                    System.IO.File.WriteAllText(Application.persistentDataPath + "/Score.txt", "");
+                }
+
+                if (!System.IO.File.Exists(Application.persistentDataPath + "/Ratio.txt"))
+                {
+                    System.IO.File.WriteAllText(Application.persistentDataPath + "/Ratio.txt", "");
+                }
+
+                if (!System.IO.File.Exists(Application.persistentDataPath + "/BLM.txt"))
+                {
+                    System.IO.File.WriteAllText(Application.persistentDataPath + "/BLM.txt", "");
+                }
+
+                if (!System.IO.File.Exists(Application.persistentDataPath + "/Temps.txt"))
+                {
+                    System.IO.File.WriteAllText(Application.persistentDataPath + "/Temps.txt", "");
+                }
+
+
+                using (System.IO.StreamWriter file =
+            new System.IO.StreamWriter(Application.persistentDataPath + "/Partie.txt", true))
+                {
+                    file.WriteLine(partieStat);
+                }
+
+                using (System.IO.StreamWriter file =
+         new System.IO.StreamWriter(Application.persistentDataPath + "/Type.txt", true))
+                {
+                    file.WriteLine(typeStat);
+                }
+
+                using (System.IO.StreamWriter file =
+        new System.IO.StreamWriter(Application.persistentDataPath + "/Score.txt", true))
+                {
+                    file.WriteLine(scoreStat);
+                }
+
+                using (System.IO.StreamWriter file =
+          new System.IO.StreamWriter(Application.persistentDataPath + "/Ratio.txt", true))
+                {
+                    file.WriteLine(ratioStat + " %");
+                }
+
+                using (System.IO.StreamWriter file =
+          new System.IO.StreamWriter(Application.persistentDataPath + "/BLM.txt", true))
+                {
+                    file.WriteLine(blmStat);
+                }
+
+                using (System.IO.StreamWriter file =
+          new System.IO.StreamWriter(Application.persistentDataPath + "/Temps.txt", true))
+                {
+                    file.WriteLine(tempsStat + " secondes");
+                }
+
+
+
+
 
                 Instantiate(canvas);
                 Time.timeScale = 0.0f;

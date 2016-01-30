@@ -17,7 +17,8 @@ public class GenerateurFinDePartie : MonoBehaviour {
 
     public static int apm;
 
-    string[] lines = { "First line", "Second line", "Third" };
+    
+    
     string scoreStat;
     string partieStat;
     string blmStat;
@@ -85,6 +86,7 @@ public class GenerateurFinDePartie : MonoBehaviour {
 
                // FileStream filaz = File.Open(Application.persistentDataPath + "/Test.txt", FileMode.Open);
               // Debug.Log(Application.persistentDataPath);
+               
                 if (!System.IO.File.Exists(Application.persistentDataPath + "/Partie.txt"))
                 {
                     System.IO.File.WriteAllText(Application.persistentDataPath + "/Partie.txt", "");
@@ -137,13 +139,13 @@ public class GenerateurFinDePartie : MonoBehaviour {
                 using (System.IO.StreamWriter file =
           new System.IO.StreamWriter(Application.persistentDataPath + "/Ratio.txt", true))
                 {
-                    file.WriteLine(ratioStat);
+                    file.WriteLine(ratioStat + " %");
                 }
 
                 using (System.IO.StreamWriter file =
           new System.IO.StreamWriter(Application.persistentDataPath + "/BLM.txt", true))
                 {
-                    file.WriteLine(blmStat + " %");
+                    file.WriteLine(blmStat);
                 }
 
                 using (System.IO.StreamWriter file =
