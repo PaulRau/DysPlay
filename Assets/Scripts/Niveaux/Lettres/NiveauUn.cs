@@ -3,7 +3,8 @@ using System.Collections;
 
 public class NiveauUn : MonoBehaviour {
 
-    private int rand;
+    private int rand = 0;
+    private int prand = 1;
     public static int frand;
 
     
@@ -32,8 +33,11 @@ public class NiveauUn : MonoBehaviour {
         GenerateurDePartiePerso.compteurNbPartie++;
         Instantiate(fond[frand]);
         Instantiate(sol[0]);
-        
-       
+
+        ScoreManager.bonneLettre = 0;
+        ScoreManager.mauvaiseLettre = 0;
+
+
     }
 	
 	// Update is called once per frame
@@ -53,7 +57,13 @@ public class NiveauUn : MonoBehaviour {
 
 
                 success = false;
-                rand = Random.Range(0, alphabet.Length);
+
+                do
+                {
+                    rand = Random.Range(0, alphabet.Length);
+                }
+                while (rand == prand);
+                prand = rand;
 
                 lettre = Instantiate(lettrePrefab);
 
@@ -98,7 +108,9 @@ public class NiveauUn : MonoBehaviour {
         //Empêche le joueur de faire quoi que ce soit pendant ce délai
         success = true;
 
-        }
+        ScoreManager.bonneLettre++;
+
+    }
 
     void MauvaiseLettre()
     {
