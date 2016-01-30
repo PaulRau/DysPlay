@@ -29,7 +29,7 @@ public class GenerateurFinDePartie : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        DirectoryInfo dir = new DirectoryInfo(Application.persistentDataPath + "/");
+        
 	}    
     
 
@@ -84,7 +84,7 @@ public class GenerateurFinDePartie : MonoBehaviour {
 
 
                // FileStream filaz = File.Open(Application.persistentDataPath + "/Test.txt", FileMode.Open);
-              //  Debug.Log(Application.persistentDataPath);
+              // Debug.Log(Application.persistentDataPath);
                 if (!System.IO.File.Exists(Application.persistentDataPath + "/Partie.txt"))
                 {
                     System.IO.File.WriteAllText(Application.persistentDataPath + "/Partie.txt", "");
