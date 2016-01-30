@@ -19,6 +19,6 @@ public class DureePartie : MonoBehaviour {
     void Start()
     {
         Compteur.timeForAPM = Compteur.timeForAPM - 4;
-        duree.text = "Durée de la partie : " + (int)Compteur.timeForAPM + "secondes";
+        duree.text = "Durée de la partie : " + (int)Compteur.timeForAPM + " secondes";
     }
 }
