@@ -13,7 +13,6 @@ public class LettreAleatoire : MonoBehaviour
 
     public int scoreValue = 1;
     public int scoreValue1 = 1;
-
     /// <summary>
     /// Vitesse de déplacement
     /// </summary>
@@ -33,6 +32,10 @@ public class LettreAleatoire : MonoBehaviour
     public GameObject letter;
     
     private int rand;
+    private int rand2;
+    private int rand3;
+    private int rand1;
+
     public Sprite[] alphabet;     // Contient tous les sprites (à compléter dans l'instructor)
     public Vector2 newPos = new Vector2(0, 8);
     public static bool success = false;
@@ -60,23 +63,17 @@ public class LettreAleatoire : MonoBehaviour
         }
         else if (spec == true && GenerateurDePartiePerso.choixLettrea == true)
         {
-            rand = Random.Range(0, 37); // Les 25 premiers caractères correspondent aux lettres A à Z + les caractères accentués
+            rand = Random.Range(0, 38); // Les 25 premiers caractères correspondent aux lettres A à Z + les caractères accentués
         }
         else if (GenerateurDePartiePerso.choixLettrea == true && PersonalisablePartie.caracspec == true)
         {
-            rand = Random.Range(0, 52);  // Les 0-25 premier ou les 38-52 dernier
-            if(rand >= 26 || rand <= 31)
-            {
-                rand = rand - 6;
-            }
-            else if(rand >= 32 || rand <= 37)
-            {
-                rand = rand + 6;
-            }
+            rand1 = Random.Range(0, 26);  rand2 = Random.Range(38, 52);  rand3 = Random.Range(0, 2);// Les 0-25 premier ou les 38-52 dernier
+
+            if (rand3 == 0) { rand = rand1; }else rand = rand2;
         }
         else if (GenerateurDePartiePerso.choixLettrea == true)
         {
-            rand = Random.Range(0, 25);  // Les 25 premiers caractères correspondent aux lettres A à Z, sans caractères spéciaux.
+            rand = Random.Range(0, 26);  // Les 25 premiers caractères correspondent aux lettres A à Z, sans caractères spéciaux.
         }
         else if ( PersonalisablePartie.caracspec == true)
         {
@@ -84,7 +81,7 @@ public class LettreAleatoire : MonoBehaviour
         }
         else if (spec == true )
         {
-            rand = Random.Range(26,37); // Les 12 caractères accentués
+            rand = Random.Range(26,38); // Les 12 caractères accentués
         }
 
 

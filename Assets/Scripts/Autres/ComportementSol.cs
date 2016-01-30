@@ -116,6 +116,8 @@ public class ComportementSol : MonoBehaviour {
             NiveauDeux.success = true;
             NiveauTrois.success = true;
             NiveauQuatre.success = true;
+
+            Combo.combo = 0;
             
         }
 
@@ -143,7 +145,9 @@ public class ComportementSol : MonoBehaviour {
             NiveauDeux.success = true;
             NiveauTrois.success = true;
             NiveauQuatre.success = true;
-            
+
+            Combo.combo = 0;
+
 
             if (aVie == true)
             {
@@ -179,6 +183,8 @@ public class ComportementSol : MonoBehaviour {
             Jungle2.success = true;
             Campagne1.success = true;
             Campagne2.success = true;
+
+            Combo.combo = 0;
 
             if (aVie == true)
                 {

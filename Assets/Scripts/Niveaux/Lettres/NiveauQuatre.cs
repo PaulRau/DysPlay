@@ -4,7 +4,8 @@ using System.Collections;
 public class NiveauQuatre : MonoBehaviour
 {
 
-    private int rand;
+    private int rand = 0;
+    private int prand = 1;
     public static int frand;
     private bool activationCaret;
     private bool caret;
@@ -57,7 +58,12 @@ public class NiveauQuatre : MonoBehaviour
 
                 activationCaret = false;
                 success = false;
-                rand = Random.Range(0, alphabet.Length);
+                do
+                {
+                    rand = Random.Range(0, alphabet.Length);
+                }
+                while (rand == prand);
+                prand = rand;
 
                 lettre = Instantiate(lettrePrefab);
                 lettre.GetComponent<LettreNiveau>().speed = new Vector2(0, 7);

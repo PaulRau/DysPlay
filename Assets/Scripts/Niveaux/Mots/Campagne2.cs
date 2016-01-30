@@ -25,6 +25,7 @@ public class Campagne2 : MonoBehaviour
     private int x = 0;
     public static bool success = false;
     private int rand = 0;
+    private int prand = 1;
     private int frand;
     private float vit;
 
@@ -79,7 +80,11 @@ public class Campagne2 : MonoBehaviour
                 success = false;
                 x = 0;
 
-                rand = Random.Range(0, liste.Length);
+                do
+                {
+                    rand = Random.Range(0, liste.Length);
+                }
+                while (rand == prand);
 
                 characters = liste[rand].ToCharArray();
 
