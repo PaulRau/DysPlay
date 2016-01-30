@@ -18,7 +18,7 @@ public class StatsBLM : MonoBehaviour {
     {
        
         textScoreStatBLM = GetComponent<Text>();
-        text = Application.dataPath + "/BLM.txt";
+      
     }
 
     // Update is called once per frame
