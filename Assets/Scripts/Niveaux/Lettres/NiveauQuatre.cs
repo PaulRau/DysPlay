@@ -40,6 +40,9 @@ public class NiveauQuatre : MonoBehaviour
         activationCaret = false;
         caret = false;
 
+        ScoreManager.bonneLettre = 0;
+        ScoreManager.mauvaiseLettre = 0;
+
     }
 
     // Update is called once per frame
@@ -145,6 +148,8 @@ public class NiveauQuatre : MonoBehaviour
 
         //Empêche le joueur de faire quoi que ce soit pendant ce délai
         success = true;
+
+        ScoreManager.bonneLettre++;
 
     }
 

@@ -35,7 +35,10 @@ public class NiveauTrois : MonoBehaviour
         GenerateurDePartiePerso.compteurNbPartie++;
         Instantiate(fond[frand]);
         Instantiate(sol[0]);
-        
+
+        ScoreManager.bonneLettre = 0;
+        ScoreManager.mauvaiseLettre = 0;
+
 
     }
 
@@ -104,7 +107,7 @@ public class NiveauTrois : MonoBehaviour
 
         NiveauDeux.success = true;
 
-        
+        ScoreManager.bonneLettre++;
 
         //Empêche le joueur de faire quoi que ce soit pendant ce délai
         success = true;

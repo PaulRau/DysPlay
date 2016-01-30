@@ -33,8 +33,11 @@ public class NiveauUn : MonoBehaviour {
         GenerateurDePartiePerso.compteurNbPartie++;
         Instantiate(fond[frand]);
         Instantiate(sol[0]);
-        
-       
+
+        ScoreManager.bonneLettre = 0;
+        ScoreManager.mauvaiseLettre = 0;
+
+
     }
 	
 	// Update is called once per frame
@@ -105,7 +108,9 @@ public class NiveauUn : MonoBehaviour {
         //Empêche le joueur de faire quoi que ce soit pendant ce délai
         success = true;
 
-        }
+        ScoreManager.bonneLettre++;
+
+    }
 
     void MauvaiseLettre()
     {

@@ -7,8 +7,8 @@ public class NiveauDeux : MonoBehaviour
     private int rand = 0;
     private int prand = 1;
     public static int frand;
-
     
+
 
     public GameObject[] fond;
     public GameObject[] sol;
@@ -35,7 +35,9 @@ public class NiveauDeux : MonoBehaviour
         GenerateurDePartiePerso.compteurNbPartie++;
         Instantiate(fond[frand]);
         Instantiate(sol[0]);
-        
+
+        ScoreManager.bonneLettre = 0;
+        ScoreManager.mauvaiseLettre = 0;
 
     }
 
@@ -93,6 +95,7 @@ public class NiveauDeux : MonoBehaviour
 
         //Incremente le score
         ScoreManager.score += scoreValue;
+
         if (LettresRestantes.lettresrestant > 0) { LettresRestantes.lettresrestant--; }
 
         GenerateurFinDePartie.MotsValide++;
@@ -101,6 +104,8 @@ public class NiveauDeux : MonoBehaviour
         Destroy(lettre, 0.5f);
         
         NiveauDeux.success = true;
+
+        ScoreManager.bonneLettre ++;
 
         //Empêche le joueur de faire quoi que ce soit pendant ce délai
         success = true;
@@ -120,6 +125,7 @@ public class NiveauDeux : MonoBehaviour
                 Combo.combo = 0;
                 lettre.GetComponent<SpriteRenderer>().color = Color.red;
                 ScoreManager.mauvaiseLettre += scoreValue;
+
             }
         }
     }
