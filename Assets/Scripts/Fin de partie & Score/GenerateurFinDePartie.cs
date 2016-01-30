@@ -44,7 +44,7 @@ public class GenerateurFinDePartie : MonoBehaviour {
             {
 
                
-                    apm = ScoreManager.bonneLettre * 60 / (int)Compteur.timeForAPM;
+                    apm = (int)(ScoreManager.bonneLettre * 60 / Compteur.timeForAPM);
 
                    
            
@@ -56,9 +56,9 @@ public class GenerateurFinDePartie : MonoBehaviour {
                    
                     ratio = ScoreManager.bonneLettre / ratio;
                 
-                    ratio = ratio * 100;
+                    ratio = (int)(ratio * 100);
 
-                    ratio = (int)ratio;
+                   
                
                 }
                 else
