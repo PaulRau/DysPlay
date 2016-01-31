@@ -17,7 +17,7 @@ public class GenerateurFinDePartie : MonoBehaviour {
 
     public static int apm;
 
-    
+    public static int compteurDePartie;
     
     string scoreStat;
     string partieStat;
@@ -67,29 +67,14 @@ public class GenerateurFinDePartie : MonoBehaviour {
                     ratio = 100;
                 
                 }
-                            
-                
-                cutToInt = (int)Compteur.timeForAPM;
-                tempsStat = cutToInt.ToString();
-
-                if (GenerateurDePartiePerso.statPartiePerso == true)
-                {
-                    typeStat = "Personnalisable";
-                }
-                else typeStat = "Niveaux";
-
-                scoreStat = ScoreManager.score.ToString();
-                ratioStat = ratio.ToString();
-                blmStat = apm.ToString();
-                partieStat = GenerateurDePartiePerso.compteurNbPartie.ToString();
 
 
-               // FileStream filaz = File.Open(Application.persistentDataPath + "/Test.txt", FileMode.Open);
-              // Debug.Log(Application.persistentDataPath);
-               
+
+
                 if (!System.IO.File.Exists(Application.persistentDataPath + "/Partie.txt"))
                 {
                     System.IO.File.WriteAllText(Application.persistentDataPath + "/Partie.txt", "");
+                    compteurDePartie = 0;
                 }
 
                 if (!System.IO.File.Exists(Application.persistentDataPath + "/Type.txt"))
@@ -116,6 +101,27 @@ public class GenerateurFinDePartie : MonoBehaviour {
                 {
                     System.IO.File.WriteAllText(Application.persistentDataPath + "/Temps.txt", "");
                 }
+                
+                cutToInt = (int)Compteur.timeForAPM;
+                tempsStat = cutToInt.ToString();
+
+                if (GenerateurDePartiePerso.statPartiePerso == true)
+                {
+                    typeStat = "Personnalisable";
+                }
+                else typeStat = "Niveaux";
+
+                scoreStat = ScoreManager.score.ToString();
+                ratioStat = ratio.ToString();
+                blmStat = apm.ToString();
+
+                compteurDePartie++;
+               partieStat = compteurDePartie.ToString();
+
+
+               // FileStream filaz = File.Open(Application.persistentDataPath + "/Test.txt", FileMode.Open);
+              // Debug.Log(Application.persistentDataPath);
+               
 
                
                 using (System.IO.StreamWriter file =
@@ -176,7 +182,8 @@ public class GenerateurFinDePartie : MonoBehaviour {
         System.IO.File.WriteAllText(Application.persistentDataPath + "/Temps.txt", "");
         System.IO.File.WriteAllText(Application.persistentDataPath + "/Type.txt", "");
         Application.LoadLevel("Statistiques");
-       GenerateurDePartiePerso.compteurNbPartie = 0;
+      
+        compteurDePartie = 0;
      
 
     }

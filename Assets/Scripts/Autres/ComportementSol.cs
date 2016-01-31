@@ -86,25 +86,6 @@ public class ComportementSol : MonoBehaviour {
                 Campagne2.success = true;
 
 
-                cutToInt = (int)Compteur.timeForAPM;
-                tempsStat = cutToInt.ToString();
-
-                if (GenerateurDePartiePerso.statPartiePerso == true)
-                {
-                    typeStat = "Personnalisable";
-                }
-                else typeStat = "Niveaux";
-
-
-                scoreStat = ScoreManager.score.ToString();
-                ratioStat = GenerateurFinDePartie.ratio.ToString();
-                blmStat = GenerateurFinDePartie.apm.ToString();
-                partieStat = GenerateurDePartiePerso.compteurNbPartie.ToString();
-
-
-                // FileStream filaz = File.Open(Application.persistentDataPath + "/Test.txt", FileMode.Open);
-                // Debug.Log(Application.persistentDataPath);
-
                 if (!System.IO.File.Exists(Application.persistentDataPath + "/Partie.txt"))
                 {
                     System.IO.File.WriteAllText(Application.persistentDataPath + "/Partie.txt", "");
@@ -134,6 +115,29 @@ public class ComportementSol : MonoBehaviour {
                 {
                     System.IO.File.WriteAllText(Application.persistentDataPath + "/Temps.txt", "");
                 }
+
+
+                cutToInt = (int)Compteur.timeForAPM;
+                tempsStat = cutToInt.ToString();
+
+                if (GenerateurDePartiePerso.statPartiePerso == true)
+                {
+                    typeStat = "Personnalisable";
+                }
+                else typeStat = "Niveaux";
+
+
+                scoreStat = ScoreManager.score.ToString();
+                ratioStat = GenerateurFinDePartie.ratio.ToString();
+                blmStat = GenerateurFinDePartie.apm.ToString();
+                GenerateurFinDePartie.compteurDePartie++;
+                partieStat = GenerateurFinDePartie.compteurDePartie.ToString();
+
+
+                // FileStream filaz = File.Open(Application.persistentDataPath + "/Test.txt", FileMode.Open);
+                // Debug.Log(Application.persistentDataPath);
+
+               
 
 
                 using (System.IO.StreamWriter file =

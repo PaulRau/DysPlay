@@ -18,7 +18,7 @@ public class GenerateurDePartiePerso : MonoBehaviour {
     
     private int rand;
 
-   public static int compteurNbPartie = 0;
+   
    public static bool statPartiePerso = true;
    
     
@@ -43,9 +43,9 @@ public class GenerateurDePartiePerso : MonoBehaviour {
             if (GameObject.Find("Paquerettes(Clone)") == null && GameObject.Find("Sport(Clone)") == null && GameObject.Find("Jungle(Clone)") == null && GameObject.Find("Plage(Clone)") == null)
             {
                 Instantiate(fond[rand]);
-                compteurNbPartie++;
+              
                 statPartiePerso = true;
-                Debug.Log(compteurNbPartie);
+                
             }
 
             if (GameObject.Find("Sol Invisible(Clone)") == null)

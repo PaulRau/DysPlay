@@ -33,7 +33,7 @@ public class NiveauQuatre : MonoBehaviour
 
         frand = Random.Range(0, fond.Length);
         GenerateurDePartiePerso.statPartiePerso = false;
-        GenerateurDePartiePerso.compteurNbPartie++;
+        
         Instantiate(fond[frand]);
         Instantiate(sol[0]);
         
