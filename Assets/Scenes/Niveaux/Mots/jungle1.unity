@@ -364,6 +364,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11439514, guid: 482d9bd64bf3f2749b2c07528217e48d, type: 2}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 482d9bd64bf3f2749b2c07528217e48d, type: 2}
   m_IsPrefabParent: 0

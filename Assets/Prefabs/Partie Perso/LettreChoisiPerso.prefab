@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 142874}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 8, z: 0}
-  m_LocalScale: {x: 1.45, y: 1.45, z: 1}
+  m_LocalScale: {x: 0.45, y: 0.45, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -77,7 +77,7 @@ MonoBehaviour:
   scoreValue: 1
   scoreValue1: 1
   alphabet:
-  - {fileID: 21300000, guid: 66d45eb950cea9541b31417ec4533f93, type: 3}
+  - {fileID: 21300000, guid: ac99665bd0e9bc14fbc5f76761e58ee3, type: 3}
   - {fileID: 21300000, guid: ab9cab6130ec5294fbe28611f452f1a6, type: 3}
   - {fileID: 21300000, guid: b3c0771ebfc3a93458e3a0cafa28eb7a, type: 3}
   - {fileID: 21300000, guid: e1b0e3933caedb140abb555f299f578a, type: 3}
@@ -209,7 +209,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: alphabet.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: 66d45eb950cea9541b31417ec4533f93,
+      objectReference: {fileID: 21300000, guid: ac99665bd0e9bc14fbc5f76761e58ee3,
         type: 3}
     - target: {fileID: 0}
       propertyPath: m_GravityScale
@@ -217,11 +217,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LocalScale.x
-      value: 1.45
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LocalScale.y
-      value: 5.45
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Size.x

@@ -66,7 +66,7 @@ public class NiveauTrois : MonoBehaviour
                 prand = rand;
 
                 lettre = Instantiate(lettrePrefab);
-                lettre.GetComponent<LettreNiveau>().speed = new Vector2(0, 7);
+                lettre.GetComponent<LettreNiveau>().speed = new Vector2(0, 4);
 
                 lettre.GetComponent<SpriteRenderer>().sprite = alphabet[rand];
                 lettre.GetComponent<SpriteRenderer>().color = Color.white;

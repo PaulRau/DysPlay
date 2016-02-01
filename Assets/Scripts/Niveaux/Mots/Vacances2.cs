@@ -54,7 +54,7 @@ public class Vacances2 : MonoBehaviour
         Combo.combo = 0;
 
         activationCaret = false;
-        vit = 1;                          //C'est ici que l'on règle la vitesse des lettres
+        vit = 0.75f;                          //C'est ici que l'on règle la vitesse des lettres
 
         success = false;
 
