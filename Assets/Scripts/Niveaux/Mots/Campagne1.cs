@@ -50,7 +50,7 @@ public class Campagne1 : MonoBehaviour
     {
 
         source = GetComponent<AudioSource>();
-       
+        source.volume = MenuScript.currentVolume;       
 
     }
     void Start()
