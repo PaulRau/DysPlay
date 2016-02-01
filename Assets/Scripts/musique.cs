@@ -11,7 +11,7 @@ public class musique : MonoBehaviour {
     void Awake()
     {
         source = GetComponent<AudioSource>();
-        //source.volume = MenuScript.currentVolume;
+        source.volume = MenuScript.currentMusicVolume;
         
 
     }

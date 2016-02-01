@@ -7,6 +7,7 @@ public class MenuScript : MonoBehaviour {
     bool pause = false;
 
     public static float currentVolume = 0;
+    public static float currentMusicVolume = 0;
 
     
     public void goToStats()
@@ -18,6 +19,12 @@ public class MenuScript : MonoBehaviour {
     {
         currentVolume = vo;
         Debug.Log(currentVolume);
+    }
+
+    public void musicVolumeSlider(float vovo)
+    {
+       currentMusicVolume = vovo;
+
     }
 
     //partie perso
