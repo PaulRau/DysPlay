@@ -26,12 +26,14 @@ public class GenerateurFinDePartie : MonoBehaviour {
     string tempsStat;
     string typeStat;
     int cutToInt;
+    public AudioClip applause;
+    private AudioSource source;
 
 
 	// Use this for initialization
 	void Start () {
-        
-	}    
+        source = GetComponent<AudioSource>();
+    }    
     
 
 	// Update is called once per frame
@@ -43,8 +45,8 @@ public class GenerateurFinDePartie : MonoBehaviour {
             if (ScoreManager.score >= finDePartiePerso || MotsValide >= But)
             {
 
-               
-                    apm = (int)(ScoreManager.bonneLettre * 60 / Compteur.timeForAPM);
+                source.PlayOneShot(applause);
+                apm = (int)(ScoreManager.bonneLettre * 60 / Compteur.timeForAPM);
 
                    
            
