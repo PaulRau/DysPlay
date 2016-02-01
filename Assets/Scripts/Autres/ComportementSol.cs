@@ -19,6 +19,17 @@ public class ComportementSol : MonoBehaviour {
     string typeStat;
     int cutToInt;
 
+    public AudioClip crash;
+    private AudioSource source;
+
+    void Awake()
+    {
+
+        source = GetComponent<AudioSource>();
+
+
+    }
+
     void Start()
     {
         vies = 5;
@@ -230,7 +241,7 @@ public class ComportementSol : MonoBehaviour {
             ScoreManager.score -= scoreValue;
             if (ScoreManager.score < 0) ScoreManager.score = 0;
 
-
+            source.PlayOneShot(crash);
 
             //detruit la lettre au bout de 0.5 secondes, met la lettre en rouge, et stope son mouvement
             Destroy(collision.gameObject, 0.5f);
@@ -250,7 +261,7 @@ public class ComportementSol : MonoBehaviour {
             NiveauQuatre.success = true;
 
             Combo.combo = 0;
-
+            
 
             if (aVie == true)
             {
@@ -288,6 +299,8 @@ public class ComportementSol : MonoBehaviour {
             Campagne2.success = true;
 
             Combo.combo = 0;
+
+            source.PlayOneShot(crash);
 
             if (aVie == true)
                 {

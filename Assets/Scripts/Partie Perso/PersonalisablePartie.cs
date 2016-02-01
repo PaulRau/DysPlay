@@ -74,6 +74,11 @@ public class PersonalisablePartie : MonoBehaviour {
     public void MOTtoggle(bool sel)
     {
         bloc = sel;
+        bloc1 = false;
+        LettreAleatoire.spec = false;
+        GenerateurDePartiePerso.choixLettrea = false;
+        GenerateurDePartiePerso.choixLettrechoisia = false; 
+        caracspec = false;
         but6.GetComponent<Toggle>().isOn = false;
         but7.GetComponent<Toggle>().isOn = false;
         but4.GetComponent<Toggle>().isOn = false;
@@ -83,7 +88,12 @@ public class PersonalisablePartie : MonoBehaviour {
 
     public void LETTREtoggle(bool sela)
     {
+       
+
         bloc1 = sela;
+        bloc2 = false;
+        bloc = false;
+        
         but.GetComponent<Toggle>().isOn = false;
         but2.GetComponent<Toggle>().isOn = false;
         but5.GetComponent<Toggle>().isOn = false;
@@ -93,14 +103,16 @@ public class PersonalisablePartie : MonoBehaviour {
     public void OnToggleMot(bool selected)
     {
 
+
         bloc2 = selected;
            if(bloc == true)
            {
-               if (selected == true)
+               if (bloc2 == true)
                {
                    GenerateurDePartiePerso.choixMota = true;
+               
 
-               }
+            }
                else
                {
                    GenerateurDePartiePerso.choixMota = false;
@@ -128,7 +140,8 @@ public class PersonalisablePartie : MonoBehaviour {
 
     public void OnToggleLettre(bool selected)
     {
-      
+
+        
 
          if(bloc1 == true)
            {
@@ -240,7 +253,7 @@ public class PersonalisablePartie : MonoBehaviour {
 
     public void OnToggleCarSpecMot(bool spec)
     {
-        if(bloc2==true)
+        if(bloc1==true)
         {
             if (spec == true)
             {

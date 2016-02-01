@@ -38,6 +38,7 @@ public class Campagne1 : MonoBehaviour
 
     public AudioClip sonBonneLettre;
     public AudioClip sonMauvaiseLettre;
+    public AudioClip sonFindepartie;
 
     private AudioSource source;
 
@@ -45,6 +46,13 @@ public class Campagne1 : MonoBehaviour
     public GameObject[] sol;
 
     // Use this for initialization
+    void Awake()
+    {
+
+        source = GetComponent<AudioSource>();
+       
+
+    }
     void Start()
     {
         GenerateurFinDePartie.finDePartiePerso = 500000;
@@ -235,6 +243,7 @@ public class Campagne1 : MonoBehaviour
                 if (success == false)
                 {
                     GenerateurFinDePartie.MotsValide++;
+                    source.PlayOneShot(sonBonneLettre);
                     Debug.Log(GenerateurFinDePartie.MotsValide);
                     if (MotsRestants.motsrestant > 0) { MotsRestants.motsrestant--; }
                 }
@@ -1133,7 +1142,6 @@ public class Campagne1 : MonoBehaviour
 
         letter[x].GetComponent<SpriteRenderer>().color = Color.green;
 
-        //  source.PlayOneShot(sonBonneLettre,1.0f);
         x++;
 
     }
@@ -1151,6 +1159,7 @@ public class Campagne1 : MonoBehaviour
                 Combo.combo = 0;
                 letter[x].GetComponent<SpriteRenderer>().color = Color.red;
                 ScoreManager.mauvaiseLettre += scoreValue1;
+                source.PlayOneShot(sonMauvaiseLettre);
             }
         }
     }
