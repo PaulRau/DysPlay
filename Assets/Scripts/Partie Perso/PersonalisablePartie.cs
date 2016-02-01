@@ -253,7 +253,7 @@ public class PersonalisablePartie : MonoBehaviour {
 
     public void OnToggleCarSpecMot(bool spec)
     {
-        if(bloc1==true)
+        if(bloc==true)
         {
             if (spec == true)
             {
