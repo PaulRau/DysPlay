@@ -7,7 +7,7 @@ public class Campagne1 : MonoBehaviour
 
     private string[] liste = { "champ", "pré", "ferme", "blé", "orge", "chat", "chien", "vigne", "vin", "maïs", "riz", "pain", "fruit", "rural", "boue", "vache", "oie", "herbe", "coq", "poule", "veau", "poney", "mulet", "âne", "roche", "oeuf", "foin", "lapin", "pêche", "flore", "faune", "bio", "nid", "lait", "aigle", "rat", "raton" };
     private int i = 0;
-    private int j = 0;
+    
 
     public GameObject ClonePrefab;  // Pour décrémenter les vies
     public GameObject Clone;
@@ -38,7 +38,7 @@ public class Campagne1 : MonoBehaviour
 
     public AudioClip sonBonneLettre;
     public AudioClip sonMauvaiseLettre;
-    public AudioClip sonFindepartie;
+    
     
     private AudioSource source;
 
@@ -244,7 +244,7 @@ public class Campagne1 : MonoBehaviour
                 {
                     GenerateurFinDePartie.MotsValide++;
                     source.PlayOneShot(sonBonneLettre);
-                    Debug.Log(GenerateurFinDePartie.MotsValide);
+                   
                     if (MotsRestants.motsrestant > 0) { MotsRestants.motsrestant--; }
                 }
 

@@ -39,15 +39,13 @@ public class MotChoisiePerso : MonoBehaviour
 
     private AudioSource source;
 
-    void awake()
+    void Awake()
     {
-        // source = GetComponent<AudioSource>();
 
-
+        source = GetComponent<AudioSource>();
+        source.volume = MenuScript.currentVolume;
 
     }
-
-
 
     // Use this for initialization
     void Start()
@@ -233,7 +231,10 @@ public class MotChoisiePerso : MonoBehaviour
         }
         else
         {
-
+            if (success == false)
+            {
+                source.PlayOneShot(sonBonneLettre);
+            }
             success = true;
             for (i = 0; i < liste[rand].Length; i++)
             {
@@ -1137,6 +1138,7 @@ public class MotChoisiePerso : MonoBehaviour
             }
             else
             {
+                source.PlayOneShot(sonMauvaiseLettre);
                 letter[x].GetComponent<SpriteRenderer>().color = Color.red;
                 ScoreManager.mauvaiseLettre += scoreValue1;
             }

@@ -5,7 +5,7 @@ public class Campagne2 : MonoBehaviour
 {
     private string[] liste = { "lumière", "bonheur", "vacance", "vacances", "camping", "verdure", "fleurs", "coucher", "soleil", "dormir", "repose", "reposer", "feuille", "montagne", "poisson", "poissons", "oiseau", "oiseaux", "animal", "animaux", "balade", "marche", "parasol", "solaire", "plaisir", "visite", "visites", "touriste", "explorer", "explore", "voyage", "voyages", "aéroport", "sacoche", "valise", "auberge", "nuitée", "circuit", "matinée", "randonnée", "cheval", "canard", "ruisseau", "grenouille", "canasson", "champignon", "chèvre", "serpent", "brebis", "mouton", "fromage", "clapier", "poulailler", "porcherie", "poussin", "écurie", "élevage", "fumier", "verger", "pollen", "abeilles", "guèpes" };
     private int i = 0;
-    private int j = 0;
+   
 
     public GameObject ClonePrefab;  // Pour décrémenter les vies
     public GameObject Clone;
@@ -43,6 +43,14 @@ public class Campagne2 : MonoBehaviour
     public GameObject[] sol;
 
     // Use this for initialization
+    void Awake()
+    {
+
+        source = GetComponent<AudioSource>();
+        source.volume = MenuScript.currentVolume;
+
+    }
+
     void Start()
     {
         GenerateurFinDePartie.finDePartiePerso = 500000;
@@ -233,6 +241,7 @@ public class Campagne2 : MonoBehaviour
             {
                 if (success == false)
                 {
+                    source.PlayOneShot(sonBonneLettre);
                     GenerateurFinDePartie.MotsValide++;
                     if (MotsRestants.motsrestant > 0) { MotsRestants.motsrestant--; }
                 }
@@ -1142,6 +1151,7 @@ public class Campagne2 : MonoBehaviour
             }
             else
             {
+                source.PlayOneShot(sonMauvaiseLettre);
                 Combo.combo = 0;
                 letter[x].GetComponent<SpriteRenderer>().color = Color.red;
                 ScoreManager.mauvaiseLettre += scoreValue1;

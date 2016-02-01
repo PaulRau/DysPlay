@@ -7,7 +7,7 @@ public class Vacances2 : MonoBehaviour
 
     private string[] liste = { "lumière", "bonheur", "vacance", "vacances", "camping", "verdure", "fleurs", "coucher", "soleil", "dormir", "repose", "reposer", "feuille", "montagne", "poisson", "poissons", "oiseau", "oiseaux", "animal", "animaux", "balade", "marche", "parasol", "solaire", "plaisir", "visite", "visites", "touriste", "explorer", "explore", "voyage", "voyages", "aéroport", "sacoche", "valise", "auberge", "nuitée", "circuit", "matinée", "noyées", "irlande", "espagne", "bretagne", "ballon", "escalade", "requin", "floride", "californie", "bateau", "nautique", "plongée", "coktail", "chaleur", "palmier", "croisière", "souvenir" };
     private int i = 0;
-    private int j = 0;
+   
 
     public GameObject ClonePrefab;  // Pour décrémenter les vies
     public GameObject Clone;
@@ -44,6 +44,13 @@ public class Vacances2 : MonoBehaviour
     public GameObject[] fond;
     public GameObject[] sol;
 
+    void Awake()
+    {
+
+        source = GetComponent<AudioSource>();
+        source.volume = MenuScript.currentVolume;
+
+    }
     // Use this for initialization
     void Start()
     {
@@ -235,6 +242,7 @@ public class Vacances2 : MonoBehaviour
             {
                 if (success == false)
                 {
+                    source.PlayOneShot(sonBonneLettre);
                     GenerateurFinDePartie.MotsValide++;
                     if (MotsRestants.motsrestant > 0) { MotsRestants.motsrestant--; }
                 }
@@ -1149,6 +1157,7 @@ public class Vacances2 : MonoBehaviour
             }
             else
             {
+                source.PlayOneShot(sonMauvaiseLettre);
                 Combo.combo = 0;
                 letter[x].GetComponent<SpriteRenderer>().color = Color.red;
                 ScoreManager.mauvaiseLettre += scoreValue1;

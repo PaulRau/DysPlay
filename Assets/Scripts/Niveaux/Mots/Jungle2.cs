@@ -7,7 +7,7 @@ public class Jungle2 : MonoBehaviour
 
     private string[] liste = { "feuilles", "arbres", "racines", "lianes", "fougères", "mousson", "animaux", "humide", "sauvage", "naturel", "sauvages", "jaguar", "tigres", "tamanoir", "reptiles", "serpents", "iguanes", "singes", "tamarins", "oiseaux", "toucans", "toucan", "colibri", "insectes", "mygales", "piranha", "tarzan", "rivière", "aligator", "humidité", "araignée", "serpent", "serpents", "baobab", "mangrove", "singes", "macaque", "gorille", "exotique", "amazone", "équatorial", "savane", "canopée", "éléphant", "zebré", "zèbres", "girafe", "eucalyptus", "épiphyte", "découverte", "aventure", "sentier", "pyrogue", "zyggourat", "caïman", "guépar", "léopard", "féroce", "hostile", "braconnier", "braconner", "ivoire", "safari", "cacaoyer", "cascade", "prédateur", "python", "reptile", "reptilien", "vipère", "couleuvre", "vivipare", "ovipare", "arboricole"};
     private int i = 0;
-    private int j = 0;
+    
 
     public GameObject ClonePrefab;  // Pour décrémenter les vies
     public GameObject Clone;
@@ -44,6 +44,13 @@ public class Jungle2 : MonoBehaviour
     public GameObject[] fond;
     public GameObject[] sol;
 
+    void Awake()
+    {
+
+        source = GetComponent<AudioSource>();
+        source.volume = MenuScript.currentVolume;
+
+    }
     // Use this for initialization
     void Start()
     {
@@ -235,6 +242,7 @@ public class Jungle2 : MonoBehaviour
             {
                 if (success == false)
                 {
+                    source.PlayOneShot(sonBonneLettre);
                     GenerateurFinDePartie.MotsValide++;
                     if (MotsRestants.motsrestant > 0) { MotsRestants.motsrestant--; }
                 }
@@ -1149,6 +1157,7 @@ public class Jungle2 : MonoBehaviour
             }
             else
             {
+                source.PlayOneShot(sonMauvaiseLettre);
                 Combo.combo = 0;
                 letter[x].GetComponent<SpriteRenderer>().color = Color.red;
                 ScoreManager.mauvaiseLettre += scoreValue1;

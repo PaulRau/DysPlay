@@ -7,7 +7,7 @@ public class Sport2 : MonoBehaviour
 
     private string[] liste = { "aerobic", "agility", "aikido", "aviron", "aviation", "ballet", "soccer", "volley", "biathlon", "billard", "nageur", "bowling", "bridge", "hockey", "jetski", "karaté", "karting", "kravmaga", "kungfu", "squash", "spéléo", "tennis", "sportif", "tumbling", "défense", "capoeira", "cirque", "combat", "course", "cyclisme", "marche", "natation", "ninjitsu", "patinage", "pelote", "pétanque", "planche", "plongée", "frisbee", "escrime", "escalade", "fitness", "football", "futsal", "plongeon", "quilles", "rafting", "rallye", "roller", "podium", "champion", "compétition", "entrainer", "effort", "blessure", "combat", "qualifier", "sauts", "courir", "raquette", "badminton", "echecs", "fairplay", "triche", "dopage", "objectif", "médaille", "supporter", "équipe", "entraide", "battre", "battant", "activité", "sport", "sportif", "sportive", "jogger", "marathonien", "joueur", "arbitre", "motiver", "motivation", "émulation", "récompense", "patiner", "basket", "basketteur", "oplympique"};
     private int i = 0;
-    private int j = 0;
+   
 
     public GameObject ClonePrefab;  // Pour décrémenter les vies
     public GameObject Clone;
@@ -43,6 +43,14 @@ public class Sport2 : MonoBehaviour
 
     public GameObject[] fond;
     public GameObject[] sol;
+
+    void Awake()
+    {
+
+        source = GetComponent<AudioSource>();
+        source.volume = MenuScript.currentVolume;
+
+    }
 
     // Use this for initialization
     void Start()
@@ -235,6 +243,7 @@ public class Sport2 : MonoBehaviour
             {
                 if (success == false)
                 {
+                    source.PlayOneShot(sonBonneLettre);
                     GenerateurFinDePartie.MotsValide++;
                     if (MotsRestants.motsrestant > 0) { MotsRestants.motsrestant--; }
                 }
@@ -252,6 +261,7 @@ public class Sport2 : MonoBehaviour
                     Destroy(letter[i], 0.5f);
 
                 }
+                
                 // Ne pas oublier de detruire l'object mot éventuellement
                 Destroy(Clone, 0.5f);
             }
@@ -1149,6 +1159,7 @@ public class Sport2 : MonoBehaviour
             }
             else
             {
+                source.PlayOneShot(sonMauvaiseLettre);
                 Combo.combo = 0;
                 letter[x].GetComponent<SpriteRenderer>().color = Color.red;
                 ScoreManager.mauvaiseLettre += scoreValue1;

@@ -8,7 +8,7 @@ public class Vacances1 : MonoBehaviour
     private string[] liste = { "baïne", "sable", "plage", "dodo", "mer", "eau", "sel", "apero", "bleue", "calme", "jouer", "repos", "train", "avion", "chaud", "ski", "froid", "fleur", "canoë", "lac", "pêche", "frais", "cool", "neige", "calme", "zoo", "port", "ports", "sac", "bain", "hôtel", "ferry", "louer", "tente", "kart", "vélo", "vegas", "sud", "suède", "île", "rame", "ramer", "ski", "océan", "congé" };
    
     private int i = 0;
-    private int j = 0;
+    
 
     public GameObject ClonePrefab;  // Pour décrémenter les vies
     public GameObject Clone;
@@ -45,6 +45,13 @@ public class Vacances1 : MonoBehaviour
     public GameObject[] fond;
     public GameObject[] sol;
 
+    void Awake()
+    {
+
+        source = GetComponent<AudioSource>();
+        source.volume = MenuScript.currentVolume;
+
+    }
     // Use this for initialization
     void Start()
     {
@@ -234,6 +241,7 @@ public class Vacances1 : MonoBehaviour
             else
             {
                 if (success == false) {
+                    source.PlayOneShot(sonBonneLettre);
                     GenerateurFinDePartie.MotsValide++;
                     if (MotsRestants.motsrestant > 0) { MotsRestants.motsrestant--; }
                 }
@@ -1148,6 +1156,7 @@ public class Vacances1 : MonoBehaviour
             }
             else
             {
+                source.PlayOneShot(sonMauvaiseLettre);
                 Combo.combo =0;
                 letter[x].GetComponent<SpriteRenderer>().color = Color.red;
                 ScoreManager.mauvaiseLettre += scoreValue1;

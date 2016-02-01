@@ -7,7 +7,7 @@ public class Sport1 : MonoBehaviour
 
     private string[] liste = { "apnée", "gym", "arts", "aqua", "foot", "ball", "balle", "nage", "bmx", "beach", "boxe", "hand", "salsa", "samba", "surf", "sumo", "iaido", "judo", "kite", "surf", "ski", "skate", "rando", "tir", "canoë", "char", "voile", "danse", "luge", "lutte", "lutta", "moto", "vtt", "ulm", "vol", "yoga", "polo", "golf", "muscu", "echec", "flag", "force", "quad", "raid", "pock", "rando", "rugby", "sueur", "stade", "coupe", "fan", "ligue", "battu", "jouer", "juge", "match", "club", "roller", "patin", "vélo"};
     private int i = 0;
-    private int j = 0;
+  
 
     public GameObject ClonePrefab;  // Pour décrémenter les vies
     public GameObject Clone;
@@ -43,6 +43,14 @@ public class Sport1 : MonoBehaviour
 
     public GameObject[] fond;
     public GameObject[] sol;
+
+    void Awake()
+    {
+
+        source = GetComponent<AudioSource>();
+        source.volume = MenuScript.currentVolume;
+
+    }
 
     // Use this for initialization
     void Start()
@@ -237,6 +245,7 @@ public class Sport1 : MonoBehaviour
             {
                 if (success == false)
                 {
+                    source.PlayOneShot(sonBonneLettre);
                     GenerateurFinDePartie.MotsValide++;
                     if (MotsRestants.motsrestant > 0) { MotsRestants.motsrestant--; }
                 }
@@ -1150,6 +1159,7 @@ public class Sport1 : MonoBehaviour
             }
             else
             {
+                source.PlayOneShot(sonMauvaiseLettre);
                 Combo.combo = 0;
                 letter[x].GetComponent<SpriteRenderer>().color = Color.red;
                 ScoreManager.mauvaiseLettre += scoreValue1;
