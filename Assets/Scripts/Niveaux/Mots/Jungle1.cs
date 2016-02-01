@@ -54,7 +54,7 @@ public class Jungle1 : MonoBehaviour
         Combo.combo = 0;
 
         activationCaret = false;
-        vit = 4;                          //C'est ici que l'on règle la vitesse des lettres
+        vit = 3.5f;                          //C'est ici que l'on règle la vitesse des lettres
 
         success = false;
 

@@ -5,7 +5,7 @@ public class Jungle2 : MonoBehaviour
 {
 
 
-    private string[] liste = { "feuilles", "arbres", "racines", "lianes", "fougères", "mousson", "animaux", "humide", "sauvage", "naturel", "sauvages", "jaguar", "tigres", "tamanoir", "reptiles", "serpents", "iguanes", "singes", "tamarins", "oiseaux", "toucans", "toucan", "colibri", "insectes", "mygales", "piranha", "tarzan", "rivière", "aligator", "humidité", "araignée", "serpent", "serpents", "baobab", "mangrove", "singes", "macaque", "gorille", "exotique", "amazone", "équatorial", "savane", "canopée", "éléphant", "zebré", "zèbres", "girafe", "eucalyptus", "épiphyte", "découverte", "aventure", "sentier", "pyrogue", "zyggourat", "caïman", "guépar", "léopart", "féroce", "hostile", "braconnier", "braconner", "ivoire", "safari", "cacaoyer", "cascade", "prédateur", "python", "reptile", "reptilien", "vipère", "couleuvre", "vivipare", "ovipare", "arboricole"};
+    private string[] liste = { "feuilles", "arbres", "racines", "lianes", "fougères", "mousson", "animaux", "humide", "sauvage", "naturel", "sauvages", "jaguar", "tigres", "tamanoir", "reptiles", "serpents", "iguanes", "singes", "tamarins", "oiseaux", "toucans", "toucan", "colibri", "insectes", "mygales", "piranha", "tarzan", "rivière", "aligator", "humidité", "araignée", "serpent", "serpents", "baobab", "mangrove", "singes", "macaque", "gorille", "exotique", "amazone", "équatorial", "savane", "canopée", "éléphant", "zebré", "zèbres", "girafe", "eucalyptus", "épiphyte", "découverte", "aventure", "sentier", "pyrogue", "zyggourat", "caïman", "guépar", "léopard", "féroce", "hostile", "braconnier", "braconner", "ivoire", "safari", "cacaoyer", "cascade", "prédateur", "python", "reptile", "reptilien", "vipère", "couleuvre", "vivipare", "ovipare", "arboricole"};
     private int i = 0;
     private int j = 0;
 
@@ -54,7 +54,7 @@ public class Jungle2 : MonoBehaviour
         Combo.combo = 0;
 
         activationCaret = false;
-        vit = 4;                          //C'est ici que l'on règle la vitesse des lettres
+        vit = 2.5f;                          //C'est ici que l'on règle la vitesse des lettres
 
         success = false;
 

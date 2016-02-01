@@ -54,7 +54,7 @@ public class Sport2 : MonoBehaviour
         Combo.combo = 0;
 
         activationCaret = false;
-        vit = 3;                          //C'est ici que l'on règle la vitesse des lettres
+        vit = 2;                          //C'est ici que l'on règle la vitesse des lettres
 
         success = false;
 

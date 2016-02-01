@@ -52,7 +52,7 @@ public class Campagne2 : MonoBehaviour
         Combo.combo = 0;
 
         activationCaret = false;
-        vit = 2;                          //C'est ici que l'on règle la vitesse des lettres
+        vit = 1.5f;                          //C'est ici que l'on règle la vitesse des lettres
 
         success = false;
 

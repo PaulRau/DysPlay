@@ -69,7 +69,7 @@ public class NiveauQuatre : MonoBehaviour
                 prand = rand;
 
                 lettre = Instantiate(lettrePrefab);
-                lettre.GetComponent<LettreNiveau>().speed = new Vector2(0, 7);
+                lettre.GetComponent<LettreNiveau>().speed = new Vector2(0, 5);
 
                 lettre.GetComponent<SpriteRenderer>().sprite = alphabet[rand];
                 lettre.GetComponent<SpriteRenderer>().color = Color.white;

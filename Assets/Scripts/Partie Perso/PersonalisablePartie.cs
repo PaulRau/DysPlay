@@ -14,6 +14,7 @@ public class PersonalisablePartie : MonoBehaviour {
     public static bool bloc3 = false;
 
     public static float NbLettreAlea;
+    private float vitesse1 = 0;
     public static float vitesse = 4;
 
     public static bool caracspec;
@@ -64,7 +65,8 @@ public class PersonalisablePartie : MonoBehaviour {
     
     public void sliderVitesse(float vit)
     {
-        vitesse = vit;
+        vitesse1 = vit;
+        vitesse = 0.75f * vitesse1;
 
     }
        
