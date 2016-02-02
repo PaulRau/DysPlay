@@ -53,6 +53,7 @@ public class Campagne2 : MonoBehaviour
 
     void Start()
     {
+        NiveauUn.frand = 0; NiveauDeux.frand = 0; NiveauTrois.frand = 0; NiveauQuatre.frand = 0;
         GenerateurFinDePartie.finDePartiePerso = 500000;
         GenerateurFinDePartie.But = 15;
         MotsRestants.motsrestant = 15;

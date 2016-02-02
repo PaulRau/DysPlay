@@ -55,6 +55,7 @@ public class Jungle1 : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        NiveauUn.frand = 0; NiveauDeux.frand = 0; NiveauTrois.frand = 0; NiveauQuatre.frand = 0;
         GenerateurFinDePartie.finDePartiePerso = 500000;
         GenerateurFinDePartie.But = 25;
         MotsRestants.motsrestant = 25;

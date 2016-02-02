@@ -26,7 +26,7 @@ public class ComportementSol : MonoBehaviour {
     {
 
         source = GetComponent<AudioSource>();
-
+        source.volume = MenuScript.currentVolume;
 
     }
 

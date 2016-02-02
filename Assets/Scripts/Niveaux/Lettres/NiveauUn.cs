@@ -32,6 +32,7 @@ public class NiveauUn : MonoBehaviour {
         GenerateurDePartiePerso.statPartiePerso = false;
   
         Instantiate(fond[frand]);
+    
         Instantiate(sol[0]);
 
         ScoreManager.bonneLettre = 0;
