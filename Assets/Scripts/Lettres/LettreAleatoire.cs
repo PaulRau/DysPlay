@@ -44,11 +44,15 @@ public class LettreAleatoire : MonoBehaviour
     private int Ctype = 0;
     private bool activationCaret;
 
+    private float vit;
+
     void Start()
     {
         GenerateurFinDePartie.But = 50000;
 
-        letter.GetComponent<LettreAleatoire>().speed = new Vector2(0, PersonalisablePartie.vitesse);
+        vit = PersonalisablePartie.vitesse * 0.75f;
+
+        letter.GetComponent<LettreAleatoire>().speed = new Vector2(0, vit);
         success = false;      
        
 

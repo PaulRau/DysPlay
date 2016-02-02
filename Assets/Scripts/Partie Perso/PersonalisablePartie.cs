@@ -65,8 +65,8 @@ public class PersonalisablePartie : MonoBehaviour {
     
     public void sliderVitesse(float vit)
     {
-        vitesse1 = vit;
-        vitesse = 0.75f * vitesse1;
+        vitesse = vit;
+       
 
     }
        

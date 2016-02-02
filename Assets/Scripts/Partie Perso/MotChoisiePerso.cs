@@ -54,7 +54,7 @@ public class MotChoisiePerso : MonoBehaviour
         activationCaret = false;
 
         Clone.GetComponent<LettreChoisie>().speed = new Vector2(0, PersonalisablePartie.vitesse);
-        vit = PersonalisablePartie.vitesse;
+        vit = PersonalisablePartie.vitesse*0.75f;
         //nb = (int)PersonalisablePartie.NbLettreAlea;
         Debug.Log(nb);
 

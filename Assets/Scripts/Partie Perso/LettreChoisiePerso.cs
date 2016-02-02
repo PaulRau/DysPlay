@@ -24,12 +24,15 @@ public class LettreChoisiePerso : MonoBehaviour {
     private int type = 0;
     public GameObject choixLettreChoisi;
 
+    private float vit;
+
 	// Use this for initialization
 	void Start () {
 
+        vit = PersonalisablePartie.vitesse * 0.75f;
         GenerateurFinDePartie.But = 50000;
         charactere = cara.ToCharArray();
-        choixLettreChoisi.GetComponent<LettreChoisie>().speed = new Vector2(0, PersonalisablePartie.vitesse);
+        choixLettreChoisi.GetComponent<LettreChoisie>().speed = new Vector2(0, vit);
         success = false;
         rand = Random.Range(0, charactere.Length);
         activationCaret = false;
