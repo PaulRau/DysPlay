@@ -77,7 +77,9 @@ public class PersonalisablePartie : MonoBehaviour {
         bloc1 = false;
         LettreAleatoire.spec = false;
         GenerateurDePartiePerso.choixLettrea = false;
-        GenerateurDePartiePerso.choixLettrechoisia = false; 
+        GenerateurDePartiePerso.choixLettrechoisia = false;
+        MotAleaPerso.spec = false;
+
         caracspec = false;
         but6.GetComponent<Toggle>().isOn = false;
         but7.GetComponent<Toggle>().isOn = false;
