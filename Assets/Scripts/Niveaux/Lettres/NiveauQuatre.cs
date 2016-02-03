@@ -25,6 +25,8 @@ public class NiveauQuatre : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        Time.timeScale = 1.0f;
+
         GenerateurFinDePartie.finDePartiePerso = 500000;
         GenerateurFinDePartie.But = 20;
         LettresRestantes.lettresrestant = 20;

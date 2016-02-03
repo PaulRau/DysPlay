@@ -27,6 +27,8 @@ public class GenerateurDePartiePerso : MonoBehaviour {
 
     void Start()
     {
+        Time.timeScale = 1.0f;
+
         NiveauUn.frand = 0; NiveauDeux.frand = 0; NiveauTrois.frand = 0; NiveauQuatre.frand = 0;
         GenerateurFinDePartie.But = 50000;
         rand = Random.Range(0, fond.Length);

@@ -5,7 +5,7 @@ public class Jungle1 : MonoBehaviour
 {
 
 
-    private string[] liste = { "vert", "eau", "bois", "arbre", "dense", "biome", "félin", "tigre", "puma", "lion", "liane", " terre", "singe", "verte", "lions", "pumas", "pluie", "maya", "toile", "singe", "panda", "zèbre", "alizé", "cacao", "tribu", "orage", "bufle", "tige", "ficus", "mue", "cocon" };
+    private string[] liste = { "vert", "eau", "bois", "arbre", "dense", "biome", "félin", "tigre", "puma", "lion", "liane", "terre", "singe", "verte", "lions", "pumas", "pluie", "maya", "toile", "singe", "panda", "zèbre", "alizé", "cacao", "tribu", "orage", "bufle", "tige", "ficus", "mue", "cocon" };
     private int i = 0;
     
 
@@ -26,6 +26,8 @@ public class Jungle1 : MonoBehaviour
 
     private int x = 0;
     public static bool success = false;
+    
+
     private int rand = 0;
     private int prand = 1;
     private int frand;
@@ -55,6 +57,8 @@ public class Jungle1 : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        Time.timeScale = 1.0f;
+
         NiveauUn.frand = 0; NiveauDeux.frand = 0; NiveauTrois.frand = 0; NiveauQuatre.frand = 0;
         GenerateurFinDePartie.finDePartiePerso = 500000;
         GenerateurFinDePartie.But = 25;
@@ -97,178 +101,185 @@ public class Jungle1 : MonoBehaviour
                 }
                 while (rand == prand);
 
+                prand = rand;
+
                 characters = liste[rand].ToCharArray();
 
-                Clone = Instantiate(ClonePrefab);
-                Clone.GetComponent<LettreMotNiveau>().speed = new Vector2(0, vit);
+
 
                 for (i = 0; i < liste[rand].Length; i++)
                 {
                     AfficheLettre(characters[i]);
-                    letter[i].GetComponent<LettreMotNiveau>().speed = new Vector2(0, vit);
+
 
                 }
+
+                Clone = Instantiate(ClonePrefab);
+                Clone.GetComponent<LettreMotNiveau>().speed = new Vector2(0, vit);
+
             }
 
-
-            if (x < liste[rand].Length)
-            {
-                switch (characters[x])
+            
+                if (x < liste[rand].Length)
                 {
-                    case 'a':
-                        currenttype = 0;
-                        break;
-                    case 'b':
-                        currenttype = 1;
-                        break;
-                    case 'c':
-                        currenttype = 2;
-                        break;
-                    case 'd':
-                        currenttype = 3;
-                        break;
-                    case 'e':
-                        currenttype = 4;
-                        break;
-                    case 'f':
-                        currenttype = 5;
-                        break;
-                    case 'g':
-                        currenttype = 6;
-                        break;
-                    case 'h':
-                        currenttype = 7;
-                        break;
-                    case 'i':
-                        currenttype = 8;
-                        break;
-                    case 'j':
-                        currenttype = 9;
-                        break;
-                    case 'k':
-                        currenttype = 10;
-                        break;
-                    case 'l':
-                        currenttype = 11;
-                        break;
-                    case 'm':
-                        currenttype = 12;
-                        break;
-                    case 'n':
-                        currenttype = 13;
-                        break;
-                    case 'o':
-                        currenttype = 14;
-                        break;
-                    case 'p':
-                        currenttype = 15;
-                        break;
-                    case 'q':
-                        currenttype = 16;
-                        break;
-                    case 'r':
-                        currenttype = 17;
-                        break;
-                    case 's':
-                        currenttype = 18;
-                        break;
-                    case 't':
-                        currenttype = 19;
-                        break;
-                    case 'u':
-                        currenttype = 20;
-                        break;
-                    case 'v':
-                        currenttype = 21;
-                        break;
-                    case 'w':
-                        currenttype = 22;
-                        break;
-                    case 'x':
-                        currenttype = 23;
-                        break;
-                    case 'y':
-                        currenttype = 24;
-                        break;
-                    case 'z':
-                        currenttype = 25;
-                        break;
-                    case 'é':
-                        currenttype = 26;
-                        break;
-                    case 'è':
-                        currenttype = 27;
-                        break;
-                    case 'à':
-                        currenttype = 28;
-                        break;
-                    case 'ç':
-                        currenttype = 29;
-                        break;
-                    case 'ê':
-                        currenttype = 30;
-                        Ctype = 0;
-                        break;
-                    case 'â':
-                        currenttype = 31;
-                        Ctype = 1;
-                        break;
-                    case 'û':
-                        currenttype = 32;
-                        Ctype = 2;
-                        break;
-                    case 'î':
-                        currenttype = 33;
-                        Ctype = 3;
-                        break;
-                    case 'ô':
-                        currenttype = 34;
-                        Ctype = 4;
-                        break;
-                    case 'ë':
-                        currenttype = 35;
-                        Ctype = 5;
-                        break;
-                    case 'ü':
-                        currenttype = 36;
-                        Ctype = 6;
-                        break;
-                    case 'ï':
-                        currenttype = 37;
-                        Ctype = 7;
-                        break;
+                    switch (characters[x])
+                    {
+                        case 'a':
+                            currenttype = 0;
+                            break;
+                        case 'b':
+                            currenttype = 1;
+                            break;
+                        case 'c':
+                            currenttype = 2;
+                            break;
+                        case 'd':
+                            currenttype = 3;
+                            break;
+                        case 'e':
+                            currenttype = 4;
+                            break;
+                        case 'f':
+                            currenttype = 5;
+                            break;
+                        case 'g':
+                            currenttype = 6;
+                            break;
+                        case 'h':
+                            currenttype = 7;
+                            break;
+                        case 'i':
+                            currenttype = 8;
+                            break;
+                        case 'j':
+                            currenttype = 9;
+                            break;
+                        case 'k':
+                            currenttype = 10;
+                            break;
+                        case 'l':
+                            currenttype = 11;
+                            break;
+                        case 'm':
+                            currenttype = 12;
+                            break;
+                        case 'n':
+                            currenttype = 13;
+                            break;
+                        case 'o':
+                            currenttype = 14;
+                            break;
+                        case 'p':
+                            currenttype = 15;
+                            break;
+                        case 'q':
+                            currenttype = 16;
+                            break;
+                        case 'r':
+                            currenttype = 17;
+                            break;
+                        case 's':
+                            currenttype = 18;
+                            break;
+                        case 't':
+                            currenttype = 19;
+                            break;
+                        case 'u':
+                            currenttype = 20;
+                            break;
+                        case 'v':
+                            currenttype = 21;
+                            break;
+                        case 'w':
+                            currenttype = 22;
+                            break;
+                        case 'x':
+                            currenttype = 23;
+                            break;
+                        case 'y':
+                            currenttype = 24;
+                            break;
+                        case 'z':
+                            currenttype = 25;
+                            break;
+                        case 'é':
+                            currenttype = 26;
+                            break;
+                        case 'è':
+                            currenttype = 27;
+                            break;
+                        case 'à':
+                            currenttype = 28;
+                            break;
+                        case 'ç':
+                            currenttype = 29;
+                            break;
+                        case 'ê':
+                            currenttype = 30;
+                            Ctype = 0;
+                            break;
+                        case 'â':
+                            currenttype = 31;
+                            Ctype = 1;
+                            break;
+                        case 'û':
+                            currenttype = 32;
+                            Ctype = 2;
+                            break;
+                        case 'î':
+                            currenttype = 33;
+                            Ctype = 3;
+                            break;
+                        case 'ô':
+                            currenttype = 34;
+                            Ctype = 4;
+                            break;
+                        case 'ë':
+                            currenttype = 35;
+                            Ctype = 5;
+                            break;
+                        case 'ü':
+                            currenttype = 36;
+                            Ctype = 6;
+                            break;
+                        case 'ï':
+                            currenttype = 37;
+                            Ctype = 7;
+                            break;
+                    }
                 }
-            }
-            else
-            {
-                if (success == false)
+                else
                 {
-                    source.PlayOneShot(sonBonneLettre);
-                    GenerateurFinDePartie.MotsValide++;
-                    if (MotsRestants.motsrestant > 0) { MotsRestants.motsrestant--; }
+                    if (success == false)
+                    {
+                        source.PlayOneShot(sonBonneLettre);
+                        GenerateurFinDePartie.MotsValide++;
+                        if (MotsRestants.motsrestant > 0) { MotsRestants.motsrestant--; }
+                    }
+
+
+                    success = true;
+                    for (i = 0; i < liste[rand].Length; i++)
+                    {
+
+                        // Arrête le mouvement de chaque lettre 
+                        letter[i].GetComponent<LettreMotNiveau>().speed = new Vector2(0, 0);
+
+                        // Detruit chaque lettre après un délai de 0.5 secondes
+                        Destroy(letter[i], 0.5f);
+
+                    }
+                    // Ne pas oublier de detruire l'object mot éventuellement
+                    Destroy(Clone, 0.5f);
                 }
 
 
-                success = true;
-                for (i = 0; i < liste[rand].Length; i++)
-                {
 
-                    // Arrête le mouvement de chaque lettre 
-                    letter[i].GetComponent<LettreMotNiveau>().speed = new Vector2(0, 0);
+                if (success == false) { clavier(); }
 
-                    // Detruit chaque lettre après un délai de 0.5 secondes
-                    Destroy(letter[i], 0.5f);
+                if (activationCaret == true) { CaracSpeciaux(); }
 
-                }
-                // Ne pas oublier de detruire l'object mot éventuellement
-                Destroy(Clone, 0.5f);
-            }
-
-
-            if (success == false) { clavier(); }
-
-            if (activationCaret == true) { CaracSpeciaux(); }
-
+            
         }
     }
 
@@ -923,7 +934,7 @@ public class Jungle1 : MonoBehaviour
                 if (vit == 0)
                 {
 
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
                     }
@@ -931,7 +942,7 @@ public class Jungle1 : MonoBehaviour
                 }
                 else
                 {
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
                     }
@@ -947,7 +958,7 @@ public class Jungle1 : MonoBehaviour
                 if (vit == 0)
                 {
 
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
                     }
@@ -955,7 +966,7 @@ public class Jungle1 : MonoBehaviour
                 }
                 else
                 {
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
                     }
@@ -971,7 +982,7 @@ public class Jungle1 : MonoBehaviour
                 if (vit == 0)
                 {
 
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
                     }
@@ -979,7 +990,7 @@ public class Jungle1 : MonoBehaviour
                 }
                 else
                 {
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
                     }
@@ -995,7 +1006,7 @@ public class Jungle1 : MonoBehaviour
                 if (vit == 0)
                 {
 
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
                     }
@@ -1003,7 +1014,7 @@ public class Jungle1 : MonoBehaviour
                 }
                 else
                 {
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
                     }
@@ -1019,7 +1030,7 @@ public class Jungle1 : MonoBehaviour
                 if (vit == 0)
                 {
 
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
                     }
@@ -1027,7 +1038,7 @@ public class Jungle1 : MonoBehaviour
                 }
                 else
                 {
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
                     }
@@ -1043,7 +1054,7 @@ public class Jungle1 : MonoBehaviour
                 if (vit == 0)
                 {
 
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
                     }
@@ -1051,7 +1062,7 @@ public class Jungle1 : MonoBehaviour
                 }
                 else
                 {
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
                     }
@@ -1067,7 +1078,7 @@ public class Jungle1 : MonoBehaviour
                 if (vit == 0)
                 {
 
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
                     }
@@ -1075,7 +1086,7 @@ public class Jungle1 : MonoBehaviour
                 }
                 else
                 {
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
                     }
@@ -1091,7 +1102,7 @@ public class Jungle1 : MonoBehaviour
                 if (vit == 0)
                 {
 
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
                     }
@@ -1099,7 +1110,7 @@ public class Jungle1 : MonoBehaviour
                 }
                 else
                 {
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
                     }
@@ -1110,18 +1121,20 @@ public class Jungle1 : MonoBehaviour
                 break;
         }
 
-        if (liste[rand].Length > 5)
-        {
-            letter[i].GetComponent<Transform>().localScale = new Vector2(0.3f, 0.3f);
+        
+            if (liste[rand].Length > 5)
+            {
+                letter[i].GetComponent<Transform>().localScale = new Vector2(0.3f, 0.3f);
 
-        }
+            }
 
-        if (liste[rand].Length > 9)
-        {
-            letter[i].GetComponent<Transform>().localScale = new Vector2(0.25f, 0.25f);
+            if (liste[rand].Length > 9)
+            {
+                letter[i].GetComponent<Transform>().localScale = new Vector2(0.25f, 0.25f);
 
-        }
-
+            }
+            letter[i].GetComponent<LettreMotNiveau>().speed = new Vector2(0, vit);
+        
 
     }
 

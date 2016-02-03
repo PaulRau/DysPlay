@@ -54,6 +54,8 @@ public class Jungle2 : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        Time.timeScale = 1.0f;
+
         NiveauUn.frand = 0; NiveauDeux.frand = 0; NiveauTrois.frand = 0; NiveauQuatre.frand = 0;
         GenerateurFinDePartie.finDePartiePerso = 500000;
         GenerateurFinDePartie.But = 25;
@@ -924,7 +926,7 @@ public class Jungle2 : MonoBehaviour
                 if (vit == 0)
                 {
 
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
                     }
@@ -932,12 +934,13 @@ public class Jungle2 : MonoBehaviour
                 }
                 else
                 {
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
                     }
                     else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
                 }
+                letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
 
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
@@ -948,7 +951,7 @@ public class Jungle2 : MonoBehaviour
                 if (vit == 0)
                 {
 
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
                     }
@@ -956,12 +959,13 @@ public class Jungle2 : MonoBehaviour
                 }
                 else
                 {
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
                     }
                     else letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1f) * liste[rand].Length + 2 * i + 1f, 8), Quaternion.identity);
                 }
+                
 
                 letter[i].GetComponent<SpriteRenderer>().sprite = alphabet[type];
                 break;
@@ -972,7 +976,7 @@ public class Jungle2 : MonoBehaviour
                 if (vit == 0)
                 {
 
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
                     }
@@ -980,7 +984,7 @@ public class Jungle2 : MonoBehaviour
                 }
                 else
                 {
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
                     }
@@ -996,7 +1000,7 @@ public class Jungle2 : MonoBehaviour
                 if (vit == 0)
                 {
 
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
                     }
@@ -1004,7 +1008,7 @@ public class Jungle2 : MonoBehaviour
                 }
                 else
                 {
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
                     }
@@ -1020,7 +1024,7 @@ public class Jungle2 : MonoBehaviour
                 if (vit == 0)
                 {
 
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
                     }
@@ -1028,7 +1032,7 @@ public class Jungle2 : MonoBehaviour
                 }
                 else
                 {
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
                     }
@@ -1044,7 +1048,7 @@ public class Jungle2 : MonoBehaviour
                 if (vit == 0)
                 {
 
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
                     }
@@ -1052,7 +1056,7 @@ public class Jungle2 : MonoBehaviour
                 }
                 else
                 {
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
                     }
@@ -1068,7 +1072,7 @@ public class Jungle2 : MonoBehaviour
                 if (vit == 0)
                 {
 
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
                     }
@@ -1076,7 +1080,7 @@ public class Jungle2 : MonoBehaviour
                 }
                 else
                 {
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
                     }
@@ -1092,7 +1096,7 @@ public class Jungle2 : MonoBehaviour
                 if (vit == 0)
                 {
 
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 0), Quaternion.identity);
                     }
@@ -1100,7 +1104,7 @@ public class Jungle2 : MonoBehaviour
                 }
                 else
                 {
-                    if (liste.Length < 6)
+                    if (liste[rand].Length < 6)
                     {
                         letter[i] = (GameObject)Instantiate(letterPrefab, new Vector2((-1.5f) * liste[rand].Length + 3 * i + 1.5f, 8), Quaternion.identity);
                     }
