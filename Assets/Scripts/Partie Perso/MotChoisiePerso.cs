@@ -26,7 +26,8 @@ public class MotChoisiePerso : MonoBehaviour
     private char[] characters;
     private int x = 0;
     public static bool success = false;
-    private int rand = 0;
+    public static int rand = 0;
+    
     private float vit;
 
     // utiles pour les caractères spéciaux
@@ -71,7 +72,16 @@ public class MotChoisiePerso : MonoBehaviour
 
 
         liste = listeChoisi.Split(' ');
-        rand = Random.Range(0, liste.Length);
+
+        do
+        {
+            rand = Random.Range(0, liste.Length);
+        }
+        while (rand == GenerateurDePartiePerso.prand);
+
+        GenerateurDePartiePerso.prand = rand;
+
+
         if (liste[rand].Length > 5)
         {
             Clone.GetComponent<Transform>().localScale = new Vector2(3.8f, 3.8f);

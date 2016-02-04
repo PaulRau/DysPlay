@@ -7,6 +7,7 @@ public class GenerateurDePartiePerso : MonoBehaviour {
     public static bool choixLettrea = false;
     public static bool choixMotchoisia = false;
     public static bool choixLettrechoisia = false;
+    public static int prand = 10;
     private float vit;
     public GameObject choixMot;
     public GameObject choixLettre;

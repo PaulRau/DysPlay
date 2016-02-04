@@ -98,6 +98,8 @@ public class Vacances2 : MonoBehaviour
                 }
                 while (rand == prand);
 
+                prand = rand;
+
                 characters = liste[rand].ToCharArray();
 
                 Clone = Instantiate(ClonePrefab);

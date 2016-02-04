@@ -99,6 +99,8 @@ public class Campagne1 : MonoBehaviour
                 }
                 while (rand == prand);
 
+                prand = rand;
+
                 characters = liste[rand].ToCharArray();
 
                 Clone = Instantiate(ClonePrefab);

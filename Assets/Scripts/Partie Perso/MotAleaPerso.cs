@@ -38,6 +38,7 @@ public class MotAleaPerso : MonoBehaviour
     private int x = 0;
     public static bool success = false;
     private int rand = 0;
+    private int prand = 1;
     private float vit;
 
     // utiles pour les caractères spéciaux
@@ -130,7 +131,13 @@ public class MotAleaPerso : MonoBehaviour
             }
         }
 
-        rand = Random.Range(0, liste.Length);
+        do
+        {
+            rand = Random.Range(0, liste.Length);
+        }
+        while (rand == prand);
+
+        prand = rand;
 
         if (liste[rand].Length > 5)
         {
