@@ -55,13 +55,13 @@ public class MotChoisiePerso : MonoBehaviour
         activationCaret = false;
 
         Clone.GetComponent<LettreChoisie>().speed = new Vector2(0, PersonalisablePartie.vitesse);
-        vit = PersonalisablePartie.vitesse*0.75f;
+        vit = PersonalisablePartie.vitesse * 0.75f;
         //nb = (int)PersonalisablePartie.NbLettreAlea;
         Debug.Log(nb);
 
-        
 
-       
+
+
         success = false;
 
         for (j = 0; j < 12; j++)
@@ -72,15 +72,17 @@ public class MotChoisiePerso : MonoBehaviour
 
 
         liste = listeChoisi.Split(' ');
-
-        do
+        if (liste.Length != 1)
         {
-            rand = Random.Range(0, liste.Length);
+            do
+            {
+                rand = Random.Range(0, liste.Length);
+            }
+            while (rand == GenerateurDePartiePerso.prand);
+
+            GenerateurDePartiePerso.prand = rand;
         }
-        while (rand == GenerateurDePartiePerso.prand);
-
-        GenerateurDePartiePerso.prand = rand;
-
+        else rand = 0;
 
         if (liste[rand].Length > 5)
         {
